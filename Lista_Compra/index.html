@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Supermercados</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+	transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 20px;
+}
+
+        .sidebar form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar input, .sidebar button {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #357abd;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #357abd;
+}
+
+
+/* Estilos para los botones */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #38a169;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2f855a;
+}
+
+.btn-profesional {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-profesional:hover {
+    transform: scale(1.05);
+}
+
+.btn-importar {
+    background-color: #38a169;
+    color: white;
+}
+
+.btn-importar:hover {
+    background-color: #2f855a;
+}
+
+.btn-exportar {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.btn-exportar:hover {
+    background-color: #357abd;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f7fafc;
+}
+
+
+/* Estilos para los formularios */
+.form-container {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+        #productosSimilares  {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        #productosSimilares  div {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #productosSimilares  div:hover {
+            background-color: #f0f0f0;
+        }
+
+/* estilos CSS para la tabla de comparación de precios. */
+#tablaComparacionPrecios table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaComparacionPrecios th, #tablaComparacionPrecios td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tablaComparacionPrecios th {
+    background-color: #007bff;
+    color: white;
+}
+
+#tablaComparacionPrecios tr:hover {
+    background-color: #f5f5f5;
+}
+
+#tablaComparacionPrecios .nombre-producto {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+#tablaComparacionPrecios .icono-establecimiento {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+/* Estilo de lista de sugerencias */
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestions-list li:hover {
+    background-color: #edf2f7;
+}
+
+
+
+
+/* Estilo para los campos opcionales y grupos de campos */
+.hidden {
+    display: none;
+}
+
+/* Estilos para los botones */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+    /* Estilos para la sección de crear lista de la compra */
+#createShoppingList {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    max-width: none;
+}
+
+#createShoppingList h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+    #createShoppingList .form-group {
+        margin-bottom: 20px;
+    }
+
+    #createShoppingList input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    #createShoppingList .suggestions-list {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        max-height: 150px;
+        overflow-y: auto;
+        margin-top: 5px;
+    }
+
+    #createShoppingList .suggestions-list li {
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    #createShoppingList .suggestions-list li:hover {
+        background-color: #f0f0f0;
+    }
+
+    #listaCompra {
+        margin-top: 20px;
+    }
+
+    #listaCompra h3 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+#listaProductosCompra {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#listaProductosCompra li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.2s ease;
+}
+
+#listaProductosCompra li:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    #listaProductosCompra li:last-child {
+        border-bottom: none;
+    }
+
+    #listaProductosCompra li input {
+        width: 60px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+	
+	#listaProductosCompra li input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+#listaProductosCompra li button {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#listaProductosCompra li button:hover {
+    background-color: #c53030;
+}
+
+    /* Estilos para la tabla de resultados de la compra */
+#resultadosCompra table {
+    margin-top: 20px;
+}
+
+#resultadosCompra .total-row {
+    background-color: #edf2f7;
+    font-weight: 600;
+}
+
+    #resultadosCompra th, #resultadosCompra td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #resultadosCompra th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    #resultadosCompra tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    #resultadosCompra tr.total-row {
+        background-color: #f9f9f9;
+        font-weight: bold;
+    }
+
+.precioUnitario small {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 4px;
+}
+
+.precio-mas-economico {
+    background-color: #d4edda; /* Verde claro */
+}
+
+.btn-toggle-nutricion {
+    background-color: #6b7280; /* Gray-500 for a professional look */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-toggle-nutricion:hover {
+    background-color: #4b5563; /* Darker gray on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-toggle-nutricion:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la valoración */
+.valoracion-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre texto e ícono */
+}
+
+.valoracion-texto {
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: black;
+}
+
+/* Estilo para el ícono */
+.valoracion-icono {
+    font-size: 18px;
+}
+
+#infoNutricionalCampos label {
+    margin-top: 20px; /* Aumentar el espaciado superior */
+    display: block; /* Asegurar que ocupe toda la línea */
+}
+
+#infoNutricionalCamposActualizar label {
+    margin-top: 20px; /* Aumentar el espaciado superior */
+    display: block; /* Asegurar que ocupe toda la línea */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en móviles */
+        padding: 10px;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px; /* Ancho fijo en móviles */
+        transform: translateX(-100%); /* Oculta la barra lateral por defecto */
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Muestra la barra lateral cuando está activa */
+    }
+
+    .main-content {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 20px;
+        margin-top: 50px; /* Espacio para el botón hamburguesa */
+    }
+
+    .hamburger {
+        display: block; /* Visible en móviles */
+    }
+
+    /* Ajustar el menú superior */
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu button {
+        width: 100%;
+    }
+
+    /* Ajustar tablas */
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+
+.nutri-score {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.nutri-score-a { background-color: #006633; } /* Verde oscuro */
+.nutri-score-b { background-color: #85bb2f; } /* Verde claro */
+.nutri-score-c { background-color: #fecb00; } /* Amarillo */
+.nutri-score-d { background-color: #f29400; } /* Naranja */
+.nutri-score-e { background-color: #e63e11; } /* Rojo */
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral para añadir establecimientos -->
+<aside class="sidebar">
+    <h2>Administrar Base de Datos</h2>
+	<button onclick="showSection('gestionEstablecimientos')"><i class="bi bi-shop"></i> Gestionar Establecimientos</button>
+	<button onclick="showSection('Formulario_Anhadir_Producto')"><i class="bi bi-plus"></i> Añadir Productos</button>
+	<button onclick="showSection('gestionBaseDatos')"><i class="bi bi-database"></i> Gestionar Base de Datos</button>
+</aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+		<button class="hamburger" onclick="toggleSidebar()">☰</button>
+            <h1>Comparador de Supermercados</h1>
+<nav class="menu">
+    <button onclick="showSection('createShoppingList')"><i class="bi bi-cart"></i> Crear Lista de la Compra</button>
+    <button onclick="showSection('verProductos')"><i class="bi bi-eye"></i> Ver Productos</button>
+    <button onclick="showSection('rateProduct')"><i class="bi bi-star"></i> Valorar Producto</button>
+</nav>
+
+
+ <!-- Secciones -->
+
+
+<section id="añadirEstablecimiento" class="section">
+    <h2>Añadir Establecimiento</h2>
+    <form id="addStoreForm" class="form-container">
+        <div class="form-group">
+            <label for="storeName">Nombre del Establecimiento:</label>
+            <input type="text" id="storeName" required>
+        </div>
+        <div class="form-group">
+            <label for="storeLogoUrl">Logotipo (URL o archivo):</label>
+            <input type="text" id="storeLogoUrl" placeholder="URL del logotipo">
+            <input type="file" id="storeLogoFile" accept="image/*">
+        </div>
+        <button type="submit">Añadir Establecimiento</button>
+    </form>
+</section>
+
+<section id="gestionCategorias" class="section">
+    <h2>Gestionar Categorías</h2>
+    <div class="menu">
+        <button onclick="showSection('añadirCategoria')">Añadir Categoría</button>
+    </div>
+    <div id="listaCategorias"></div>
+</section>
+
+<section id="añadirCategoria" class="section">
+    <h2>Añadir Categoría</h2>
+    <form id="addCategoryForm" class="form-container">
+        <div class="form-group">
+            <label for="categoryName">Nombre de la Categoría:</label>
+            <input type="text" id="categoryName" required>
+        </div>
+        <button type="submit">Añadir Categoría</button>
+    </form>
+</section>
+
+
+            <!-- Sección: Añadir Producto -->
+<section id="Formulario_Anhadir_Producto" class="section">
+    <h2>Añadir Producto</h2>
+	<div id="mensajeProducto" style="display: none; color: green; margin-bottom: 20px;"></div>
+    <form id="formProducto" class="form-container">
+        <div class="form-group">
+            <label for="establecimiento">Establecimiento</label>
+            <select id="establecimiento" class="form-select">
+                <option value="" selected disabled>Escoger establecimiento</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+    <label for="categoria">Categoría</label>
+	<select id="categoria" class="form-select" onchange="mostrarInfoNutricional()">
+		<option value="" selected disabled>Escoja la categoría</option>
+		<option value="alimentacion">Alimentación</option>
+		<option value="lacteos">Lácteos</option>
+		<option value="bebidas">Bebidas</option>
+		<option value="carnes_pescados">Carnes y Pescados</option>
+		<option value="panaderia_reposteria">Panadería y Repostería</option>
+		<option value="frutas_verduras">Frutas y Verduras</option>
+		<option value="cereales_legumbres">Cereales y Legumbres</option>
+		<option value="snacks">Snacks</option>
+		<option value="limpieza">Limpieza</option>
+		<option value="hogar">Hogar</option>
+	</select>
+</div>
+
+        <div class="form-group">
+<label for="nombreProducto"><i class="bi bi-tag"></i> Nombre del Producto</label>
+    <input type="text" id="nombreProducto" class="form-input" oninput="mostrarProductosSimilares()">
+            <ul id="productosSimilares" class="suggestions-list hidden"></ul>
+        </div>
+
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" class="form-input">
+        </div>
+
+        <div class="form-group">
+                        <label for="barcode">Código de Barras</label>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <input type="text" id="barcode" class="form-input" placeholder="Escribe o escanea el código">
+                            <button type="button" id="scanBarcodeBtn" class="btn-profesional" style="background-color: #4a90e2; color: white;" onclick="toggleBarcodeScanner()">
+                                <i class="bi bi-camera"></i> Escanear
+                            </button>
+                        </div>
+                        <div id="scannerContainer" class="hidden" style="margin-top: 10px;">
+                            <video id="barcodeScanner" style="width: 100%; max-width: 400px; border-radius: 6px;"></video>
+                        </div>
+         </div>
+
+        <div class="form-group">
+    <label for="precio"><i class="bi bi-currency-euro"></i> Precio (€)</label>
+    <input type="number" id="precio" step="0.01" class="form-input" oninput="validarNumero(this)">
+        </div>
+
+		<div class="form-group">
+			<label for="unidad">Unidad</label>
+			<select id="unidad" class="form-select" onchange="mostrarCantidad()">
+				<option value="unidad">Unidad</option>
+				<option value="kg">Kilogramo</option>
+				<option value="litro">Litro</option>
+				<option value="pack">Pack</option>
+			</select>
+		</div>
+		<div class="form-group hidden" id="cantidadGrupo">
+			<label for="cantidad">Cantidad <span id="cantidadLabel">(kg/l/unidades)</span></label>
+			<input type="number" id="cantidad" step="0.01" class="form-input" oninput="validarNumero(this)">
+		</div>
+
+        <div class="form-group hidden" id="infoNutricionalGrupo">
+			<button type="button" class="btn-profesional btn-toggle-nutricion" onclick="toggleInfoNutricional()">
+				<i class="bi bi-info-circle"></i> Información Nutricional
+			</button>
+			<div id="infoNutricionalCampos" style="display: none;">
+				<label>Información Nutricional (por 100g/ml)</label>
+            <div class="form-group">
+                <label for="valorEnergeticoKj">Valor Energético (kJ):</label>
+                <input type="number" id="valorEnergeticoKj" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="valorEnergeticoKcal">Valor Energético (kcal):</label>
+                <input type="number" id="valorEnergeticoKcal" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+				<label for="grasasTotales">Grasas Totales (g):</label>
+				<input type="number" id="grasasTotales" step="0.01" class="form-input">
+			</div>
+			<div class="form-group">
+                <label for="grasasSaturadas">Grasas Saturadas (g):</label>
+                <input type="number" id="grasasSaturadas" step="0.01" class="form-input">
+            </div>
+			<div class="form-group">
+				<label for="grasasNoSaturadas">Grasas No Saturadas (g):</label>
+				<input type="number" id="grasasNoSaturadas" step="0.01" class="form-input">
+			</div>
+			<div class="form-group">
+				<label for="colesterol">Colesterol (mg):</label>
+				<input type="number" id="colesterol" step="0.01" class="form-input">
+			</div>
+            <div class="form-group">
+                <label for="hidratosCarbono">Hidratos de Carbono (g):</label>
+                <input type="number" id="hidratosCarbono" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="azucares">Azúcares (g):</label>
+                <input type="number" id="azucares" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="proteinas">Proteínas (g):</label>
+                <input type="number" id="proteinas" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="fibra">Fibra (g):</label>
+                <input type="number" id="fibra" step="0.01" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="sal">Sal (g):</label>
+                <input type="number" id="sal" step="0.01" class="form-input">
+            </div>
+			<div class="form-group">
+				<label for="sodio">Sodio (mg):</label>
+				<input type="number" id="sodio" step="0.01" class="form-input">
+			</div>
+        </div>
+</div>
+
+        <button type="button" class="btn-submit" onclick="guardarProducto()">Guardar Producto</button>
+    </form>
+</section>
+
+<section id="ActualizarProducto" class="section">
+    <h2>Actualizar Producto</h2>
+    <form id="formActualizarProducto" class="form-container">
+        <div id="mensaje" style="display: none; color: red; background-color: #ffe6e6; padding: 10px; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;"></div>
+        
+        <div class="form-group">
+            <label for="establecimientoActualizar">Establecimiento</label>
+            <select id="establecimientoActualizar" class="form-select"></select>
+        </div>
+
+        <div class="form-group">
+            <label for="categoriaActualizar">Categoría</label>
+            <select id="categoriaActualizar" class="form-select" onchange="mostrarInfoNutricionalActualizar()">
+                <option value="" selected disabled>Escoja la categoría</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="lacteos">Lácteos</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="carnes_pescados">Carnes y Pescados</option>
+                <option value="panaderia_reposteria">Panadería y Repostería</option>
+                <option value="frutas_verduras">Frutas y Verduras</option>
+                <option value="cereales_legumbres">Cereales y Legumbres</option>
+                <option value="snacks">Snacks</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="hogar">Hogar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nombreProductoActualizar">Nombre del Producto</label>
+            <input type="text" id="nombreProductoActualizar" class="form-input">
+        </div>
+
+        <div class="form-group">
+			<label for="marcaActualizar">Marca</label>
+			<input type="text" id="marcaActualizar" class="form-input">
+		</div>
+
+        <div class="form-group">
+            <label for="barcodeActualizar">Código de Barras</label>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <input type="text" id="barcodeActualizar" class="form-input" placeholder="Escribe o escanea el código">
+                <button type="button" id="scanBarcodeBtnActualizar" class="btn-profesional" style="background-color: #4a90e2; color: white;" onclick="toggleBarcodeScanner('ActualizarProducto')">
+                    <i class="bi bi-camera"></i> Escanear
+                </button>
+            </div>
+            <div id="scannerContainerActualizar" class="hidden" style="margin-top: 10px;">
+                <video id="barcodeScannerActualizar" autoplay playsinline style="width: 100%; max-width: 400px; border-radius: 6px;"></video>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="precioActualizar">Precio (€)</label>
+            <input type="number" id="precioActualizar" step="0.01" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="unidadActualizar">Unidad</label>
+            <select id="unidadActualizar" class="form-select" onchange="mostrarCantidadActualizar()">
+                <option value="unidad">Unidad</option>
+                <option value="kg">Kilogramo</option>
+                <option value="litro">Litro</option>
+                <option value="pack">Pack</option>
+            </select>
+        </div>
+        <div class="form-group hidden" id="cantidadGrupoActualizar">
+            <label for="cantidadActualizar">Cantidad <span id="cantidadLabelActualizar">(kg/l/unidades)</span></label>
+            <input type="number" id="cantidadActualizar" step="0.01" class="form-input" oninput="validarNumero(this)">
+        </div>
+
+        <!-- Información Nutricional -->
+        <div class="form-group hidden" id="infoNutricionalGrupoActualizar">
+            <button type="button" class="btn-profesional btn-toggle-nutricion" onclick="toggleInfoNutricionalActualizar()">
+                <i class="bi bi-info-circle"></i> Información Nutricional
+            </button>
+            <div id="infoNutricionalCamposActualizar" style="display: none;">
+                <!-- Campos nutricionales aquí (sin cambios) -->
+                <label>Información Nutricional (por 100g/ml)</label>
+                <div class="form-group">
+                    <label for="valorEnergeticoKjActualizar">Valor Energético (kJ):</label>
+                    <input type="number" id="valorEnergeticoKjActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="valorEnergeticoKcalActualizar">Valor Energético (kcal):</label>
+                    <input type="number" id="valorEnergeticoKcalActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="grasasTotalesActualizar">Grasas Totales (g):</label>
+                    <input type="number" id="grasasTotalesActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="grasasSaturadasActualizar">Grasas Saturadas (g):</label>
+                    <input type="number" id="grasasSaturadasActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="grasasNoSaturadasActualizar">Grasas No Saturadas (g):</label>
+                    <input type="number" id="grasasNoSaturadasActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="colesterolActualizar">Colesterol (mg):</label>
+                    <input type="number" id="colesterolActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="hidratosCarbonoActualizar">Hidratos de Carbono (g):</label>
+                    <input type="number" id="hidratosCarbonoActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="azucaresActualizar">Azúcares (g):</label>
+                    <input type="number" id="azucaresActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="proteinasActualizar">Proteínas (g):</label>
+                    <input type="number" id="proteinasActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="fibraActualizar">Fibra (g):</label>
+                    <input type="number" id="fibraActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="salActualizar">Sal (g):</label>
+                    <input type="number" id="salActualizar" step="0.01" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="sodioActualizar">Sodio (mg):</label>
+                    <input type="number" id="sodioActualizar" step="0.01" class="form-input">
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="actualizarProducto()">Guardar Cambios</button>
+    </form>
+</section>
+
+
+<section id="compararPrecios" class="section">
+    <h2>Comparar Precios</h2>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="filtroCategoriaComparar">Filtrar por Categoría:</label>
+            <select id="filtroCategoriaComparar" onchange="mostrarComparacionPrecios()">
+                <option value="Todas">Todas las categorías</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="lacteos">Lácteos</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="hogar">Hogar</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="buscarProductoComparar">Buscar Producto:</label>
+            <input type="text" id="buscarProductoComparar" oninput="mostrarComparacionPrecios()">
+        </div>
+    </div>
+    <div id="tablaComparacionPrecios"></div>
+</section>
+
+<section id="createShoppingList" class="section">
+    <h2>Crear Lista de la Compra</h2>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="buscarProductoLista">Buscar Producto:</label>
+            <input type="text" id="buscarProductoLista" oninput="buscarProductosLista()">
+            <ul id="sugerenciasProductosLista" class="suggestions-list hidden"></ul>
+        </div>
+        <div id="listaCompra">
+            <h3>Lista de la Compra</h3>
+            <ul id="listaProductosCompra"></ul>
+        </div>
+        <button class="btn-submit" onclick="calcularCompra()">Hacer la Compra</button>
+    </div>
+</section>
+
+<section id="DondeComprar" class="section">
+    <h2>Donde Comprar</h2>
+    <div id="resultadosCompra"></div>
+</section>
+
+<section id="verProductos" class="section">
+    <h2>Ver Productos</h2>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="filtroEstablecimiento">Filtrar por Establecimiento:</label>
+            <select id="filtroEstablecimiento" onchange="mostrarProductosFiltrados()">
+                <option value="Todos">Todos</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="filtroCategoria">Filtrar por Categoría:</label>
+            <select id="filtroCategoria" onchange="mostrarProductosFiltrados()">
+                <option value="Todas">Todas las categorías</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="lacteos">Lácteos</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="carnes_pescados">Carnes y Pescados</option>
+                <option value="panaderia_reposteria">Panadería y Repostería</option>
+                <option value="frutas_verduras">Frutas y Verduras</option>
+                <option value="cereales_legumbres">Cereales y Legumbres</option>
+                <option value="snacks">Snacks</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="hogar">Hogar</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="buscarProducto">Buscar Producto:</label>
+            <input type="text" id="buscarProducto" oninput="mostrarProductosFiltrados()" placeholder="Escribe el nombre del producto">
+        </div>
+    </div>
+    <div id="listaProductosFiltrados"></div>
+</section>
+
+<section id="rateProduct" class="section">
+    <h2>Valorar Producto</h2>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="buscarProductoValorar">Buscar Producto:</label>
+            <input type="text" id="buscarProductoValorar" oninput="buscarProductosValorar()">
+            <ul id="sugerenciasProductosValorar" class="suggestions-list hidden"></ul>
+        </div>
+        <div id="resultadosValoracion"></div>
+    </div>
+</section>
+
+<section id="gestionEstablecimientos" class="section">
+    <h2>Gestionar Establecimientos</h2>
+    <div class="menu">
+        <button onclick="showSection('añadirEstablecimiento')">Añadir Establecimiento</button>
+        <div id="mensajeEstablecimiento" style="display: none; color: green; margin-left: 10px;"></div>
+    </div>
+    <div id="listaEstablecimientos"></div>
+</section>
+
+<section id="gestionBaseDatos" class="section" style="display: none;">
+    <h2>Gestionar Base de Datos</h2>
+    <div class="button-container">
+        <button onclick="document.getElementById('importarArchivoBaseDatos').click()" class="btn-profesional btn-importar">
+            <i class="bi bi-file-earmark-arrow-up"></i> Importar Base de Datos
+        </button>
+        <button onclick="exportarDatos()" class="btn-profesional btn-exportar">
+            <i class="bi bi-file-earmark-arrow-down"></i> Exportar Base de Datos
+        </button>
+        <button onclick="consolidarProductos()" class="btn-profesional" style="background-color: #e2a94a; color: white;">
+            <i class="bi bi-plus-circle"></i> Añadir productos a todos los establecimientos
+        </button>
+    </div>
+    <input type="file" id="importarArchivoBaseDatos" accept=".json" style="display: none;" onchange="importarDatos(event)">
+    <div id="mensajeGestionBaseDatos" style="display: none; color: green; margin-left: 10px;"></div>
+</section>
+
+<section id="editarEstablecimiento" class="section" style="display: none;">
+    <h2>Editar Establecimiento</h2>
+    <form id="editStoreForm" class="form-container" onsubmit="event.preventDefault();">
+        <div class="form-group">
+            <label for="editStoreName">Nombre del Establecimiento:</label>
+            <input type="text" id="editStoreName" required>
+        </div>
+        <div class="form-group">
+            <label for="editStoreLogoUrl">Logotipo (URL o archivo):</label>
+            <input type="text" id="editStoreLogoUrl" placeholder="URL del logotipo">
+            <input type="file" id="editStoreLogoFile" accept="image/*">
+        </div>
+        <button type="button" class="btn-submit" onclick="guardarEdicionEstablecimiento()">Guardar Cambios</button>
+    </form>
+</section>
+
+            <!-- Otras secciones (Actualizar, Comparar, Valorar, Lista de Compra) -->
+            <!-- Se pueden estructurar de manera similar a "Añadir Producto" -->
+        </main>
+    </div>
+
+    <script>
+	
+let establecimientos = [];
+let productos = [];
+try {
+    establecimientos = JSON.parse(localStorage.getItem("establecimientos")) || [];
+    productos = JSON.parse(localStorage.getItem("productos")) || [];
+} catch (e) {
+    console.error("Error al cargar datos de localStorage:", e);
+    mostrarMensaje("Error al cargar datos almacenados.", "mensajeGestionBaseDatos");
+}
+
+let establecimientoCounter = establecimientos.length > 0 ? Math.max(...establecimientos.map(e => parseInt(e.id.split('_')[1]))) + 1 : 1;
+
+// Validar y filtrar entradas inválidas de productos
+productos = productos.map(p => {
+    establecimientos.forEach(est => {
+        if (!p.hasOwnProperty(`Precio_${est.id}`)) {
+            p[`Precio_${est.id}`] = null; // Asegurar que todos los productos tengan precios definidos
+        }
+    });
+    return p;
+});
+
+
+// Validar y limpiar productos al cargar
+productos = productos.map((p, index) => {
+    if (!p || typeof p !== 'object' || !p.nombre || typeof p.nombre !== 'string') {
+        console.warn(`Producto inválido en índice ${index}:`, p);
+        return null;
+    }
+    if ((p.unidad === "kg" || p.unidad === "litro") && (!p.cantidad || p.cantidad <= 0)) {
+        p.cantidad = 1; // Valor por defecto
+    }
+    establecimientos.forEach(est => {
+        if (!p.hasOwnProperty(`Precio_${est.id}`)) {
+            p[`Precio_${est.id}`] = null;
+        }
+    });
+    return p;
+}).filter(p => p !== null);
+
+localStorage.setItem("productos", JSON.stringify(productos));
+
+
+        // Mostrar sección específica
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+    if (sectionId === 'main') {
+        document.querySelector('.main-content h1').style.display = 'block';
+    } else {
+        document.querySelector('.main-content h1').style.display = 'none';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    if (sectionId === 'Formulario_Anhadir_Producto') {
+        limpiarFormulario();
+        updateStoreDropdown();
+    }
+    if (sectionId === 'gestionEstablecimientos') {
+        mostrarEstablecimientos();
+    }
+    if (sectionId === 'verProductos') {
+        cargarEstablecimientosEnFiltro();
+        mostrarProductosFiltrados();
+    }
+    if (sectionId === 'createShoppingList') {
+        document.getElementById("buscarProductoLista").value = "";
+        document.getElementById("sugerenciasProductosLista").innerHTML = "";
+        cargarListaCompra();
+    }
+    if (sectionId === 'gestionBaseDatos') {
+        // No es necesario hacer nada adicional aquí
+    }
+}
+
+function limpiarFormularioEdicion() {
+    document.getElementById('editStoreName').value = '';
+    document.getElementById('editStoreLogoUrl').value = '';
+    document.getElementById('editStoreLogoFile').value = '';
+}
+
+function mostrarMensaje(mensaje, elementoId) {
+    const elemento = document.getElementById(elementoId);
+    if (elemento) {
+        elemento.textContent = mensaje;
+        elemento.style.display = "block"; // Mostrar el mensaje
+        setTimeout(() => {
+            elemento.textContent = "";
+            elemento.style.display = "none"; // Ocultar el mensaje después de 3 segundos
+        }, 3000);
+    }
+}
+
+function validarNumero(input) {
+    if (input.value < 0) {
+        input.value = 0; // No permitir valores negativos
+    }
+}
+
+        // Añadir establecimiento
+function isValidUrl(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+	// Modificar los botones del sidebar para que cierren el menú en móvil
+	const sidebarButtons = document.querySelectorAll('.sidebar button');
+    sidebarButtons.forEach(button => {
+		button.addEventListener('click', function() {
+			const originalOnclick = button.getAttribute('onclick');
+			if (originalOnclick) {
+				const funcName = originalOnclick.match(/showSection\('([^']+)'\)/)?.[1];
+				if (funcName) showSection(funcName); // Ejecutar directamente
+			}
+			if (window.innerWidth <= 768) {
+				toggleSidebar();
+			}
+		});
+    });
+    // Actualizar creación de establecimientos
+	document.getElementById('addStoreForm').addEventListener('submit', function (e) {
+		e.preventDefault();
+		const storeName = document.getElementById('storeName').value.trim();
+		const storeLogoUrl = document.getElementById('storeLogoUrl').value.trim();
+		const storeLogoFile = document.getElementById('storeLogoFile').files[0];
+
+		if (establecimientos.some(est => est.nombre === storeName)) {
+			mostrarMensaje("Ya existe un establecimiento con ese nombre.", "mensajeEstablecimiento");
+			return;
+		}
+
+		const storeLogo = storeLogoUrl || (storeLogoFile ? URL.createObjectURL(storeLogoFile) : null);
+		const nuevoEstablecimiento = {
+			id: `Establecimiento_${establecimientoCounter++}`,
+			nombre: storeName,
+			logoURL: storeLogo
+		};
+		
+        if (storeLogoUrl && !isValidUrl(storeLogoUrl)) {
+            mostrarMensaje("La URL del logotipo no es válida.", "mensajeEstablecimiento");
+            return;
+        }
+
+        if (storeLogoFile && !storeLogoFile.type.startsWith('image/')) {
+            mostrarMensaje("El archivo seleccionado no es una imagen válida.", "mensajeEstablecimiento");
+            return;
+        }
+
+
+
+        // Añadir el nuevo establecimiento
+        establecimientos.push(nuevoEstablecimiento);
+		localStorage.setItem("establecimientos", JSON.stringify(establecimientos));
+
+        // Mostrar mensaje de éxito
+        mostrarMensaje('Establecimiento añadido correctamente.', "mensajeEstablecimiento");
+
+        // Limpiar todos los campos del formulario
+		document.getElementById('storeName').value = '';
+		document.getElementById('storeLogoUrl').value = '';
+		document.getElementById('storeLogoFile').value = '';
+
+        // Actualizar la lista de establecimientos
+        mostrarEstablecimientos();
+        updateStoreDropdown();
+
+        // Volver a la sección de gestión de establecimientos
+        showSection('gestionEstablecimientos');
+		
+	
+    });
+});
+
+
+
+        // Actualizar el desplegable de establecimientos
+function updateStoreDropdown() {
+
+    const storeDropdown = document.getElementById('establecimiento');
+    storeDropdown.innerHTML = '<option value="" selected disabled>Escoger establecimiento</option>';
+    establecimientos.forEach(est => {
+        const option = document.createElement('option');
+        option.value = est.nombre;
+        option.textContent = est.nombre;
+        storeDropdown.appendChild(option);
+    });
+}
+function mostrarEstablecimientos() {
+    const lista = document.getElementById("listaEstablecimientos");
+    lista.innerHTML = "";
+
+    if (establecimientos.length === 0) {
+        lista.innerHTML = "<p>No hay establecimientos registrados.</p>";
+        return;
+    }
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let encabezado = tabla.createTHead();
+    let filaEncabezado = encabezado.insertRow();
+    ["Nombre", "Logotipo", "Acciones"].forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    let cuerpoTabla = tabla.createTBody();
+
+    establecimientos.forEach((est, index) => {
+        let fila = cuerpoTabla.insertRow();
+
+        let celdaNombre = fila.insertCell(0);
+        celdaNombre.textContent = est.nombre;
+
+        let celdaLogo = fila.insertCell(1);
+        if (est.logoURL) {
+            celdaLogo.innerHTML = `<img src="${est.logoURL}" width="50">`;
+        } else {
+            celdaLogo.textContent = "Sin logotipo";
+        }
+
+        let celdaAcciones = fila.insertCell(2);
+        let botonEditar = document.createElement("button");
+        botonEditar.textContent = "✏️";
+        botonEditar.onclick = () => editarEstablecimiento(index);
+        botonEditar.style.marginRight = "10px"; // Añadir margen a la derecha del botón de editar
+        celdaAcciones.appendChild(botonEditar);
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "🗑️";
+        botonEliminar.onclick = () => eliminarEstablecimiento(index);
+        celdaAcciones.appendChild(botonEliminar);
+    });
+
+    lista.appendChild(tabla);
+}
+
+function editarEstablecimiento(index) {
+    const est = establecimientos[index];
+    
+    // Llenar el formulario con los datos actuales del establecimiento
+    document.getElementById('editStoreName').value = est.nombre;
+    document.getElementById('editStoreLogoUrl').value = est.logoURL || '';
+    document.getElementById('editStoreLogoFile').value = ''; // Limpiar el campo de archivo
+
+    // Guardar el índice del establecimiento que se está editando
+    document.getElementById('editStoreForm').dataset.index = index;
+
+    // Mostrar la sección de edición
+    showSection('editarEstablecimiento');
+}
+
+function guardarEdicionEstablecimiento() {
+    const index = document.getElementById('editStoreForm').dataset.index;
+    if (index === undefined || index === null) return;
+
+    const storeName = document.getElementById('editStoreName').value.trim();
+    const storeLogoUrl = document.getElementById('editStoreLogoUrl').value.trim();
+    const storeLogoFile = document.getElementById('editStoreLogoFile').files[0];
+
+    if (!storeName) {
+        alert("El nombre del establecimiento no puede estar vacío.");
+        return;
+    }
+
+    // Validar la URL del logotipo
+    if (storeLogoUrl && !isValidUrl(storeLogoUrl)) {
+        alert("La URL del logotipo no es válida.");
+        return;
+    }
+
+    // Validar el archivo del logotipo
+    if (storeLogoFile && !storeLogoFile.type.startsWith('image/')) {
+        alert("El archivo seleccionado no es una imagen válida.");
+        return;
+    }
+
+    // Actualizar el establecimiento
+    const est = establecimientos[index];
+    est.nombre = storeName;
+    est.logoURL = storeLogoUrl || (storeLogoFile ? URL.createObjectURL(storeLogoFile) : est.logoURL);
+
+    // Guardar los cambios en localStorage
+    localStorage.setItem("establecimientos", JSON.stringify(establecimientos));
+
+    // Mostrar mensaje de éxito
+    mostrarMensaje('Establecimiento actualizado correctamente.', "mensajeEstablecimiento");
+
+    // Volver a la sección de gestión de establecimientos
+    showSection('gestionEstablecimientos');
+    mostrarEstablecimientos();
+    updateStoreDropdown();
+}
+
+function eliminarEstablecimiento(index) {
+    if (confirm("¿Estás seguro de que quieres eliminar este establecimiento?")) {
+        establecimientos.splice(index, 1);
+        localStorage.setItem("establecimientos", JSON.stringify(establecimientos));
+        mostrarEstablecimientos();
+    }
+}
+
+        // Mostrar u ocultar el campo de cantidad según la unidad de medida
+        function toggleQuantityField() {
+            const unit = document.getElementById('productUnit').value;
+            const quantityContainer = document.getElementById('quantityContainer');
+            if (unit === 'kg' || unit === 'litro') {
+                quantityContainer.style.display = 'block';
+            } else {
+                quantityContainer.style.display = 'none';
+            }
+        }
+
+
+
+
+let categorias = JSON.parse(localStorage.getItem("categorias")) || [];
+
+document.getElementById('addCategoryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const categoryName = document.getElementById('categoryName').value.trim();
+
+    if (categorias.some(cat => cat.nombre === categoryName)) {
+        alert("Ya existe una categoría con ese nombre.");
+        return;
+    }
+
+    categorias.push({ nombre: categoryName });
+    localStorage.setItem("categorias", JSON.stringify(categorias));
+    mostrarMensaje('Categoría añadida correctamente.');
+    showSection('gestionCategorias');
+    mostrarCategorias();
+});
+
+function mostrarCategorias() {
+    const lista = document.getElementById("listaCategorias");
+    lista.innerHTML = "";
+
+    if (categorias.length === 0) {
+        lista.innerHTML = "<p>No hay categorías registradas.</p>";
+        return;
+    }
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let encabezado = tabla.createTHead();
+    let filaEncabezado = encabezado.insertRow();
+    ["Nombre", "Acciones"].forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    let cuerpoTabla = tabla.createTBody();
+
+    categorias.forEach((cat, index) => {
+        let fila = cuerpoTabla.insertRow();
+
+        let celdaNombre = fila.insertCell(0);
+        celdaNombre.textContent = cat.nombre;
+
+        let celdaAcciones = fila.insertCell(1);
+        let botonEditar = document.createElement("button");
+        botonEditar.textContent = "✏️";
+        botonEditar.onclick = () => editarCategoria(index);
+        celdaAcciones.appendChild(botonEditar);
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "🗑️";
+        botonEliminar.onclick = () => eliminarCategoria(index);
+        celdaAcciones.appendChild(botonEliminar);
+    });
+
+    lista.appendChild(tabla);
+}
+
+function editarCategoria(index) {
+    const cat = categorias[index];
+    const nuevoNombre = prompt("Introduce el nuevo nombre de la categoría:", cat.nombre);
+    if (nuevoNombre && nuevoNombre.trim() !== "") {
+        cat.nombre = nuevoNombre.trim();
+        localStorage.setItem("categorias", JSON.stringify(categorias));
+        mostrarCategorias();
+    }
+}
+
+function eliminarCategoria(index) {
+    if (confirm("¿Estás seguro de que quieres eliminar esta categoría?")) {
+        categorias.splice(index, 1);
+        localStorage.setItem("categorias", JSON.stringify(categorias));
+        mostrarCategorias();
+    }
+}
+
+        // Cargar información del producto seleccionado
+        function loadProductInfo(product) {
+            document.getElementById('nombreProducto').value = product.name;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productUnit').value = product.unit;
+            document.getElementById('productQuantity').value = product.quantity || '';
+            document.getElementById('barcode').value = product.barcode;
+            toggleQuantityField(); // Asegurar que el campo de cantidad esté visible si es necesario
+        }
+
+function toggleInfoNutricional() {
+    const infoNutricionalCampos = document.getElementById("infoNutricionalCampos");
+    if (infoNutricionalCampos.style.display === "none" || infoNutricionalCampos.style.display === "") {
+        infoNutricionalCampos.style.display = "block";
+    } else {
+        infoNutricionalCampos.style.display = "none";
+    }
+}
+		
+function guardarProducto() {
+    const establecimiento = document.getElementById("establecimiento").value;
+    const categoria = document.getElementById("categoria").value;
+    const nombre = document.getElementById("nombreProducto").value.trim();
+    const marca = document.getElementById("marca").value.trim();
+    const barcode = document.getElementById("barcode").value.trim();
+    const precio = parseFloat(document.getElementById("precio").value);
+    const unidad = document.getElementById("unidad").value;
+    const cantidad = (unidad === "kg" || unidad === "litro" || unidad === "pack") ? parseFloat(document.getElementById("cantidad").value) : 1;
+
+    if (!establecimiento || !categoria || !nombre || isNaN(precio) || precio < 0 || (unidad !== "unidad" && (!cantidad || cantidad <= 0))) {
+        alert("Por favor, complete todos los campos obligatorios correctamente.");
+        return;
+    }
+
+    const estId = establecimientos.find(e => e.nombre === establecimiento).id;
+    const fechaActual = new Date().toLocaleDateString("es-ES");
+
+    const nuevoProducto = {
+        nombre,
+        categoria,
+        marca,
+        barcode,
+        unidad,
+        cantidad,
+        fechaActualizacion: fechaActual,
+        [`Precio_${estId}`]: precio
+    };
+
+    if (unidad === "kg" || unidad === "litro" || unidad === "pack") {
+        nuevoProducto.cantidad = cantidad;
+    }
+
+    const infoNutricionalCampos = document.getElementById("infoNutricionalCampos");
+    if (infoNutricionalCampos.style.display === "block") {
+        nuevoProducto.infoNutricional = {
+            valorEnergeticoKj: parseFloat(document.getElementById("valorEnergeticoKj").value) || null,
+            valorEnergeticoKcal: parseFloat(document.getElementById("valorEnergeticoKcal").value) || null,
+            grasasTotales: parseFloat(document.getElementById("grasasTotales").value) || null,
+            grasasSaturadas: parseFloat(document.getElementById("grasasSaturadas").value) || null,
+            grasasNoSaturadas: parseFloat(document.getElementById("grasasNoSaturadas").value) || null,
+            colesterol: parseFloat(document.getElementById("colesterol").value) || null,
+            hidratosCarbono: parseFloat(document.getElementById("hidratosCarbono").value) || null,
+            azucares: parseFloat(document.getElementById("azucares").value) || null,
+            proteinas: parseFloat(document.getElementById("proteinas").value) || null,
+            fibra: parseFloat(document.getElementById("fibra").value) || null,
+            sal: parseFloat(document.getElementById("sal").value) || null,
+            sodio: parseFloat(document.getElementById("sodio").value) || null
+        };
+    }
+
+    productos.push(nuevoProducto);
+    localStorage.setItem("productos", JSON.stringify(productos));
+    mostrarMensaje("Producto guardado correctamente.", "mensajeProducto");
+    limpiarFormulario();
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
+    
+
+
+function buscarProductosLista() {
+    const query = document.getElementById("buscarProductoLista").value.toLowerCase();
+    const sugerencias = document.getElementById("sugerenciasProductosLista");
+    sugerencias.innerHTML = "";
+
+    if (query.length === 0) {
+        sugerencias.classList.add("hidden");
+        return;
+    }
+
+    const productosUnicos = [...new Set(productos.map(p => p.nombre))];
+    const resultados = productosUnicos.filter(nombre => nombre.toLowerCase().includes(query));
+
+    if (resultados.length > 0) {
+        sugerencias.classList.remove("hidden");
+        resultados.forEach(nombre => {
+            const li = document.createElement("li");
+            li.textContent = nombre;
+            li.onclick = () => añadirProductoALista(nombre);
+            sugerencias.appendChild(li);
+        });
+    } else {
+        sugerencias.classList.add("hidden");
+    }
+}
+
+function añadirProductoALista(nombreProducto) {
+    const listaCompra = document.getElementById("listaProductosCompra");
+    const inputBusqueda = document.getElementById("buscarProductoLista");
+
+    if (Array.from(listaCompra.children).some(li => li.dataset.nombre === nombreProducto)) {
+        alert("El producto ya está en la lista.");
+        return;
+    }
+
+    const productosEncontrados = productos.filter(p => p.nombre.toLowerCase() === nombreProducto.toLowerCase());
+    if (productosEncontrados.length === 0) {
+        alert("No se encontró el producto en ningún establecimiento.");
+        return;
+    }
+
+    // Filtrar productos con al menos un precio válido
+    const productosConPrecio = productosEncontrados.filter(p => 
+        establecimientos.some(est => p[`Precio_${est.id}`] !== null && p[`Precio_${est.id}`] !== undefined)
+    );
+    if (productosConPrecio.length === 0) {
+        alert("No hay precios disponibles para este producto en ningún establecimiento.");
+        return;
+    }
+
+    const productoMasEconomico = productosConPrecio.reduce((prev, curr) => {
+        const precioUnitarioPrev = Math.min(...establecimientos.map(est => prev[`Precio_${est.id}`] || Infinity));
+        const precioUnitarioCurr = Math.min(...establecimientos.map(est => curr[`Precio_${est.id}`] || Infinity));
+        return precioUnitarioPrev < precioUnitarioCurr ? prev : curr;
+    });
+
+    const estMasEconomico = establecimientos.find(est => 
+        productoMasEconomico[`Precio_${est.id}`] === Math.min(...establecimientos.map(e => productoMasEconomico[`Precio_${e.id}`] || Infinity))
+    );
+    const precio = productoMasEconomico[`Precio_${estMasEconomico.id}`];
+
+    // Verificar que precio no sea null o undefined
+    if (precio === null || precio === undefined) {
+        alert("No se pudo determinar un precio válido para este producto.");
+        return;
+    }
+
+    const li = document.createElement("li");
+    li.dataset.nombre = nombreProducto;
+    li.innerHTML = `
+        <input type="checkbox" onchange="marcarProducto(this)">
+        ${nombreProducto} 
+        <input type="number" min="1" value="1" class="cantidadProducto" placeholder="Cantidad">
+        <span class="precioUnitario">   
+            ${precio}€ ${productoMasEconomico.unidad !== 'unidad' ? `/ ${productoMasEconomico.cantidad}${productoMasEconomico.unidad === 'kg' ? 'g' : 'l'}` : ''}  
+            ( ${calcularPrecioUnitario(productoMasEconomico, precio)} ) 
+            <br><small>Actualizado: ${productoMasEconomico.fechaActualizacion || 'Sin fecha'}</small>
+        </span>
+        <button onclick="eliminarProductoDeLista(this)"><i class="bi bi-trash"></i></button>
+    `;
+    listaCompra.appendChild(li);
+
+    guardarListaCompra();
+    inputBusqueda.value = "";
+    document.getElementById("sugerenciasProductosLista").classList.add("hidden");
+}
+
+
+function marcarProducto(checkbox) {
+    const li = checkbox.parentElement;
+    const listaCompra = document.getElementById("listaProductosCompra");
+
+    if (checkbox.checked) {
+        listaCompra.appendChild(li); // Mover al final de la lista
+    } else {
+        listaCompra.insertBefore(li, listaCompra.firstChild); // Mover al principio de la lista
+    }
+
+    // Guardar la lista en localStorage
+    guardarListaCompra();
+}
+
+function calcularPrecioUnitario(producto, precio) {
+    if (precio === null || precio === undefined || isNaN(precio) || precio <= 0) {
+        return "Precio no disponible";
+    }
+
+    if (producto.unidad === "kg" || producto.unidad === "litro") {
+        const cantidad = parseFloat(producto.cantidad);
+        if (isNaN(cantidad) || cantidad <= 0) {
+            return "Cantidad inválida";
+        }
+        if (producto.unidad === "kg") {
+            return `${(precio / (cantidad / 1000)).toFixed(2)}€/kg`;
+        } else {
+            return `${(precio / cantidad).toFixed(2)}€/l`;
+        }
+    } else {
+        return `${precio.toFixed(2)}€/unidad`;
+    }
+}
+
+
+function eliminarProductoDeLista(boton) {
+    const li = boton.parentElement;
+    li.remove();
+
+    // Guardar la lista en localStorage
+    guardarListaCompra();
+}
+
+function mostrarComparacionPrecios() {
+    const filtroCategoria = document.getElementById("filtroCategoriaComparar").value;
+    const filtroNombre = document.getElementById("buscarProductoComparar").value.toLowerCase();
+    const tablaComparacion = document.getElementById("tablaComparacionPrecios");
+    tablaComparacion.innerHTML = "";
+
+    let productosFiltrados = productos.filter(p => 
+        (filtroCategoria === "Todas" || p.categoria === filtroCategoria) &&
+        p.nombre.toLowerCase().includes(filtroNombre)
+    );
+
+    const productosAgrupados = {};
+    productosFiltrados.forEach(prod => {
+        if (!productosAgrupados[prod.nombre]) {
+            productosAgrupados[prod.nombre] = [];
+        }
+        productosAgrupados[prod.nombre].push(prod);
+    });
+
+    const nombresOrdenados = Object.keys(productosAgrupados).sort();
+
+    const tabla = document.createElement("table");
+    const encabezado = tabla.createTHead();
+    const filaEncabezado = encabezado.insertRow();
+    ["Producto", "Establecimiento", "Precio", "Precio por Unidad/Kg/L"].forEach(texto => {
+        const celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    const cuerpoTabla = tabla.createTBody();
+
+    nombresOrdenados.forEach(nombre => {
+        const productosDelNombre = productosAgrupados[nombre];
+        let primeraFila = true;
+
+        establecimientos.forEach(est => {
+            const prod = productosDelNombre[0]; // Tomamos el primer producto como base
+            const precio = prod[`Precio_${est.id}`];
+            if (precio !== null && precio !== undefined) {
+                const fila = cuerpoTabla.insertRow();
+
+                if (primeraFila) {
+                    const celdaNombre = fila.insertCell(0);
+                    celdaNombre.textContent = nombre;
+                    celdaNombre.classList.add("nombre-producto");
+                    celdaNombre.rowSpan = establecimientos.filter(e => prod[`Precio_${e.id}`] !== null).length;
+                    primeraFila = false;
+                }
+
+                const celdaEstablecimiento = fila.insertCell(-1);
+                celdaEstablecimiento.innerHTML = est.logoURL ? `<img src="${est.logoURL}" class="icono-establecimiento">` : est.nombre;
+
+                const celdaPrecio = fila.insertCell(-1);
+                celdaPrecio.textContent = `${precio}€ ${prod.unidad !== 'unidad' ? `/ ${prod.cantidad}${prod.unidad === 'kg' ? 'g' : 'l'}` : ''}`;
+
+                const celdaPrecioUnidad = fila.insertCell(-1);
+                celdaPrecioUnidad.textContent = prod.unidad === "kg" ? `${(precio / (prod.cantidad / 1000)).toFixed(2)} €/kg` :
+                                               prod.unidad === "litro" ? `${(precio / prod.cantidad).toFixed(2)} €/l` :
+                                               `${precio} €/unidad`;
+            }
+        });
+    });
+
+    tablaComparacion.appendChild(tabla);
+}
+
+
+function calcularCompra() {
+    const listaCompra = JSON.parse(localStorage.getItem("listaCompra")) || [];
+    if (listaCompra.length === 0) {
+        alert("La lista de la compra está vacía.");
+        return;
+    }
+
+    const resultadosCompra = document.getElementById("resultadosCompra");
+    resultadosCompra.innerHTML = "";
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let thead = tabla.createTHead();
+    let filaEncabezado = thead.insertRow();
+    ["Producto", "Cantidad"].concat(establecimientos.map(est => est.nombre)).forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    let tbody = tabla.createTBody();
+
+    listaCompra.forEach(item => {
+        let fila = tbody.insertRow();
+        fila.insertCell(0).textContent = item.nombre;
+        fila.insertCell(1).textContent = `${item.cantidad} ${item.unidad || 'un'}`;
+
+        let preciosUnitarios = [];
+        establecimientos.forEach(est => {
+            const producto = productos.find(p => p.nombre.toLowerCase() === item.nombre.toLowerCase() && p[`Precio_${est.id}`] !== null);
+            let celda = fila.insertCell(-1);
+            if (producto) {
+                const precio = producto[`Precio_${est.id}`];
+                const precioUnitario = producto.unidad === "kg" ? precio / (producto.cantidad / 1000) :
+                                      producto.unidad === "litro" ? precio / producto.cantidad :
+                                      producto.unidad === "pack" ? precio / producto.cantidad : precio;
+                celda.innerHTML = `${(precioUnitario * item.cantidad).toFixed(2)}€<br><small>(${producto.fechaActualizacion})</small>`;
+                preciosUnitarios.push(precioUnitario);
+            } else {
+                celda.textContent = "-";
+                preciosUnitarios.push(Infinity);
+            }
+        });
+
+        const minimoPrecioUnitario = Math.min(...preciosUnitarios.filter(p => p !== Infinity));
+        Array.from(fila.cells).slice(2).forEach((celda, index) => {
+            const precioUnitario = preciosUnitarios[index];
+            if (precioUnitario === minimoPrecioUnitario && precioUnitario !== Infinity) {
+                celda.classList.add("precio-mas-economico");
+            }
+        });
+    });
+
+    resultadosCompra.appendChild(tabla);
+    showSection("DondeComprar");
+}
+
+function guardarListaCompra() {
+    const listaCompra = document.getElementById("listaProductosCompra").children;
+    const listaCompraData = [];
+
+    Array.from(listaCompra).forEach(li => {
+        const nombreProducto = li.dataset.nombre;
+        const cantidad = parseFloat(li.querySelector(".cantidadProducto").value);
+        const marcado = li.querySelector("input[type='checkbox']").checked;
+
+        listaCompraData.push({
+            nombre: nombreProducto,
+            cantidad: cantidad,
+            marcado: marcado
+        });
+    });
+
+    localStorage.setItem("listaCompra", JSON.stringify(listaCompraData));
+}
+
+function cargarListaCompra() {
+    const listaCompraData = JSON.parse(localStorage.getItem("listaCompra")) || [];
+    const listaCompra = document.getElementById("listaProductosCompra");
+    listaCompra.innerHTML = "";
+
+    listaCompraData.forEach(item => {
+        const productosEncontrados = productos.filter(p => p.nombre.toLowerCase() === item.nombre.toLowerCase());
+
+        if (productosEncontrados.length > 0) {
+            // Filtrar productos con precios válidos (> 0)
+            const productosConPrecio = productosEncontrados.filter(p => 
+                establecimientos.some(est => p[`Precio_${est.id}`] !== null && p[`Precio_${est.id}`] !== undefined && p[`Precio_${est.id}`] > 0)
+            );
+
+            if (productosConPrecio.length === 0) {
+                console.warn(`No hay precios válidos para ${item.nombre}`);
+                return; // Saltar este producto si no tiene precios válidos
+            }
+
+            // Encontrar el producto más económico basado en precio unitario
+            const productoMasEconomico = productosConPrecio.reduce((prev, curr) => {
+                const mejorPrecioPrev = Math.min(...establecimientos.map(est => 
+                    (prev[`Precio_${est.id}`] !== null && prev[`Precio_${est.id}`] > 0) ? prev[`Precio_${est.id}`] : Infinity
+                ));
+                const mejorPrecioCurr = Math.min(...establecimientos.map(est => 
+                    (curr[`Precio_${est.id}`] !== null && curr[`Precio_${est.id}`] > 0) ? curr[`Precio_${est.id}`] : Infinity
+                ));
+
+                const precioUnitarioPrev = prev.unidad === "kg" ? mejorPrecioPrev / (prev.cantidad / 1000) :
+                                          prev.unidad === "litro" ? mejorPrecioPrev / prev.cantidad : mejorPrecioPrev;
+                const precioUnitarioCurr = curr.unidad === "kg" ? mejorPrecioCurr / (curr.cantidad / 1000) :
+                                          curr.unidad === "litro" ? mejorPrecioCurr / curr.cantidad : mejorPrecioCurr;
+
+                return precioUnitarioPrev < precioUnitarioCurr ? prev : curr;
+            });
+
+            // Encontrar el establecimiento con el mejor precio
+            const estMasEconomico = establecimientos.find(est => 
+                productoMasEconomico[`Precio_${est.id}`] === Math.min(...establecimientos.map(e => 
+                    (productoMasEconomico[`Precio_${e.id}`] !== null && productoMasEconomico[`Precio_${e.id}`] > 0) ? productoMasEconomico[`Precio_${e.id}`] : Infinity
+                ))
+            );
+            const precio = productoMasEconomico[`Precio_${estMasEconomico.id}`];
+
+            if (precio === null || precio === undefined || precio <= 0) {
+                console.warn(`Precio inválido para ${item.nombre} en ${estMasEconomico?.nombre || 'desconocido'}`);
+                return;
+            }
+
+            const li = document.createElement("li");
+            li.dataset.nombre = item.nombre;
+            li.innerHTML = `
+                <input type="checkbox" onchange="marcarProducto(this)" ${item.marcado ? "checked" : ""}>
+                ${item.nombre} 
+                <input type="number" min="1" value="${item.cantidad}" class="cantidadProducto" placeholder="Cantidad">
+                <span class="precioUnitario">   
+                    ${precio}€ ${productoMasEconomico.unidad !== 'unidad' ? `/ ${productoMasEconomico.cantidad}${productoMasEconomico.unidad === 'kg' ? 'g' : 'l'}` : ''}  
+                    ( ${calcularPrecioUnitario(productoMasEconomico, precio)} ) 
+                    <br><small>Actualizado: ${productoMasEconomico.fechaActualizacion || 'Sin fecha'}</small>
+                </span>
+                <button onclick="eliminarProductoDeLista(this)"><i class="bi bi-trash"></i></button>
+            `;
+            listaCompra.appendChild(li);
+
+            if (item.marcado) {
+                listaCompra.appendChild(li); // Mover al final si está marcado
+            }
+        }
+    });
+}
+
+function mostrarResultadosCompra(resultados) {
+    const resultadosCompra = document.getElementById("resultadosCompra");
+    resultadosCompra.innerHTML = "";
+
+    let mensajeCompartir = "Lista de la compra (opción más económica):\n\n";
+
+    for (const [establecimiento, productos] of Object.entries(resultados)) {
+        const tabla = document.createElement("table");
+        tabla.style.width = "100%";
+        tabla.style.borderCollapse = "collapse";
+        tabla.style.marginBottom = "20px";
+
+        const encabezado = tabla.createTHead();
+        const filaEncabezado = encabezado.insertRow();
+        filaEncabezado.style.backgroundColor = "#007bff";
+        filaEncabezado.style.color = "white";
+        ["Producto", "Cantidad", "Precio Unitario", "Precio Total"].forEach(texto => {
+            const celda = document.createElement("th");
+            celda.textContent = texto;
+            celda.style.padding = "12px";
+            celda.style.borderBottom = "2px solid #ddd";
+            filaEncabezado.appendChild(celda);
+        });
+
+        const cuerpoTabla = tabla.createTBody();
+        let totalEstablecimiento = 0;
+
+        productos.forEach(prod => {
+            const fila = cuerpoTabla.insertRow();
+            fila.style.borderBottom = "1px solid #ddd";
+            fila.insertCell(0).textContent = prod.nombre;
+            fila.insertCell(1).textContent = `${prod.cantidad} ${prod.unidad}`;
+            fila.insertCell(2).textContent = `${prod.precioUnitario}€/${prod.unidad === "kg" ? "kg" : prod.unidad === "litro" ? "l" : "unidad"}`;
+            fila.insertCell(3).textContent = `${prod.precioTotal}€`;
+            totalEstablecimiento += parseFloat(prod.precioTotal);
+
+            Array.from(fila.cells).forEach(cell => cell.style.padding = "12px");
+        });
+
+        const filaTotal = cuerpoTabla.insertRow();
+        filaTotal.classList.add("total-row");
+        const celdaTotalTexto = filaTotal.insertCell(0);
+        celdaTotalTexto.colSpan = 3;
+        celdaTotalTexto.textContent = "Total de la compra";
+        celdaTotalTexto.style.textAlign = "right";
+        celdaTotalTexto.style.padding = "12px";
+        const celdaTotalValor = filaTotal.insertCell(1);
+        celdaTotalValor.textContent = `${totalEstablecimiento.toFixed(2)}€`;
+        celdaTotalValor.style.padding = "12px";
+
+        mensajeCompartir += `${establecimiento}:\n`;
+        productos.forEach(prod => {
+            mensajeCompartir += `- ${prod.nombre}: ${prod.cantidad} ${prod.unidad} - ${prod.precioTotal}€\n`;
+        });
+        mensajeCompartir += `Total: ${totalEstablecimiento.toFixed(2)}€\n\n`;
+
+        resultadosCompra.appendChild(document.createElement("h3")).textContent = establecimiento;
+        resultadosCompra.appendChild(tabla);
+    }
+
+    const botonCompartir = document.createElement("button");
+    botonCompartir.classList.add("btn-submit");
+    botonCompartir.innerHTML = '<i class="bi bi-share"></i> Compartir';
+    botonCompartir.onclick = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Lista de la Compra',
+                text: mensajeCompartir,
+            }).catch(error => console.log('Error al compartir:', error));
+        } else {
+            alert("Tu navegador no soporta la función de compartir. Aquí está el texto:\n\n" + mensajeCompartir);
+        }
+    };
+    resultadosCompra.appendChild(botonCompartir);
+
+    // Nueva tabla con costos totales
+    const tablaCostosTotales = document.createElement("table");
+    tablaCostosTotales.style.width = "100%";
+    tablaCostosTotales.style.borderCollapse = "collapse";
+    tablaCostosTotales.style.marginTop = "20px";
+
+    const encabezadoCostos = tablaCostosTotales.createTHead();
+    const filaEncabezadoCostos = encabezadoCostos.insertRow();
+    filaEncabezadoCostos.style.backgroundColor = "#007bff";
+    filaEncabezadoCostos.style.color = "white";
+    ["Criterio/Establecimiento", "Costo Total"].forEach(texto => {
+        const celda = document.createElement("th");
+        celda.textContent = texto;
+        celda.style.padding = "12px";
+        celda.style.borderBottom = "2px solid #ddd";
+        filaEncabezadoCostos.appendChild(celda);
+    });
+
+    const cuerpoTablaCostos = tablaCostosTotales.createTBody();
+
+    // Obtener la lista de productos de la compra
+    const listaCompra = Array.from(document.getElementById("listaProductosCompra").children)
+        .map(li => ({
+            nombre: li.dataset.nombre,
+            cantidad: parseFloat(li.querySelector(".cantidadProducto").value)
+        }));
+
+    // Calcular costo total yendo al establecimiento más barato para cada producto
+    let costoTotalMinimo = 0;
+    listaCompra.forEach(item => {
+        const productosEncontrados = productos.filter(p => 
+            p.nombre.toLowerCase() === item.nombre.toLowerCase()
+        );
+        if (productosEncontrados.length > 0) {
+            const productosConPrecio = productosEncontrados.filter(p => 
+                establecimientos.some(est => p[`Precio_${est.id}`] > 0)
+            );
+            if (productosConPrecio.length > 0) {
+                const masEconomico = productosConPrecio.reduce((prev, curr) => {
+                    const mejorPrecioPrev = Math.min(...establecimientos.map(est => 
+                        (prev[`Precio_${est.id}`] > 0) ? prev[`Precio_${est.id}`] : Infinity
+                    ));
+                    const mejorPrecioCurr = Math.min(...establecimientos.map(est => 
+                        (curr[`Precio_${est.id}`] > 0) ? curr[`Precio_${est.id}`] : Infinity
+                    ));
+                    const precioUnitarioPrev = prev.unidad === "kg" ? mejorPrecioPrev / (prev.cantidad / 1000) :
+                        prev.unidad === "litro" ? mejorPrecioPrev / prev.cantidad : mejorPrecioPrev;
+                    const precioUnitarioCurr = curr.unidad === "kg" ? mejorPrecioCurr / (curr.cantidad / 1000) :
+                        curr.unidad === "litro" ? mejorPrecioCurr / curr.cantidad : mejorPrecioCurr;
+                    return precioUnitarioPrev < precioUnitarioCurr ? prev : curr;
+                });
+
+                const mejorPrecio = Math.min(...establecimientos.map(est => 
+                    (masEconomico[`Precio_${est.id}`] > 0) ? masEconomico[`Precio_${est.id}`] : Infinity
+                ));
+                const precioUnitario = masEconomico.unidad === "kg" ? mejorPrecio / (masEconomico.cantidad / 1000) :
+                    masEconomico.unidad === "litro" ? mejorPrecio / masEconomico.cantidad : mejorPrecio;
+
+                if (mejorPrecio !== Infinity) {
+                    costoTotalMinimo += precioUnitario * item.cantidad;
+                }
+            }
+        }
+    });
+
+    const filaTodos = cuerpoTablaCostos.insertRow();
+    filaTodos.insertCell(0).textContent = "Todos los establecimientos";
+    filaTodos.insertCell(1).textContent = `${costoTotalMinimo.toFixed(2)}€`;
+    Array.from(filaTodos.cells).forEach(cell => cell.style.padding = "12px");
+
+    // Calcular costo total por establecimiento (toda la compra en un solo lugar)
+    establecimientos.forEach(est => {
+        let costoEstablecimiento = 0;
+        let todosDisponibles = true;
+
+        listaCompra.forEach(item => {
+            const productoEnEst = productos.find(p => 
+                p.nombre.toLowerCase() === item.nombre.toLowerCase() && 
+                p[`Precio_${est.id}`] > 0
+            );
+            if (productoEnEst) {
+                const precioUnitario = productoEnEst.unidad === "kg" ? productoEnEst[`Precio_${est.id}`] / (productoEnEst.cantidad / 1000) :
+                    productoEnEst.unidad === "litro" ? productoEnEst[`Precio_${est.id}`] / productoEnEst.cantidad : 
+                    productoEnEst[`Precio_${est.id}`];
+                costoEstablecimiento += precioUnitario * item.cantidad;
+            } else {
+                todosDisponibles = false;
+            }
+        });
+
+        const filaEst = cuerpoTablaCostos.insertRow();
+        filaEst.insertCell(0).textContent = est.nombre;
+        filaEst.insertCell(1).textContent = todosDisponibles ? `${costoEstablecimiento.toFixed(2)}€` : "No se dispone del precio de todos los productos de la lista";
+        Array.from(filaEst.cells).forEach(cell => cell.style.padding = "12px");
+    });
+
+    resultadosCompra.appendChild(document.createElement("h3")).textContent = "Comparación de Costos Totales";
+    resultadosCompra.appendChild(tablaCostosTotales);
+}
+
+function exportarDatos() {
+    const datos = {
+        establecimientos: establecimientos,
+        productos: productos
+    };
+
+    if (productos.length === 0 && establecimientos.length === 0) {
+        mostrarMensaje("No hay datos para exportar.", "mensajeGestionBaseDatos");
+        return;
+    }
+
+    try {
+        const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'datos_exportados.json';
+        a.click();
+        URL.revokeObjectURL(url);
+
+        mostrarMensaje("Datos exportados correctamente.", "mensajeGestionBaseDatos");
+    } catch (error) {
+        mostrarMensaje("Error al exportar los datos.", "mensajeGestionBaseDatos");
+    }
+}
+
+function importarDatos(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const datos = JSON.parse(e.target.result);
+            if (!Array.isArray(datos.productos) || !Array.isArray(datos.establecimientos)) {
+                throw new Error("Formato inválido: 'productos' o 'establecimientos' no son arrays.");
+            }
+            productos = datos.productos.filter(p => p && p.nombre && typeof p.nombre === 'string');
+            establecimientos = datos.establecimientos.filter(e => e && e.id && e.nombre);
+            localStorage.setItem("productos", JSON.stringify(productos));
+            localStorage.setItem("establecimientos", JSON.stringify(establecimientos));
+            mostrarMensaje("Datos importados correctamente.", "mensajeGestionBaseDatos");
+            mostrarProductosFiltrados();
+            mostrarEstablecimientos();
+            updateStoreDropdown();
+        } catch (error) {
+            mostrarMensaje(`Error al importar: ${error.message}`, "mensajeGestionBaseDatos");
+        }
+    };
+    reader.readAsText(file);
+}
+
+function mostrarProductosSimilares() {
+    const nombre = document.getElementById("nombreProducto").value.toLowerCase().trim();
+    const listaSimilares = document.getElementById("productosSimilares");
+    listaSimilares.innerHTML = "";
+
+    if (!nombre) {
+        listaSimilares.classList.add("hidden");
+        return;
+    }
+
+    const productosSimilares = productos.filter(p => 
+        p && p.nombre && typeof p.nombre === 'string' && p.nombre.toLowerCase().includes(nombre)
+    );
+
+    if (productosSimilares.length > 0) {
+        listaSimilares.classList.remove("hidden");
+        productosSimilares.forEach(prod => {
+            const li = document.createElement("li");
+            li.textContent = `${prod.nombre} (${prod.marca || 'Sin marca'})`;
+            li.onclick = () => cargarDatosProducto(prod);
+            listaSimilares.appendChild(li);
+        });
+    } else {
+        listaSimilares.classList.add("hidden");
+    }
+}
+
+function cargarDatosProducto(producto) {
+    document.getElementById("nombreProducto").value = producto.nombre || "";
+    document.getElementById("categoria").value = producto.categoria || "";
+    document.getElementById("marca").value = producto.marca || "";
+    document.getElementById("barcode").value = producto.barcode || "";
+    document.getElementById("precio").value = "";
+    document.getElementById("unidad").value = producto.unidad || "unidad";
+
+    // Seleccionar el primer establecimiento con precio definido
+    const estConPrecio = establecimientos.find(est => producto[`Precio_${est.id}`] !== null && producto[`Precio_${est.id}`] !== undefined);
+    if (estConPrecio) {
+        document.getElementById("establecimiento").value = estConPrecio.nombre;
+        document.getElementById("precio").value = producto[`Precio_${estConPrecio.id}`] || ""; // Corrección aquí
+    } else {
+        document.getElementById("establecimiento").value = "";
+    }
+
+    // Mostrar cantidad si aplica
+	if (producto.unidad === "kg" || producto.unidad === "litro" || producto.unidad === "pack") {
+		document.getElementById("cantidadGrupoActualizar").classList.remove("hidden");
+		document.getElementById("cantidadActualizar").value = producto.cantidad;
+	} else {
+		document.getElementById("cantidadGrupoActualizar").classList.add("hidden");
+	}
+
+    // Mostrar información nutricional si aplica
+    mostrarInfoNutricional();
+    if (producto.infoNutricional) {
+        document.getElementById("infoNutricionalCampos").style.display = "block";
+        document.getElementById("valorEnergeticoKj").value = producto.infoNutricional.valorEnergeticoKj || "";
+        document.getElementById("valorEnergeticoKcal").value = producto.infoNutricional.valorEnergeticoKcal || "";
+        document.getElementById("grasasTotales").value = producto.infoNutricional.grasasTotales || "";
+        document.getElementById("grasasSaturadas").value = producto.infoNutricional.grasasSaturadas || "";
+        document.getElementById("grasasNoSaturadas").value = producto.infoNutricional.grasasNoSaturadas || "";
+        document.getElementById("colesterol").value = producto.infoNutricional.colesterol || "";
+        document.getElementById("hidratosCarbono").value = producto.infoNutricional.hidratosCarbono || "";
+        document.getElementById("azucares").value = producto.infoNutricional.azucares || "";
+        document.getElementById("proteinas").value = producto.infoNutricional.proteinas || "";
+        document.getElementById("fibra").value = producto.infoNutricional.fibra || "";
+        document.getElementById("sal").value = producto.infoNutricional.sal || "";
+        document.getElementById("sodio").value = producto.infoNutricional.sodio || "";
+    } else {
+        document.getElementById("infoNutricionalCampos").style.display = "none";
+    }
+
+    document.getElementById("productosSimilares").classList.add("hidden");
+}
+
+function completarCamposConProducto(producto) {
+    document.getElementById("nombreProducto").value = producto.nombre || "";
+    document.getElementById("categoria").value = producto.categoria || "";
+    document.getElementById("precio").value = producto.precio || "";
+    document.getElementById("unidad").value = producto.unidad || "unidad";
+	if (producto.unidad === "kg" || producto.unidad === "litro" || producto.unidad === "pack") {
+		document.getElementById("cantidadGrupoActualizar").classList.remove("hidden");
+		document.getElementById("cantidadActualizar").value = producto.cantidad;
+	} else {
+		document.getElementById("cantidadGrupoActualizar").classList.add("hidden");
+	}
+    document.getElementById("nombreProducto").oninput = limpiarCamposAutocompletados;
+}
+
+function limpiarCamposAutocompletados() {
+        document.getElementById("categoria").value = "";
+        document.getElementById("precio").value = "";
+        document.getElementById("unidad").value = "unidad";
+        document.getElementById("cantidadGrupo").classList.add("hidden");
+        document.getElementById("cantidad").value = "";
+}
+	
+function limpiarFormularios() {
+    document.querySelectorAll("input").forEach(input => input.value = "");
+    document.getElementById("unidad").value = "unidad";
+    document.getElementById("cantidadGrupo").classList.add("hidden");
+}
+
+function ocultarVistas() {
+    document.getElementById("agregarProducto").classList.add("hidden");
+    document.getElementById("compararPrecios").classList.add("hidden");
+}
+
+
+// Modificar mostrarProductosFiltrados para calcular precio por unidad en packs
+function mostrarProductosFiltrados() {
+    const filtroEstablecimiento = document.getElementById("filtroEstablecimiento").value;
+    const filtroCategoria = document.getElementById("filtroCategoria").value;
+    const buscarProducto = document.getElementById("buscarProducto").value.toLowerCase().trim();
+    const lista = document.getElementById("listaProductosFiltrados");
+    lista.innerHTML = "";
+
+    let productosFiltrados = productos.filter(prod => {
+        const cumpleEstablecimiento = filtroEstablecimiento === "Todos" || 
+            establecimientos.some(est => est.nombre === filtroEstablecimiento && prod[`Precio_${est.id}`] !== null);
+        const cumpleCategoria = filtroCategoria === "Todas" || prod.categoria === filtroCategoria;
+        const cumpleNombre = !buscarProducto || prod.nombre.toLowerCase().includes(buscarProducto);
+        return cumpleEstablecimiento && cumpleCategoria && cumpleNombre;
+    });
+
+    if (productosFiltrados.length === 0) {
+        lista.innerHTML = "<p>No hay productos que cumplan los criterios.</p>";
+        return;
+    }
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let thead = tabla.createTHead();
+    let filaEncabezado1 = thead.insertRow();
+    let filaEncabezado2 = thead.insertRow();
+
+    ["Nombre", "Marca", "Valoración Saludable"].forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        celda.rowSpan = 2;
+        filaEncabezado1.appendChild(celda);
+    });
+
+    establecimientos.forEach(est => {
+        let celdaEst = document.createElement("th");
+        celdaEst.colSpan = 2;
+        celdaEst.innerHTML = est.logoURL ? `<img src="${est.logoURL}" width="30">` : est.nombre;
+        filaEncabezado1.appendChild(celdaEst);
+
+        let celdaPrecio = document.createElement("th");
+        celdaPrecio.textContent = "Precio";
+        filaEncabezado2.appendChild(celdaPrecio);
+
+        let celdaUnidad = document.createElement("th");
+        celdaUnidad.textContent = "Unidad";
+        filaEncabezado2.appendChild(celdaUnidad);
+    });
+
+    let celdaAcciones = document.createElement("th");
+    celdaAcciones.textContent = "Acciones";
+    celdaAcciones.rowSpan = 2;
+    filaEncabezado1.appendChild(celdaAcciones);
+
+    let cuerpoTabla = tabla.createTBody();
+
+    productosFiltrados.forEach((prod) => {
+        let fila = cuerpoTabla.insertRow();
+
+        fila.insertCell(0).textContent = prod.nombre;
+        fila.insertCell(1).textContent = prod.marca || "";
+        fila.insertCell(2).innerHTML = calcularValoracion(prod.infoNutricional, prod.categoria);
+
+        let preciosUnitarios = establecimientos.map(est => {
+            const precio = prod[`Precio_${est.id}`];
+            if (precio === null || precio === undefined || !prod.cantidad || prod.cantidad <= 0) return Infinity;
+            return prod.unidad === "kg" ? precio / (prod.cantidad / 1000) :
+                   prod.unidad === "litro" ? precio / prod.cantidad :
+                   prod.unidad === "pack" ? precio / prod.cantidad : precio;
+        });
+        const minimoPrecioUnitario = Math.min(...preciosUnitarios.filter(p => p !== Infinity));
+
+        establecimientos.forEach(est => {
+            const precio = prod[`Precio_${est.id}`];
+            let celdaPrecio = fila.insertCell(-1);
+            let celdaUnidad = fila.insertCell(-1);
+
+            if (precio !== null && precio !== undefined) {
+                const unidadText = prod.unidad === "kg" ? `${prod.cantidad}g` :
+                                   prod.unidad === "litro" ? `${prod.cantidad}l` :
+                                   prod.unidad === "pack" ? `${prod.cantidad}un` : '';
+                celdaPrecio.innerHTML = `${precio}€ ${unidadText ? `/ ${unidadText}` : ''}<br><small>(${prod.fechaActualizacion})</small>`;
+                const precioUnitario = prod.unidad === "kg" ? precio / (prod.cantidad / 1000) :
+                                      prod.unidad === "litro" ? precio / prod.cantidad :
+                                      prod.unidad === "pack" ? precio / prod.cantidad : precio;
+                celdaUnidad.textContent = `${precioUnitario.toFixed(2)}€/${prod.unidad === "kg" ? "kg" : prod.unidad === "litro" ? "l" : "unidad"}`;
+
+                if (precioUnitario === minimoPrecioUnitario) {
+                    celdaPrecio.classList.add("precio-mas-economico");
+                    celdaUnidad.classList.add("precio-mas-economico");
+                }
+            } else {
+                celdaPrecio.textContent = "-";
+                celdaUnidad.textContent = "-";
+            }
+        });
+
+        let celdaAcciones = fila.insertCell(-1);
+        let botonEditar = document.createElement("button");
+        botonEditar.innerHTML = '<i class="bi bi-pencil"></i>';
+        botonEditar.style.marginRight = "10px";
+        const index = productos.indexOf(prod);
+        botonEditar.onclick = () => cargarProductoParaEdicion(index);
+        celdaAcciones.appendChild(botonEditar);
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.innerHTML = '<i class="bi bi-trash"></i>';
+        botonEliminar.onclick = () => eliminarProducto(index);
+        celdaAcciones.appendChild(botonEliminar);
+    });
+
+    lista.appendChild(tabla);
+}
+
+
+
+
+function cargarEstablecimientosEnFiltro() {
+    const filtroEstablecimiento = document.getElementById("filtroEstablecimiento");
+    filtroEstablecimiento.innerHTML = "<option value='Todos'>Todos</option>";
+    establecimientos.forEach(est => {
+        const option = document.createElement("option");
+        option.value = est.nombre;
+        option.textContent = est.nombre;
+        filtroEstablecimiento.appendChild(option);
+    });
+}
+
+
+function mostrarCompararPrecios() {
+    ocultarVistas();
+    limpiarFormularios();
+    document.getElementById("compararPrecios").classList.remove("hidden");
+}
+
+        function agregarEstablecimiento() {
+            const nombre = document.getElementById("nombreEstablecimiento").value;
+            const logoURL = document.getElementById("logoURL").value;
+            
+            if (nombre) {
+                establecimientos.push({ nombre, logoURL });
+                localStorage.setItem("establecimientos", JSON.stringify(establecimientos));
+                actualizarListaEstablecimientos();
+                mostrarMensaje("Establecimiento añadido");
+            }
+        }
+
+        function actualizarListaEstablecimientos() {
+            const select = document.getElementById("establecimiento");
+            select.innerHTML = "";
+            establecimientos.forEach(est => {
+                const option = document.createElement("option");
+                option.value = est.nombre;
+                option.textContent = est.nombre;
+                select.appendChild(option);
+            });
+        }
+
+function mostrarCantidad() {
+    const unidad = document.getElementById("unidad").value;
+    const cantidadGrupo = document.getElementById("cantidadGrupo");
+    const cantidadLabel = document.getElementById("cantidadLabel");
+
+    if (unidad === "kg" || unidad === "litro" || unidad === "pack") {
+        cantidadGrupo.classList.remove("hidden");
+        cantidadLabel.textContent = unidad === "kg" ? "(kg)" : unidad === "litro" ? "(litros)" : "(unidades)";
+    } else {
+        cantidadGrupo.classList.add("hidden");
+    }
+}
+
+// Modificación en cargarProductoParaEdicion para incluir los nuevos campos
+function cargarProductoParaEdicion(index) {
+    const producto = productos[index];
+	
+	    const marcaActualizar = document.getElementById("marcaActualizar");
+
+    if (!marcaActualizar) {
+        console.error("El elemento 'marcaActualizar' no se encontró en el DOM.");
+        return;
+    }
+
+    marcaActualizar.value = producto.marca || "";
+	
+	
+    const establecimientoSelect = document.getElementById("establecimientoActualizar");
+    const categoriaSelect = document.getElementById("categoriaActualizar");
+
+    // Llenar el desplegable de establecimientos
+    establecimientoSelect.innerHTML = '<option value="" selected disabled>Escoja establecimiento</option>';
+    establecimientos.forEach(est => {
+        const option = document.createElement("option");
+        option.value = est.nombre;
+        option.textContent = est.nombre;
+        establecimientoSelect.appendChild(option);
+    });
+
+    // Seleccionar el primer establecimiento con precio definido
+    let primerEstablecimientoConPrecio = null;
+    for (const est of establecimientos) {
+        if (producto[`Precio_${est.id}`] !== null && producto[`Precio_${est.id}`] !== undefined) {
+            primerEstablecimientoConPrecio = est;
+            break;
+        }
+    }
+    establecimientoSelect.value = primerEstablecimientoConPrecio ? primerEstablecimientoConPrecio.nombre : "";
+
+    // Llenar los demás campos con datos generales del producto
+    document.getElementById("nombreProductoActualizar").value = producto.nombre;
+    document.getElementById("marcaActualizar").value = producto.marca || "";
+    document.getElementById("barcodeActualizar").value = producto.barcode || "";
+    categoriaSelect.value = producto.categoria;
+    document.getElementById("unidadActualizar").value = producto.unidad;
+
+    // Mostrar cantidad si la unidad es kg o litro
+	if (producto.unidad === "kg" || producto.unidad === "litro" || producto.unidad === "pack") {
+		document.getElementById("cantidadGrupoActualizar").classList.remove("hidden");
+		document.getElementById("cantidadActualizar").value = producto.cantidad;
+	} else {
+		document.getElementById("cantidadGrupoActualizar").classList.add("hidden");
+	}
+
+    // Mostrar el precio inicial del primer establecimiento con precio
+    const precioInicial = primerEstablecimientoConPrecio ? producto[`Precio_${primerEstablecimientoConPrecio.id}`] : "";
+    document.getElementById("precioActualizar").value = precioInicial !== null && precioInicial !== undefined ? precioInicial : "";
+
+    // Mostrar campos de información nutricional si corresponde
+    const categoriasConInfoNutricional = ["alimentacion", "lacteos", "bebidas", "carnes_pescados", "panaderia_reposteria", "frutas_verduras", "cereales_legumbres", "snacks"];
+    if (categoriasConInfoNutricional.includes(producto.categoria)) {
+        document.getElementById("infoNutricionalGrupoActualizar").classList.remove("hidden");
+        document.getElementById("grasasTotalesActualizar").value = producto.infoNutricional?.grasasTotales || "";
+        document.getElementById("grasasNoSaturadasActualizar").value = producto.infoNutricional?.grasasNoSaturadas || "";
+        document.getElementById("colesterolActualizar").value = producto.infoNutricional?.colesterol || "";
+        document.getElementById("sodioActualizar").value = producto.infoNutricional?.sodio || "";
+        document.getElementById("valorEnergeticoKjActualizar").value = producto.infoNutricional?.valorEnergeticoKj || "";
+        document.getElementById("valorEnergeticoKcalActualizar").value = producto.infoNutricional?.valorEnergeticoKcal || "";
+        document.getElementById("grasasSaturadasActualizar").value = producto.infoNutricional?.grasasSaturadas || "";
+        document.getElementById("hidratosCarbonoActualizar").value = producto.infoNutricional?.hidratosCarbono || "";
+        document.getElementById("azucaresActualizar").value = producto.infoNutricional?.azucares || "";
+        document.getElementById("proteinasActualizar").value = producto.infoNutricional?.proteinas || "";
+        document.getElementById("fibraActualizar").value = producto.infoNutricional?.fibra || "";
+        document.getElementById("salActualizar").value = producto.infoNutricional?.sal || "";
+    } else {
+        document.getElementById("infoNutricionalGrupoActualizar").classList.add("hidden");
+    }
+
+    // Guardar el índice del producto que se está editando
+    document.getElementById("formActualizarProducto").dataset.index = index;
+
+    // Evento para actualizar el precio al cambiar el establecimiento
+    establecimientoSelect.onchange = function() {
+        const estSeleccionado = establecimientos.find(e => e.nombre === this.value);
+        const precio = producto[`Precio_${estSeleccionado.id}`];
+        document.getElementById("precioActualizar").value = precio !== null && precio !== undefined ? precio : "";
+    };
+
+    // Mostrar la sección de actualización
+    showSection('ActualizarProducto');
+}
+
+// Modificación en actualizarProducto para guardar los nuevos campos
+function actualizarProducto() {
+    const index = document.getElementById("formActualizarProducto").dataset.index;
+    if (index === undefined || index === null) {
+        alert("No se ha seleccionado un producto para actualizar.");
+        return;
+    }
+
+    const nombre = document.getElementById("nombreProductoActualizar").value.trim();
+    const establecimiento = document.getElementById("establecimientoActualizar").value;
+    const categoria = document.getElementById("categoriaActualizar").value;
+    const marca = document.getElementById("marcaActualizar").value.trim();
+    const barcode = document.getElementById("barcodeActualizar").value.trim();
+    const precio = parseFloat(document.getElementById("precioActualizar").value);
+    const unidad = document.getElementById("unidadActualizar").value;
+    const cantidad = (unidad === "kg" || unidad === "litro" || unidad === "pack") ? parseFloat(document.getElementById("cantidadActualizar").value) : 1;
+
+    if (!nombre || !establecimiento || !categoria || isNaN(precio) || precio < 0 || (unidad !== "unidad" && (!cantidad || cantidad <= 0))) {
+        alert("Por favor, rellene todos los campos correctamente.");
+        return;
+    }
+
+    const fechaActual = new Date().toLocaleDateString("es-ES");
+    const estId = establecimientos.find(e => e.nombre === establecimiento).id;
+
+    // Actualizar el producto existente
+    const producto = productos[index];
+    producto.nombre = nombre;
+    producto.categoria = categoria;
+    producto.marca = marca;
+    producto.barcode = barcode;
+    producto.unidad = unidad;
+    producto.cantidad = cantidad;
+    producto.fechaActualizacion = fechaActual;
+    producto[`Precio_${estId}`] = precio;
+
+    // Actualizar el precio en todos los establecimientos
+    establecimientos.forEach(est => {
+        if (producto[`Precio_${est.id}`] !== null && producto[`Precio_${est.id}`] !== undefined) {
+            producto[`Precio_${est.id}`] = precio; // Actualizar el precio en todos los establecimientos
+        }
+    });
+
+    const infoNutricionalCampos = document.getElementById("infoNutricionalCamposActualizar");
+    if (infoNutricionalCampos.style.display === "block") {
+        producto.infoNutricional = {
+            valorEnergeticoKj: parseFloat(document.getElementById("valorEnergeticoKjActualizar").value) || null,
+            valorEnergeticoKcal: parseFloat(document.getElementById("valorEnergeticoKcalActualizar").value) || null,
+            grasasTotales: parseFloat(document.getElementById("grasasTotalesActualizar").value) || null,
+            grasasSaturadas: parseFloat(document.getElementById("grasasSaturadasActualizar").value) || null,
+            grasasNoSaturadas: parseFloat(document.getElementById("grasasNoSaturadasActualizar").value) || null,
+            colesterol: parseFloat(document.getElementById("colesterolActualizar").value) || null,
+            hidratosCarbono: parseFloat(document.getElementById("hidratosCarbonoActualizar").value) || null,
+            azucares: parseFloat(document.getElementById("azucaresActualizar").value) || null,
+            proteinas: parseFloat(document.getElementById("proteinasActualizar").value) || null,
+            fibra: parseFloat(document.getElementById("fibraActualizar").value) || null,
+            sal: parseFloat(document.getElementById("salActualizar").value) || null,
+            sodio: parseFloat(document.getElementById("sodioActualizar").value) || null
+        };
+    }
+
+    // Guardar los cambios en localStorage
+    localStorage.setItem("productos", JSON.stringify(productos));
+    mostrarProductosFiltrados();
+    mostrarMensaje("Producto actualizado correctamente.", "mensaje");
+    showSection('verProductos');
+}
+
+// Nueva función para mostrar/ocultar información nutricional en "Actualizar Producto"
+function mostrarInfoNutricionalActualizar() {
+    const categoria = document.getElementById("categoriaActualizar").value;
+    const infoNutricionalGrupo = document.getElementById("infoNutricionalGrupoActualizar");
+
+    // Lista expandida de categorías con información nutricional
+    const categoriasConInfoNutricional = [
+        "alimentacion",
+        "lacteos",
+        "bebidas",
+        "carnes_pescados",
+        "panaderia_reposteria",
+        "frutas_verduras",
+        "cereales_legumbres",
+        "snacks"
+    ];
+
+    if (categoriasConInfoNutricional.includes(categoria)) {
+        infoNutricionalGrupo.classList.remove("hidden");
+    } else {
+        infoNutricionalGrupo.classList.add("hidden");
+    }
+}
+
+// Nueva función para toggle de información nutricional en "Actualizar Producto"
+function toggleInfoNutricionalActualizar() {
+    const infoNutricionalCampos = document.getElementById("infoNutricionalCamposActualizar");
+    if (infoNutricionalCampos.style.display === "none" || infoNutricionalCampos.style.display === "") {
+        infoNutricionalCampos.style.display = "block";
+    } else {
+        infoNutricionalCampos.style.display = "none";
+    }
+}
+
+
+function mostrarCantidadActualizar() {
+    const unidad = document.getElementById("unidadActualizar").value;
+    const cantidadGrupo = document.getElementById("cantidadGrupoActualizar");
+    const cantidadLabel = document.getElementById("cantidadLabelActualizar");
+
+    if (unidad === "kg" || unidad === "litro" || unidad === "pack") {
+        cantidadGrupo.classList.remove("hidden");
+        cantidadLabel.textContent = unidad === "kg" ? "(kg)" : unidad === "litro" ? "(litros)" : "(unidades)";
+    } else {
+        cantidadGrupo.classList.add("hidden");
+    }
+}
+
+function consolidarProductos() {
+    productos.forEach(producto => {
+        establecimientos.forEach(est => {
+            if (!producto.hasOwnProperty(`Precio_${est.id}`)) {
+                producto[`Precio_${est.id}`] = null; // Sin precio por defecto
+            }
+        });
+    });
+    localStorage.setItem("productos", JSON.stringify(productos));
+    mostrarMensaje("Productos consolidados en todos los establecimientos.", "mensajeGestionBaseDatos");
+    mostrarProductosFiltrados();
+}
+
+function eliminarProducto(index) {
+    if (confirm("¿Estás seguro de que quieres eliminar este producto?")) {
+        productos.splice(index, 1);
+        localStorage.setItem("productos", JSON.stringify(productos));
+        mostrarListaProductos();
+        mostrarProductosFiltrados();
+    }
+}
+
+
+
+// Limpiar el escáner al limpiar el formulario
+function limpiarFormulario() {
+    document.getElementById("nombreProducto").value = "";
+    document.getElementById("establecimiento").selectedIndex = 0;
+    document.getElementById("establecimiento").value = "";
+    document.getElementById("categoria").value = "";
+    document.getElementById("marca").value = "";
+    document.getElementById("barcode").value = ""; // Limpiar campo barcode
+    document.getElementById("precio").value = "";
+    document.getElementById("unidad").value = "unidad";
+    document.getElementById("cantidadGrupo").classList.add("hidden");
+    document.getElementById("cantidad").value = ""; // Limpiar el valor del input de cantidad
+
+    const infoNutricionalCampos = document.getElementById("infoNutricionalCampos");
+    infoNutricionalCampos.style.display = "none";
+    document.getElementById("infoNutricionalGrupo").classList.add("hidden");
+
+    const camposNutricionales = [
+        "valorEnergeticoKj", "valorEnergeticoKcal", "grasasTotales", "grasasSaturadas",
+        "grasasNoSaturadas", "colesterol", "hidratosCarbono", "azucares", "proteinas",
+        "fibra", "sal", "sodio"
+    ];
+    camposNutricionales.forEach(id => document.getElementById(id).value = "");
+
+    document.getElementById("productosSimilares").innerHTML = "";
+
+    // Detener el escáner si está activo
+    if (scanning) {
+        stopBarcodeScanner();
+        document.getElementById("scannerContainer").classList.add("hidden");
+        document.getElementById("scanBarcodeBtn").innerHTML = '<i class="bi bi-camera"></i> Escanear';
+        scanning = false;
+    }
+}
+	
+function mostrarListaProductos() {
+    const lista = document.getElementById("listaProductosFiltrados");
+    lista.innerHTML = "";
+
+    if (productos.length === 0) {
+        lista.innerHTML = "<p>No hay productos registrados.</p>";
+        return;
+    }
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let encabezado = tabla.createTHead();
+    let filaEncabezado = encabezado.insertRow();
+    ["Nombre"].concat(establecimientos.map(est => est.nombre)).concat(["Acciones"]).forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    let cuerpoTabla = tabla.createTBody();
+
+    productos.forEach((prod, index) => {
+        let fila = cuerpoTabla.insertRow();
+
+        let celdaNombre = fila.insertCell(0);
+        celdaNombre.textContent = prod.nombre;
+
+        // Mostrar precios por cada establecimiento
+        establecimientos.forEach(est => {
+            let celdaPrecio = fila.insertCell(-1);
+            const precio = prod[`Precio_${est.id}`];
+            celdaPrecio.textContent = precio !== null && precio !== undefined ? `${precio}€` : "-";
+        });
+
+        let celdaAcciones = fila.insertCell(-1);
+        let botonEditar = document.createElement("button");
+        botonEditar.innerHTML = '<i class="bi bi-pencil"></i>';
+        botonEditar.onclick = () => cargarProductoParaEdicion(index);
+        celdaAcciones.appendChild(botonEditar);
+
+        let botonEliminar = document.createElement("button");
+        botonEliminar.innerHTML = '<i class="bi bi-trash"></i>';
+        botonEliminar.onclick = () => eliminarProducto(index);
+        celdaAcciones.appendChild(botonEliminar);
+    });
+
+    lista.appendChild(tabla);
+}
+
+window.onload = function() {
+    cargarListaCompra(); // Cargar la lista de la compra al iniciar la página
+    actualizarListaEstablecimientos(); // Si esta función existe y actualiza el desplegable
+    mostrarListaProductos();
+    updateStoreDropdown(); // Añadir esta línea
+};
+
+
+
+function buscarProductos() {
+    const query = document.getElementById("buscarProducto").value.toLowerCase();
+    const lista = document.getElementById("listaProductosFiltrados");
+    lista.innerHTML = "";
+
+    let resultados = productos.filter(p => p.nombre.toLowerCase().includes(query));
+    resultados.sort((a, b) => parseFloat(a.precio) - parseFloat(b.precio));
+
+    if (resultados.length > 0) {
+        let tabla = `<table border="1" style="width:100%; text-align:center; border-collapse: collapse;">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Precio por unidad</th>
+                            <th>Establecimiento</th>
+                            <th>Acciones</th>
+                        </tr>`;
+
+        resultados.forEach(prod => {
+            let precioUnidad = prod.unidad === 'kg' ? (prod.precio / (prod.cantidad / 1000)).toFixed(2) + '€/kg' 
+                            : prod.unidad === 'litro' ? (prod.precio / prod.cantidad).toFixed(2) + '€/l' 
+                            : prod.precio + '€/unidad';
+
+            let establecimiento = establecimientos.find(e => e.nombre === prod.establecimiento);
+            let logoEstablecimiento = establecimiento?.logoURL ? `<img src="${establecimiento.logoURL}" width="50">` : prod.establecimiento;
+
+            tabla += `<tr>
+                        <td>${prod.nombre}</td>
+                        <td>${prod.precio}€ / ${prod.unidad === 'kg' ? `${prod.cantidad}g` : prod.unidad === 'litro' ? `${prod.cantidad}L` : 'unidad'}</td>
+                        <td>${precioUnidad}</td>
+                        <td>${logoEstablecimiento}</td>
+                        <td>
+                            <button onclick="cargarProductoParaEdicion(${productos.indexOf(prod)})">✏️</button>
+                            <button onclick="eliminarProducto(${productos.indexOf(prod)})">🗑️</button>
+                        </td>
+                      </tr>`;
+        });
+
+        tabla += `</table>`;
+        lista.innerHTML = tabla;
+    } else {
+        lista.innerHTML = "<p>No hay resultados.</p>";
+    }
+}
+		
+function buscarProductosValorar() {
+    const query = document.getElementById("buscarProductoValorar").value.toLowerCase();
+    const sugerencias = document.getElementById("sugerenciasProductosValorar");
+    sugerencias.innerHTML = "";
+
+    if (query.length === 0) {
+        sugerencias.classList.add("hidden");
+        return;
+    }
+
+    const productosUnicos = [...new Set(productos.map(p => p.nombre))];
+    const resultados = productosUnicos.filter(nombre => nombre.toLowerCase().includes(query));
+
+    if (resultados.length > 0) {
+        sugerencias.classList.remove("hidden");
+        resultados.forEach(nombre => {
+            const li = document.createElement("li");
+            li.textContent = nombre;
+            li.onclick = () => {
+                mostrarValoracionProducto(nombre); // Mostrar el producto seleccionado
+                sugerencias.classList.add("hidden"); // Ocultar la lista de sugerencias
+            };
+            sugerencias.appendChild(li);
+        });
+    } else {
+        sugerencias.classList.add("hidden");
+    }
+}
+
+function mostrarValoracionProducto(nombreProducto) {
+    const resultadosValoracion = document.getElementById("resultadosValoracion");
+    resultadosValoracion.innerHTML = "";
+
+    const productosEncontrados = productos.filter(p => p.nombre.toLowerCase() === nombreProducto.toLowerCase());
+
+    if (productosEncontrados.length === 0) {
+        resultadosValoracion.innerHTML = "<p>No se encontraron productos.</p>";
+        return;
+    }
+
+    let tabla = document.createElement("table");
+    tabla.style.width = "100%";
+    tabla.border = "1";
+
+    let encabezado = tabla.createTHead();
+    let filaEncabezado = encabezado.insertRow();
+    ["Producto", "Establecimiento", "Valoración"].forEach(texto => {
+        let celda = document.createElement("th");
+        celda.textContent = texto;
+        filaEncabezado.appendChild(celda);
+    });
+
+    let cuerpoTabla = tabla.createTBody();
+
+    productosEncontrados.forEach(prod => {
+        let fila = cuerpoTabla.insertRow();
+
+        let celdaNombre = fila.insertCell(0);
+        celdaNombre.textContent = prod.nombre;
+
+        let celdaEstablecimiento = fila.insertCell(1);
+        const estConPrecio = establecimientos.find(est => prod[`Precio_${est.id}`] !== null && prod[`Precio_${est.id}`] !== undefined);
+        if (estConPrecio && estConPrecio.logoURL) {
+            celdaEstablecimiento.innerHTML = `<img src="${estConPrecio.logoURL}" width="50">`;
+        } else if (estConPrecio) {
+            celdaEstablecimiento.textContent = estConPrecio.nombre;
+        } else {
+            celdaEstablecimiento.textContent = "-";
+        }
+
+        let celdaValoracion = fila.insertCell(2);
+        celdaValoracion.innerHTML = calcularValoracion(prod.infoNutricional, prod.categoria); // Usar innerHTML en lugar de textContent
+    });
+
+    resultadosValoracion.appendChild(tabla);
+}
+
+function calcularValoracion(infoNutricional, categoria, simple = false) {
+    const categoriasConsumoHumano = ["alimentacion", "lacteos", "bebidas", "carnes_pescados", "panaderia_reposteria", "frutas_verduras", "cereales_legumbres", "snacks"];
+    const esBebida = categoria === "bebidas";
+    const esQueso = categoria === "lacteos" && infoNutricional?.grasasTotales > 20;
+    const esGrasa = categoria === "alimentacion" && infoNutricional?.grasasTotales > 40;
+
+    if (!categoriasConsumoHumano.includes(categoria)) {
+        return "No es un producto de consumo";
+    }
+
+    if (!infoNutricional || Object.values(infoNutricional).every(val => val === null || val === 0)) {
+        return "Sin información";
+    }
+
+    let puntosNegativos = 0;
+
+    if (infoNutricional.valorEnergeticoKj !== null && infoNutricional.valorEnergeticoKj !== 0) {
+        const kj = infoNutricional.valorEnergeticoKj;
+        if (esBebida) {
+            if (kj > 340) puntosNegativos += 10;
+            else if (kj > 300) puntosNegativos += 9;
+            else if (kj > 270) puntosNegativos += 8;
+            else if (kj > 240) puntosNegativos += 7;
+            else if (kj > 210) puntosNegativos += 6;
+            else if (kj > 180) puntosNegativos += 5;
+            else if (kj > 150) puntosNegativos += 4;
+            else if (kj > 120) puntosNegativos += 3;
+            else if (kj > 90) puntosNegativos += 2;
+            else if (kj > 30) puntosNegativos += 1;
+        } else {
+            if (kj > 3350) puntosNegativos += 10;
+            else if (kj > 2680) puntosNegativos += 9;
+            else if (kj > 2010) puntosNegativos += 8;
+            else if (kj > 1675) puntosNegativos += 7;
+            else if (kj > 1340) puntosNegativos += 6;
+            else if (kj > 1005) puntosNegativos += 5;
+            else if (kj > 670) puntosNegativos += 4;
+            else if (kj > 335) puntosNegativos += 3;
+            else if (kj > 150) puntosNegativos += 2;
+            else if (kj > 0) puntosNegativos += 1;
+        }
+    } else if (infoNutricional.valorEnergeticoKcal !== null && infoNutricional.valorEnergeticoKcal !== 0) {
+        const kcal = infoNutricional.valorEnergeticoKcal;
+        if (esBebida) {
+            if (kcal > 80) puntosNegativos += 10;
+            else if (kcal > 70) puntosNegativos += 9;
+            else if (kcal > 60) puntosNegativos += 8;
+            else if (kcal > 50) puntosNegativos += 7;
+            else if (kcal > 45) puntosNegativos += 6;
+            else if (kcal > 40) puntosNegativos += 5;
+            else if (kcal > 30) puntosNegativos += 4;
+            else if (kcal > 20) puntosNegativos += 3;
+            else if (kcal > 10) puntosNegativos += 2;
+            else if (kcal > 0) puntosNegativos += 1;
+        } else {
+            if (kcal > 800) puntosNegativos += 10;
+            else if (kcal > 640) puntosNegativos += 9;
+            else if (kcal > 480) puntosNegativos += 8;
+            else if (kcal > 400) puntosNegativos += 7;
+            else if (kcal > 320) puntosNegativos += 6;
+            else if (kcal > 240) puntosNegativos += 5;
+            else if (kcal > 160) puntosNegativos += 4;
+            else if (kcal > 80) puntosNegativos += 3;
+            else if (kcal > 40) puntosNegativos += 2;
+            else if (kcal > 0) puntosNegativos += 1;
+        }
+    }
+
+    if (infoNutricional.grasasSaturadas !== null && infoNutricional.grasasSaturadas !== 0) {
+        const gs = infoNutricional.grasasSaturadas;
+        if (gs > 10) puntosNegativos += 10;
+        else if (gs > 9) puntosNegativos += 9;
+        else if (gs > 8) puntosNegativos += 8;
+        else if (gs > 7) puntosNegativos += 7;
+        else if (gs > 6) puntosNegativos += 6;
+        else if (gs > 5) puntosNegativos += 5;
+        else if (gs > 4) puntosNegativos += 4;
+        else if (gs > 3) puntosNegativos += 3;
+        else if (gs > 2) puntosNegativos += 2;
+        else if (gs > 1) puntosNegativos += 1;
+    }
+
+    if (infoNutricional.azucares !== null && infoNutricional.azucares !== 0) {
+        const az = infoNutricional.azucares;
+        if (esBebida) {
+            if (az > 13.5) puntosNegativos += 10;
+            else if (az > 12) puntosNegativos += 9;
+            else if (az > 10.5) puntosNegativos += 8;
+            else if (az > 9) puntosNegativos += 7; // Corregido aquí
+            else if (az > 7.5) puntosNegativos += 6;
+            else if (az > 6) puntosNegativos += 5;
+            else if (az > 4.5) puntosNegativos += 4;
+            else if (az > 3) puntosNegativos += 3;
+            else if (az > 1.5) puntosNegativos += 2;
+            else if (az > 0) puntosNegativos += 1;
+        } else {
+            if (az > 45) puntosNegativos += 10;
+            else if (az > 40) puntosNegativos += 9;
+            else if (az > 36) puntosNegativos += 8;
+            else if (az > 31) puntosNegativos += 7;
+            else if (az > 27) puntosNegativos += 6;
+            else if (az > 22.5) puntosNegativos += 5;
+            else if (az > 18) puntosNegativos += 4;
+            else if (az > 13.5) puntosNegativos += 3;
+            else if (az > 9) puntosNegativos += 2;
+            else if (az > 4.5) puntosNegativos += 1;
+        }
+    }
+
+    if (infoNutricional.sal !== null && infoNutricional.sal !== 0) {
+        const sal = infoNutricional.sal;
+        if (sal > 2.25) puntosNegativos += 10;
+        else if (sal > 2) puntosNegativos += 9;
+        else if (sal > 1.8) puntosNegativos += 8;
+        else if (sal > 1.6) puntosNegativos += 7;
+        else if (sal > 1.4) puntosNegativos += 6;
+        else if (sal > 1.2) puntosNegativos += 5;
+        else if (sal > 1) puntosNegativos += 4;
+        else if (sal > 0.8) puntosNegativos += 3;
+        else if (sal > 0.6) puntosNegativos += 2;
+        else if (sal > 0.4) puntosNegativos += 1;
+    } else if (infoNutricional.sodio !== null && infoNutricional.sodio !== 0) {
+        const sodio = infoNutricional.sodio / 400;
+        if (sodio > 2.25) puntosNegativos += 10;
+        else if (sodio > 2) puntosNegativos += 9;
+        else if (sodio > 1.8) puntosNegativos += 8;
+        else if (sodio > 1.6) puntosNegativos += 7;
+        else if (sodio > 1.4) puntosNegativos += 6;
+        else if (sodio > 1.2) puntosNegativos += 5;
+        else if (sodio > 1) puntosNegativos += 4;
+        else if (sodio > 0.8) puntosNegativos += 3;
+        else if (sodio > 0.6) puntosNegativos += 2;
+        else if (sodio > 0.4) puntosNegativos += 1;
+    }
+
+    let puntosPositivos = 0;
+
+    if (infoNutricional.fibra !== null && infoNutricional.fibra !== 0) {
+        const fb = infoNutricional.fibra;
+        if (fb > 4.7) puntosPositivos += 5;
+        else if (fb > 3.7) puntosPositivos += 4;
+        else if (fb > 2.8) puntosPositivos += 3;
+        else if (fb > 1.9) puntosPositivos += 2;
+        else if (fb > 0.9) puntosPositivos += 1;
+    }
+
+    if (infoNutricional.proteinas !== null && infoNutricional.proteinas !== 0) {
+        const pr = infoNutricional.proteinas;
+        if (pr > 8) puntosPositivos += 5;
+        else if (pr > 6.4) puntosPositivos += 4;
+        else if (pr > 4.8) puntosPositivos += 3;
+        else if (pr > 3.2) puntosPositivos += 2;
+        else if (pr > 1.6) puntosPositivos += 1;
+    }
+
+    let porcentajeFrutasVerduras = categoria === "frutas_verduras" ? 100 : 0;
+    if (porcentajeFrutasVerduras > 80) puntosPositivos += 5;
+    else if (porcentajeFrutasVerduras > 60) puntosPositivos += 4;
+    else if (porcentajeFrutasVerduras > 40) puntosPositivos += 2;
+
+    if (!esBebida && !esQueso && !esGrasa && puntosNegativos >= 11 && porcentajeFrutasVerduras <= 80) {
+        puntosPositivos = Math.min(puntosPositivos, puntosPositivos - (infoNutricional.proteinas ? (puntosPositivos > 5 ? 5 : puntosPositivos) : 0));
+    }
+
+    const puntuacionNutriScore = puntosNegativos - puntosPositivos;
+	
+	// Determinar la letra Nutri-Score
+    let letraNutriScore, claseColor;
+    if (puntuacionNutriScore <= -1) {
+        letraNutriScore = "A";
+        claseColor = "nutri-score-a";
+    } else if (puntuacionNutriScore <= 2) {
+        letraNutriScore = "B";
+        claseColor = "nutri-score-b";
+    } else if (puntuacionNutriScore <= 10) {
+        letraNutriScore = "C";
+        claseColor = "nutri-score-c";
+    } else if (puntuacionNutriScore <= 18) {
+        letraNutriScore = "D";
+        claseColor = "nutri-score-d";
+    } else {
+        letraNutriScore = "E";
+        claseColor = "nutri-score-e";
+    }
+	
+	
+    const puntuacionBase = Math.max(-15, Math.min(40, puntuacionNutriScore));
+    const puntuacion = Math.round(100 - ((puntuacionBase + 15) / 55) * 100);
+    const esSaludable = puntuacion >= 50;
+    const r = Math.round(255 * (1 - puntuacion / 100));
+    const g = Math.round(255 * (puntuacion / 100));
+    const color = `rgb(${r}, ${g}, 0)`;
+    const icono = esSaludable ? '<i class="bi bi-check-circle valoracion-icono" style="color: #00ff00;"></i>' : '<i class="bi bi-x-circle valoracion-icono" style="color: #ff0000;"></i>';
+
+    if (simple) {
+        return `
+            <div class="valoracion-container">
+                <span class="valoracion-texto">${puntuacion}</span>
+                <span class="nutri-score ${claseColor}">${letraNutriScore}</span>
+                ${icono}
+            </div>
+        `;
+    } else {
+        const mensaje = esSaludable ? "Saludable" : "No saludable";
+        return `
+            <div class="valoracion-container">
+                <span class="valoracion-texto">${mensaje}</span>
+                <span class="nutri-score ${claseColor}">${letraNutriScore}</span>
+                ${icono}
+            </div>
+        `;
+    }
+}
+
+
+function mostrarInfoNutricional() {
+    const categoria = document.getElementById("categoria").value;
+    const infoNutricionalGrupo = document.getElementById("infoNutricionalGrupo");
+
+    // Lista expandida de categorías con información nutricional
+    const categoriasConInfoNutricional = [
+        "alimentacion",
+        "lacteos",
+        "bebidas",
+        "carnes_pescados",
+        "panaderia_reposteria",
+        "frutas_verduras",
+        "cereales_legumbres",
+        "snacks"
+    ];
+
+    if (categoriasConInfoNutricional.includes(categoria)) {
+        infoNutricionalGrupo.classList.remove("hidden");
+    } else {
+        infoNutricionalGrupo.classList.add("hidden");
+    }
+}
+		
+// Función para alternar el sidebar
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+}
+
+let scanning = false;
+let currentSection = null;
+
+function toggleBarcodeScanner(section = 'Formulario_Anhadir_Producto') {
+    currentSection = section;
+    const scannerContainer = document.getElementById(section === 'ActualizarProducto' ? "scannerContainerActualizar" : "scannerContainer");
+    const scanButton = document.getElementById(section === 'ActualizarProducto' ? "scanBarcodeBtnActualizar" : "scanBarcodeBtn");
+
+    if (!scanning) {
+        startBarcodeScanner();
+        scannerContainer.classList.remove("hidden");
+        scanButton.innerHTML = '<i class="bi bi-x"></i> Detener';
+        scanning = true;
+    } else {
+        stopBarcodeScanner();
+        scannerContainer.classList.add("hidden");
+        scanButton.innerHTML = '<i class="bi bi-camera"></i> Escanear';
+        scanning = false;
+    }
+}
+
+function startBarcodeScanner() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        alert("Tu navegador no soporta el acceso a la cámara.");
+        return;
+    }
+
+    Quagga.init({
+        inputStream: {
+            name: "Live",
+            type: "LiveStream",
+            target: document.querySelector(currentSection === 'ActualizarProducto' ? '#barcodeScannerActualizar' : '#barcodeScanner'),
+            constraints: {
+                facingMode: "environment"
+            }
+        },
+        decoder: {
+            readers: ["ean_reader", "ean_8_reader", "upc_reader", "code_128_reader"]
+        }
+    }, function(err) {
+        if (err) {
+            console.error("Error al inicializar Quagga:", err);
+            alert("Error al acceder a la cámara: " + err.message);
+            toggleBarcodeScanner(currentSection);
+            return;
+        }
+        Quagga.start();
+    });
+
+    Quagga.onDetected(function(result) {
+        const code = result.codeResult.code;
+        if (code) {
+            document.getElementById(currentSection === 'ActualizarProducto' ? "barcodeActualizar" : "barcode").value = code;
+            stopBarcodeScanner();
+            document.getElementById(currentSection === 'ActualizarProducto' ? "scannerContainerActualizar" : "scannerContainer").classList.add("hidden");
+            document.getElementById(currentSection === 'ActualizarProducto' ? "scanBarcodeBtnActualizar" : "scanBarcodeBtn").innerHTML = '<i class="bi bi-camera"></i> Escanear';
+            scanning = false;
+        }
+    });
+}
+
+function stopBarcodeScanner() {
+    Quagga.stop();
+    const video = document.getElementById(currentSection === 'ActualizarProducto' ? "barcodeScannerActualizar" : "barcodeScanner");
+    const stream = video.srcObject;
+    if (stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+        video.srcObject = null;
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", async function () {
+    const permissionsRequested = localStorage.getItem("permissionsRequested");
+
+    if (!permissionsRequested) {
+        await requestInitialPermissions();
+    } else {
+        console.log("Permisos ya solicitados previamente.");
+        checkPermissionStatus();
+    }
+
+    // Resto de la inicialización
+    updateStoreDropdown();
+    mostrarListaProductos();
+    cargarListaCompra();
+    cargarEstablecimientosEnFiltro();
+    mostrarProductosFiltrados();
+});
+
+async function requestInitialPermissions() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: true // Solo cámara, ya que no usas micrófono
+        });
+        stream.getTracks().forEach(track => track.stop());
+        localStorage.setItem("permissionsRequested", "true");
+        console.log("Permisos de cámara otorgados y guardados.");
+    } catch (err) {
+        console.error("Error al solicitar permisos:", err);
+        alert("No se pudieron obtener los permisos de la cámara: " + err.message);
+    }
+}
+
+async function checkPermissionStatus() {
+    try {
+        const cameraPermission = await navigator.permissions.query({ name: "camera" });
+        console.log("Estado de la cámara:", cameraPermission.state);
+        if (cameraPermission.state !== "granted") {
+            console.warn("Permisos de cámara no otorgados, pero no se volverán a solicitar.");
+        }
+    } catch (err) {
+        console.error("Error al verificar permisos:", err);
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
