@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App de Tareas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #202124;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: white;
+            padding: 20px 0;
+            border-right: 1px solid #dadce0;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar h3 {
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #5f6368;
+            font-weight: 500;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .tab.active, .tab:hover {
+            background-color: #f1f3f4;
+            color: #174ea6;
+        }
+
+        .tab span {
+            font-size: 14px;
+        }
+
+        .sidebar-btn {
+            padding: 12px 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            color: #174ea6;
+        }
+
+        .sidebar-btn:hover {
+            background-color: #f1f3f4;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 20px;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+#listTitle {
+    font-size: 24px; /* Tamaño más grande */
+    font-weight: bold; /* Texto en negrita */
+    margin: 0 0 20px;
+}
+
+        .task-form {
+            display: none;
+            align-items: center;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        #taskTitle {
+            border: none;
+            flex-grow: 1;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #taskDate {
+            border: none;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .save-btn {
+            padding: 8px 16px;
+            background-color: #174ea6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #0d3a75;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.task-item {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+        .task-item.completed .task-title {
+            text-decoration: line-through;
+            color: #70757a;
+        }
+
+        .task-item input[type="checkbox"] {
+            margin: 0 12px 0 8px;
+        }
+
+.task-title {
+    flex-grow: 1;
+    font-size: 16px; /* Tamaño más grande para las tareas */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.subtask-item .task-title {
+    font-size: 14px; /* Tamaño más pequeño para las subtareas */
+    font-weight: normal; /* Texto normal */
+}
+
+.subtask-item.completed .task-title {
+    text-decoration: line-through; /* Tachar subtareas completadas */
+    color: #70757a; /* Color más claro para tareas completadas */
+}
+
+        .task-date {
+            font-size: 12px;
+            color: #70757a;
+            margin-right: 10px;
+        }
+		
+		.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+        .task-actions i {
+            margin: 0 8px;
+            cursor: pointer;
+            color: #70757a;
+        }
+
+        .task-actions i:hover {
+            color: #174ea6;
+        }
+
+        .task-actions .delete:hover {
+            color: #d93025;
+        }
+		
+.subtask-form {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+.subtask-form input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.subtask-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.subtask-form .save-btn {
+    padding: 8px 16px;
+    background-color: #174ea6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.subtask-form .save-btn:hover {
+    background-color: #0d3a75;
+}
+
+.subtask-list {
+    list-style: none;
+    padding-left: 40px;
+    margin: 0;
+}
+
+        .subtask-list.expanded {
+            display: block;
+        }
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+        .add-subtask {
+            padding: 8px 0 8px 20px;
+            font-size: 14px;
+            color: #174ea6;
+            cursor: pointer;
+        }
+
+        .add-subtask:hover {
+            background: #f1f3f4;
+        }
+
+        .task-details, #completed-tasks {
+            display: none;
+            padding: 20px;
+            background: white;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .no-tasks {
+            color: #70757a;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 10px 0;
+            }
+            .main {
+                padding: 10px;
+            }
+            .task-form {
+                flex-direction: column;
+                padding: 8px;
+            }
+            #taskTitle, #taskDate {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab, .sidebar-btn {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            .task-title {
+                font-size: 12px;
+            }
+            .task-date {
+                font-size: 10px;
+            }
+            .task-actions i {
+                margin: 0 5px;
+            }
+        }
+		
+		
+		
+		/* Modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar {
+    background-color: #2d2d2d;
+    border-right-color: #444;
+}
+
+body.dark-mode .tab.active, 
+body.dark-mode .tab:hover {
+    background-color: #444;
+    color: #64b5f6;
+}
+
+body.dark-mode .sidebar-btn {
+    color: #64b5f6;
+}
+
+body.dark-mode .sidebar-btn:hover {
+    background-color: #444;
+}
+
+body.dark-mode .task-form,
+body.dark-mode .task-item,
+body.dark-mode .task-details,
+body.dark-mode #completed-tasks {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #ffffff;
+}
+
+body.dark-mode .task-title,
+body.dark-mode .task-date {
+    color: #ffffff;
+}
+
+body.dark-mode .task-item.completed .task-title {
+    color: #a0a0a0;
+}
+
+body.dark-mode .task-actions i {
+    color: #a0a0a0;
+}
+
+body.dark-mode .task-actions i:hover {
+    color: #64b5f6;
+}
+
+body.dark-mode .task-actions .delete:hover {
+    color: #ff6b6b;
+}
+
+body.dark-mode .subtask-form input,
+body.dark-mode .subtask-form .save-btn {
+    background-color: #444;
+    color: #ffffff;
+    border-color: #666;
+}
+
+body.dark-mode .subtask-form .save-btn:hover {
+    background-color: #555;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+			<div>
+				<h3>Listas de Tareas</h3>
+				<div id="taskLists">
+					<div class="tab active" data-list="0" onclick="switchList(0)"><span>Mis tareas</span></div>
+					<div class="tab" data-list="1" onclick="switchList(1)"><span>Trabajo</span></div>
+					<div class="tab" data-list="2" onclick="switchList(2)"><span>Personal</span></div>
+				</div>
+				<div id="customLists"></div>
+			</div>
+			<div>
+				<button class="sidebar-btn" onclick="showCompletedTasks()">Tareas Completadas</button>
+				<button class="sidebar-btn" onclick="createNewList()">Añadir Lista</button>
+				<button class="sidebar-btn" onclick="deleteCurrentList()">Eliminar Lista</button>
+				<button class="sidebar-btn" onclick="exportData()">Exportar Datos</button>
+				<button class="sidebar-btn" onclick="importData()">Importar Datos</button>
+				<!-- Botón para alternar modo noche -->
+				<button class="sidebar-btn" onclick="toggleDarkMode()">
+					<i class="fas fa-moon"></i> Modo Noche
+				</button>
+			</div>
+		</div>
+        <div class="main">
+            <h1 id="listTitle">
+                <span></span>
+                <i class="fas fa-plus" onclick="showTaskForm()"></i>
+            </h1>
+            <div class="task-form" id="taskForm">
+                <input type="text" id="taskTitle" placeholder="Título de la tarea">
+                <i class="fas fa-star" id="taskUrgency" style="color: #70757a;" onclick="toggleUrgency(this)"></i>
+                <input type="date" id="taskDate">
+                <button class="save-btn" onclick="saveTask()">Guardar</button>
+            </div>
+            <div id="completed-tasks">
+                <h2>Tareas Completadas</h2>
+                <ul class="task-list" id="completedTaskList"></ul>
+            </div>
+            <ul class="task-list" id="taskList"></ul>
+            <div class="task-details" id="taskDetails"></div>
+        </div>
+    </div>
+
+    <script>
+        class Task {
+            constructor(id, title, date = null, urgent = false, completed = false, subtasks = []) {
+                this.id = id;
+                this.title = title;
+                this.date = date;
+                this.urgent = urgent;
+                this.completed = completed;
+                this.subtasks = subtasks;
+            }
+        }
+
+        let lists = JSON.parse(localStorage.getItem('taskLists')) || [
+            { name: 'Mis tareas', tasks: [] },
+            { name: 'Trabajo', tasks: [] },
+            { name: 'Personal', tasks: [] }
+        ];
+        let currentList = 0;
+        let editingTaskId = null;
+
+        const taskList = document.getElementById('taskList');
+        const completedTaskList = document.getElementById('completedTaskList');
+        const taskForm = document.getElementById('taskForm');
+        const taskTitle = document.getElementById('taskTitle');
+        const taskDate = document.getElementById('taskDate');
+        const taskUrgency = document.getElementById('taskUrgency');
+        const customLists = document.getElementById('customLists');
+        const listTitle = document.getElementById('listTitle').querySelector('span');
+        const taskDetails = document.getElementById('taskDetails');
+        const completedTasksDiv = document.getElementById('completed-tasks');
+
+function renderTabs() {
+    if (!Array.isArray(lists)) lists = [];
+    customLists.innerHTML = lists.slice(3).map((list, index) => `
+        <div class="tab ${currentList === index + 3 ? 'active' : ''}" data-list="${index + 3}" onclick="switchList(${index + 3})">
+            <span>${list.name}</span>
+        </div>
+    `).join('');
+    document.querySelectorAll('#taskLists .tab').forEach(tab => {
+        tab.classList.toggle('active', parseInt(tab.dataset.list) === currentList);
+    });
+    listTitle.textContent = lists[currentList]?.name || 'Mis tareas';
+}
+
+        function switchList(index) {
+            currentList = index;
+            renderTabs();
+            renderTasks();
+            hideTaskDetails();
+            completedTasksDiv.style.display = 'none';
+            taskForm.style.display = 'none';
+        }
+
+function createNewList() {
+    const name = prompt('Nombre de la nueva lista:');
+    if (name) {
+        lists.push({ name, tasks: [] });
+        currentList = lists.length - 1;
+        saveData();
+        renderTabs();
+        renderTasks();
+        // Forzar la actualización de la barra lateral
+        const customLists = document.getElementById('customLists');
+        customLists.innerHTML = lists.slice(3).map((list, index) => `
+            <div class="tab ${currentList === index + 3 ? 'active' : ''}" data-list="${index + 3}" onclick="switchList(${index + 3})">
+                <span>${list.name}</span>
+            </div>
+        `).join('');
+    }
+}
+
+// Función para eliminar una lista con confirmación
+function deleteCurrentList() {
+    if (currentList < 3) return alert('No se pueden eliminar las listas predeterminadas.');
+    if (lists.length <= 1) return alert('Debe haber al menos una lista.');
+
+    const confirmDelete = confirm(`¿Eliminar la lista "${lists[currentList].name}" y todas sus tareas?`);
+    if (confirmDelete) {
+        const moveTasks = confirm('¿Deseas mover las tareas a "Mis tareas"?');
+        if (moveTasks) {
+            lists[0].tasks.push(...lists[currentList].tasks); // Mover tareas a "Mis tareas"
+        }
+        lists.splice(currentList, 1);
+        currentList = Math.min(currentList, lists.length - 1);
+        saveData();
+        renderTabs();
+        renderTasks();
+    }
+}
+
+        function showTaskForm(taskId = null) {
+            taskForm.style.display = 'flex';
+            completedTasksDiv.style.display = 'none';
+            taskList.style.display = 'none';
+            taskDetails.style.display = 'none';
+            editingTaskId = taskId;
+            if (taskId) {
+                const task = lists[currentList].tasks.find(t => t.id === taskId);
+                taskTitle.value = task.title;
+                taskDate.value = task.date || '';
+                taskUrgency.style.color = task.urgent ? '#f1c40f' : '#70757a';
+            } else {
+                taskTitle.value = '';
+                taskDate.value = '';
+                taskUrgency.style.color = '#70757a';
+            }
+        }
+
+        function toggleUrgency(star) {
+            star.style.color = star.style.color === '#f1c40f' ? '#70757a' : '#f1c40f';
+        }
+
+function saveTask() {
+    const title = taskTitle.value.trim();
+    const date = taskDate.value || null;
+    const urgent = taskUrgency.style.color === '#f1c40f';
+    if (!title) return;
+
+    if (!lists[currentList]) {
+        lists[currentList] = { name: `Lista ${currentList + 1}`, tasks: [] };
+    }
+
+    if (editingTaskId) {
+        const task = lists[currentList].tasks.find(t => t.id === editingTaskId);
+        task.title = title;
+        task.date = date;
+        task.urgent = urgent;
+    } else {
+        lists[currentList].tasks.push(new Task(Date.now(), title, date, urgent));
+    }
+    saveData();
+    taskForm.style.display = 'none';
+    taskList.style.display = 'block';
+    renderTasks();
+    editingTaskId = null;
+}
+
+// Función para crear una nueva tarea con apariencia de ficha
+function renderTasks() {
+    taskList.style.display = 'block';
+    if (!lists[currentList] || !lists[currentList].tasks) {
+        taskList.innerHTML = '<p class="no-tasks">No hay tareas creadas para esta lista</p>';
+        return;
+    }
+    const pendingTasks = lists[currentList].tasks.filter(t => !t.completed);
+    if (pendingTasks.length === 0) {
+        taskList.innerHTML = '<p class="no-tasks">No hay tareas creadas para esta lista</p>';
+    } else {
+        taskList.innerHTML = pendingTasks.map(task => `
+            <li class="task-item ${task.completed ? 'completed' : ''}">
+                <div class="task-header">
+                    <input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask(${task.id})">
+                    <span class="task-title">${task.title}</span>
+                    ${task.date ? `<span class="task-date">${new Date(task.date).toLocaleDateString()}</span>` : ''}
+                    <div class="task-actions">
+                        <i class="fas fa-star ${task.urgent ? 'urgent' : ''}" style="color: ${task.urgent ? '#f1c40f' : '#70757a'}" onclick="toggleTaskUrgency(${task.id})"></i>
+                        <i class="fas fa-edit" onclick="showTaskForm(${task.id})"></i>
+                        <i class="fas fa-trash delete" onclick="deleteTask(${task.id})"></i>
+                    </div>
+                </div>
+                <div class="subtask-form" id="subtaskForm-${task.id}" style="display: none;">
+                    <input type="text" id="subtaskTitle-${task.id}" placeholder="Título de la subtarea">
+                    <i class="fas fa-star" id="subtaskUrgency-${task.id}" style="color: #70757a;" onclick="toggleSubtaskUrgency(${task.id})"></i>
+                    <input type="date" id="subtaskDate-${task.id}">
+                    <button class="save-btn" onclick="saveSubtask(${task.id})">Guardar</button>
+                </div>
+                <ul class="subtask-list" id="subtasks-${task.id}">${renderSubtasks(task)}</ul>
+                <div class="add-subtask" onclick="showSubtaskForm(${task.id})">+ Añadir subtarea</div>
+            </li>
+        `).join('');
+    }
+}
+
+// Función para mostrar el formulario de subtareas
+function showSubtaskForm(taskId) {
+    const subtaskForm = document.getElementById(`subtaskForm-${taskId}`);
+    subtaskForm.style.display = 'flex'; // Mostrar el formulario
+}
+
+// Función para guardar una subtarea
+function saveSubtask(taskId) {
+    const subtaskTitle = document.getElementById(`subtaskTitle-${taskId}`).value.trim();
+    const subtaskDate = document.getElementById(`subtaskDate-${taskId}`).value || null;
+    const subtaskUrgent = document.getElementById(`subtaskUrgency-${taskId}`).style.color === '#f1c40f';
+
+    if (subtaskTitle) {
+        const task = lists[currentList].tasks.find(t => t.id === taskId);
+        task.subtasks.push(new Task(Date.now(), subtaskTitle, subtaskDate, subtaskUrgent));
+        saveData();
+        renderTasks();
+    }
+}
+
+// Función para alternar la urgencia de la subtarea
+function toggleSubtaskUrgency(taskId) {
+    const star = document.getElementById(`subtaskUrgency-${taskId}`);
+    star.style.color = star.style.color === '#f1c40f' ? '#70757a' : '#f1c40f';
+}
+
+
+        function renderCompletedTasks() {
+            completedTaskList.innerHTML = lists[currentList].tasks.filter(t => t.completed).map(task => `
+                <li class="task-item completed">
+                    <div class="task-header" onclick="showTaskDetails(${task.id})">
+                        <input type="checkbox" checked onchange="toggleTask(${task.id})">
+                        <span class="task-title">${task.title}</span>
+                        ${task.date ? `<span class="task-date">${new Date(task.date).toLocaleDateString()}</span>` : ''}
+                    </div>
+                </li>
+            `).join('');
+        }
+
+// Función para renderizar subtareas con estructura de árbol
+function renderSubtasks(task) {
+    return task.subtasks.map(subtask => `
+        <li class="subtask-item ${subtask.completed ? 'completed' : ''}">
+            <input type="checkbox" ${subtask.completed ? 'checked' : ''} onchange="toggleSubtask(${task.id}, ${subtask.id})">
+            <span class="task-title">${subtask.title}</span>
+            ${subtask.date ? `<span class="task-date">${new Date(subtask.date).toLocaleDateString()}</span>` : ''}
+            <div class="task-actions">
+                <i class="fas fa-star ${subtask.urgent ? 'urgent' : ''}" style="color: ${subtask.urgent ? '#f1c40f' : '#70757a'}" onclick="toggleSubtaskUrgency(${task.id}, ${subtask.id})"></i>
+                <i class="fas fa-edit" onclick="editSubtask(${task.id}, ${subtask.id})"></i>
+                <i class="fas fa-trash delete" onclick="deleteSubtask(${task.id}, ${subtask.id})"></i>
+            </div>
+        </li>
+    `).join('');
+}
+
+        function toggleTask(id) {
+            const task = lists[currentList].tasks.find(t => t.id === id);
+            task.completed = !task.completed;
+            saveData();
+            renderTasks();
+            if (completedTasksDiv.style.display === 'block') renderCompletedTasks();
+        }
+
+        function toggleTaskUrgency(id) {
+            const task = lists[currentList].tasks.find(t => t.id === id);
+            task.urgent = !task.urgent;
+            saveData();
+            renderTasks();
+        }
+
+        function deleteTask(id) {
+            if (confirm('¿Eliminar esta tarea?')) {
+                lists[currentList].tasks = lists[currentList].tasks.filter(t => t.id !== id);
+                saveData();
+                renderTasks();
+            }
+        }
+
+        function addSubtask(taskId) {
+            const title = prompt('Introduce la subtarea:');
+            if (title) {
+                const task = lists[currentList].tasks.find(t => t.id === taskId);
+                task.subtasks.push(new Task(Date.now(), title));
+                saveData();
+                renderTasks();
+            }
+        }
+
+        function editSubtask(taskId, subtaskId) {
+            const task = lists[currentList].tasks.find(t => t.id === taskId);
+            const subtask = task.subtasks.find(s => s.id === subtaskId);
+            const newTitle = prompt('Editar subtarea:', subtask.title);
+            if (newTitle) {
+                subtask.title = newTitle;
+                saveData();
+                renderTasks();
+            }
+        }
+
+function toggleSubtask(taskId, subtaskId) {
+    const task = lists[currentList].tasks.find(t => t.id === taskId);
+    const subtask = task.subtasks.find(s => s.id === subtaskId);
+    subtask.completed = !subtask.completed;
+    saveData();
+    renderTasks();
+}
+
+        function deleteSubtask(taskId, subtaskId) {
+            if (confirm('¿Eliminar esta subtarea?')) {
+                const task = lists[currentList].tasks.find(t => t.id === taskId);
+                task.subtasks = task.subtasks.filter(s => s.id !== subtaskId);
+                saveData();
+                renderTasks();
+            }
+        }
+
+        function showTaskDetails(taskId) {
+            const task = lists[currentList].tasks.find(t => t.id === taskId);
+            taskDetails.innerHTML = `
+                <h2>${task.title}</h2>
+                <p>Urgente: ${task.urgent ? 'Sí' : 'No'}</p>
+                <p>Fecha: ${task.date ? new Date(task.date).toLocaleDateString() : 'Sin fecha'}</p>
+                <p>Estado: ${task.completed ? 'Completada' : 'Pendiente'}</p>
+                <button onclick="document.getElementById('subtasks-${task.id}').classList.toggle('expanded')">Ver Subtareas (${task.subtasks.length})</button>
+            `;
+            taskDetails.style.display = 'block';
+            taskList.style.display = 'block';
+            completedTasksDiv.style.display = 'none';
+        }
+
+        function hideTaskDetails() {
+            taskDetails.style.display = 'none';
+        }
+
+        function showCompletedTasks() {
+            completedTasksDiv.style.display = 'block';
+            taskList.style.display = 'none';
+            taskForm.style.display = 'none';
+            taskDetails.style.display = 'none';
+            renderCompletedTasks();
+        }
+
+        function exportData() {
+            const dataStr = JSON.stringify(lists);
+            const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', 'tasks.json');
+            linkElement.click();
+        }
+
+        function importData() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = e => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = e => {
+                    lists = JSON.parse(e.target.result);
+                    currentList = 0;
+                    saveData();
+                    renderTabs();
+                    renderTasks();
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        }
+
+        function saveData() {
+            localStorage.setItem('taskLists', JSON.stringify(lists));
+        }
+
+        taskTitle.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') saveTask();
+        });
+
+
+// Función para alternar el modo oscuro
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    updateDarkModeButton();
+}
+
+// Función para actualizar el ícono del botón de modo oscuro
+function updateDarkModeButton() {
+    const darkModeButton = document.querySelector('.sidebar-btn i.fa-moon');
+    if (darkModeButton) {
+        darkModeButton.classList.toggle('fa-sun', document.body.classList.contains('dark-mode'));
+    }
+}
+
+// Cargar el modo oscuro guardado
+function loadDarkMode() {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+    updateDarkModeButton();
+}
+
+// Llamar a loadDarkMode al cargar la página
+loadDarkMode();
+        // Inicializar
+        renderTabs();
+        renderTasks();
+    </script>
+</body>
+</html>
