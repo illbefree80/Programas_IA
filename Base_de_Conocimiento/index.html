@@ -1,26 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base de Conocimiento</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conocimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .entry-list {
+            margin-top: 20px;
+        }
+        .entry {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tag {
+            background-color: #e0e0e0;
+            padding: 3px 8px;
+            margin-right: 5px;
+            border-radius: 5px;
+        }
+        .suggestion {
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
+<header>
     <h1>Base de Conocimiento</h1>
-    <div class="form">
-      <textarea id="entrada" placeholder="Escribe tu entrada..."></textarea>
-      <input type="text" id="etiquetas" placeholder="Añade etiquetas (separadas por comas)">
-      <button id="guardar">Guardar Entrada</button>
+</header>
+
+<div class="container">
+    <div>
+        <h2>Agregar Nueva Entrada</h2>
+        <div class="form-group">
+            <label for="entry-text">Texto de la Entrada:</label>
+            <textarea id="entry-text" rows="4" style="width: 100%;"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="entry-tags">Etiquetas (separadas por comas):</label>
+            <input type="text" id="entry-tags" style="width: 100%;" />
+            <div id="tag-suggestions"></div>
+        </div>
+        <button class="button" id="add-entry">Agregar Entrada</button>
     </div>
-    <div class="busqueda">
-      <input type="text" id="buscar-texto" placeholder="Buscar por texto...">
-      <input type="text" id="buscar-etiqueta" placeholder="Buscar por etiqueta...">
-      <button id="buscar">Buscar</button>
+
+    <div>
+        <h2>Buscar por Etiqueta</h2>
+        <input type="text" id="search-tags" placeholder="Buscar por etiqueta..." style="width: 100%;" />
+        <div id="search-results"></div>
     </div>
-    <div id="resultados"></div>
-  </div>
-  <script src="script.js"></script>
+
+    <div>
+        <h2>Buscar por Texto</h2>
+        <input type="text" id="search-text" placeholder="Buscar por texto..." style="width: 100%;" />
+        <div id="text-search-results"></div>
+    </div>
+
+    <div class="entry-list" id="entry-list">
+        <h2>Entradas Guardadas</h2>
+        <!-- Las entradas se mostrarán aquí -->
+    </div>
+</div>
+
+<script>
+// Variables para almacenar datos
+let knowledgeBase = JSON.parse(localStorage.getItem('knowledgeBase')) || [];
+
+// Función para actualizar la visualización de entradas
+function updateEntries() {
+    const entryList = document.getElementById('entry-list');
+    entryList.innerHTML = '';
+    knowledgeBase.forEach((entry, index) => {
+        const entryDiv = document.createElement('div');
+        entryDiv.className = 'entry';
+        entryDiv.innerHTML = `
+            <p><strong>Texto:</strong> ${entry.text}</p>
+            <p><strong>Etiquetas:</strong> ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</p>
+        `;
+        entryList.appendChild(entryDiv);
+    });
+}
+
+// Agregar una nueva entrada
+document.getElementById('add-entry').addEventListener('click', () => {
+    const text = document.getElementById('entry-text').value;
+    const tags = document.getElementById('entry-tags').value.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+    if (text && tags.length > 0) {
+        knowledgeBase.push({ text, tags });
+        localStorage.setItem('knowledgeBase', JSON.stringify(knowledgeBase));
+        updateEntries();
+        document.getElementById('entry-text').value = '';
+        document.getElementById('entry-tags').value = '';
+    }
+});
+
+// Buscar por etiqueta
+document.getElementById('search-tags').addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const results = knowledgeBase.filter(entry => entry.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+    const resultsDiv = document.getElementById('search-results');
+    resultsDiv.innerHTML = results.map(entry => `<p>${entry.text}</p>`).join('');
+});
+
+// Buscar por texto
+document.getElementById('search-text').addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const results = knowledgeBase.filter(entry => entry.text.toLowerCase().includes(searchTerm));
+    const resultsDiv = document.getElementById('text-search-results');
+    resultsDiv.innerHTML = results.map(entry => `<p>${entry.text}</p>`).join('');
+});
+
+// Función para sugerir etiquetas
+document.getElementById('entry-tags').addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const existingTags = [...new Set(knowledgeBase.flatMap(entry => entry.tags))];
+    const suggestions = existingTags.filter(tag => tag.toLowerCase().includes(searchTerm));
+    const suggestionsDiv = document.getElementById('tag-suggestions');
+    suggestionsDiv.innerHTML = suggestions.map(tag => `<div class="suggestion">${tag}</div>`).join('');
+});
+
+// Inicializar la aplicación
+updateEntries();
+</script>
+
 </body>
 </html>
+
