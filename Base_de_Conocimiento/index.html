@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base de Conocimiento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Base de Conocimiento</h1>
+    <div class="form">
+      <textarea id="entrada" placeholder="Escribe tu entrada..."></textarea>
+      <input type="text" id="etiquetas" placeholder="Añade etiquetas (separadas por comas)">
+      <button id="guardar">Guardar Entrada</button>
+    </div>
+    <div class="busqueda">
+      <input type="text" id="buscar-texto" placeholder="Buscar por texto...">
+      <input type="text" id="buscar-etiqueta" placeholder="Buscar por etiqueta...">
+      <button id="buscar">Buscar</button>
+    </div>
+    <div id="resultados"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
