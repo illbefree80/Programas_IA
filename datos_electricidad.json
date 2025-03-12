@@ -162,6 +162,19 @@
         "bonoSocial": 0.012742,
         "contador": 0.026557
       }
+    },
+    {
+      "company": "Repsol",
+      "name": "Tranquilísima",
+      "powerP1": 0.068219,
+      "powerP2": 0.068219,
+      "energy": 0.1299,
+      "taxes": {
+        "iee": 5.11269632,
+        "iva": 21,
+        "bonoSocial": 0.012742,
+        "contador": 0.026557
+      }
     }
   ],
   "generalCosts": {
