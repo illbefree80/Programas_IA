@@ -27,10 +27,6 @@
     {
       "name": "prueba 4",
       "logo": ""
-    },
-    {
-      "name": "prueba 5",
-      "logo": ""
     }
   ],
   "tariffs": [
@@ -131,7 +127,7 @@
     },
     {
       "company": "Repsol",
-      "name": "TranquilÃÂ­sima",
+      "name": "TranquilÃÂÃÂ­sima",
       "powerP1": 0.068219,
       "powerP2": 0.068219,
       "energy": 0.1299,
@@ -157,7 +153,7 @@
     },
     {
       "company": "Repsol",
-      "name": "TranquilÃ­sima",
+      "name": "TranquilÃÂ­sima",
       "powerP1": 0.068219,
       "powerP2": 0.068219,
       "energy": 0.1299,
