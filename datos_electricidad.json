@@ -31,10 +31,6 @@
     {
       "name": "prueba",
       "logo": ""
-    },
-    {
-      "name": "pruba3",
-      "logo": ""
     }
   ],
   "tariffs": [
@@ -135,7 +131,7 @@
     },
     {
       "company": "Repsol",
-      "name": "Tranquilísima",
+      "name": "TranquilÃ­sima",
       "powerP1": 0.068219,
       "powerP2": 0.068219,
       "energy": 0.1299,
@@ -160,10 +156,5 @@
       }
     }
   ],
-  "generalCosts": {
-    "iee": 5.11269632,
-    "iva": 21,
-    "bonoSocial": 0.012742,
-    "contador": 0.026557
-  }
+  "generalCosts": null
 }
