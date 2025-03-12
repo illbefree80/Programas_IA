@@ -43,10 +43,6 @@
     {
       "name": "pruba3",
       "logo": ""
-    },
-    {
-      "name": "prueba",
-      "logo": ""
     }
   ],
   "tariffs": [
@@ -147,7 +143,7 @@
     },
     {
       "company": "Repsol",
-      "name": "Tranquilísima",
+      "name": "TranquilÃ­sima",
       "powerP1": 0.068219,
       "powerP2": 0.068219,
       "energy": 0.1299,
