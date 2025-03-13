@@ -384,32 +384,23 @@
           "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "Vinagre de mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³dena",
+          "nombre": "Vinagre de módena",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 236,
-          "infoNutricional": {
-            "grasasTotales": null,
-            "grasasNoSaturadas": null,
-            "colesterol": null,
-            "sodio": null,
-            "valorEnergeticoKj": null,
-            "valorEnergeticoKcal": null,
-            "grasasSaturadas": null,
-            "hidratosCarbono": null,
-            "azucares": null,
-            "proteinas": null,
-            "fibra": null,
-            "sal": null
-          },
-          "fechaActualizacion": "6/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.65,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Pechuca de pollo",
