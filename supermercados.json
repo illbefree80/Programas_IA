@@ -1269,25 +1269,6 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "Nachos",
-          "categoria": "snacks",
-          "marca": null,
-          "barcode": null,
-          "unidad": "kg",
-          "cantidad": 300,
-          "unidadesPack": null,
-          "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": null,
-          "Fecha_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": 1.65,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
-        },
-        {
           "nombre": "Cerveza con limón",
           "categoria": "bebidas",
           "marca": "Argus",
