@@ -465,7 +465,7 @@
           "barcode": "",
           "unidad": "kg",
           "cantidad": 400,
-          "fechaActualizacion": "6/3/2025",
+          "fechaActualizacion": "13/3/2025",
           "unidadesPack": null,
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 0.8,
@@ -484,7 +484,8 @@
             "sal": 0.6,
             "sodio": null
           },
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": 0.75,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
           "nombre": "Arroz",
