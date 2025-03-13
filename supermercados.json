@@ -508,12 +508,13 @@
             "fibra": null,
             "sal": null
           },
-          "fechaActualizacion": "6/3/2025",
+          "fechaActualizacion": "13/3/2025",
           "unidadesPack": null,
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.33,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": 1.27,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
           "nombre": "Filete de merluza",
