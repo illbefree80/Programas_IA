@@ -1672,6 +1672,25 @@
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 4.69,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+        },
+        {
+          "nombre": "Natillas Chocolate",
+          "categoria": "lacteos",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 500,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 0.99,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         }
       ]
     },
