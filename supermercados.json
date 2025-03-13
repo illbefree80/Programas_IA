@@ -1238,18 +1238,23 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "PiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a en almÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­bar",
+          "nombre": "Piña en almí­bar",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 420,
-          "fechaActualizacion": "6/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.45,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Cerveza con limón",
