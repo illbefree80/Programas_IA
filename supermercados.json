@@ -1955,6 +1955,19 @@
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1.15,
           "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+        },
+        {
+          "nombre": "Rufles Jamón",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 150,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Madrid_Establecimiento_1": 1.35,
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
         }
       ]
     },
