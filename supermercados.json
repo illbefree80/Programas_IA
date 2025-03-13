@@ -1968,6 +1968,19 @@
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1.35,
           "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+        },
+        {
+          "nombre": "Triskys",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 135,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Madrid_Establecimiento_1": 1.59,
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
         }
       ]
     },
