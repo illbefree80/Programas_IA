@@ -1850,7 +1850,14 @@
       ]
     },
     "Madrid": {
-      "establecimientos": [],
+      "establecimientos": [
+        {
+          "id": "Madrid_Establecimiento_1",
+          "nombre": "Carrefour Express",
+          "logoURL": "https://quefranquicia.com/sitepanel/wp-content/uploads/2017/04/CarrefourExpress-Logo.jpg",
+          "ciudad": "Madrid"
+        }
+      ],
       "productos": []
     },
     "Vigo": {
