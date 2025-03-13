@@ -879,7 +879,7 @@
           "marca": "",
           "barcode": "",
           "unidad": "kg",
-          "cantidad": null,
+          "cantidad": 300,
           "unidadesPack": null,
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
