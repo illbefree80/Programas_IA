@@ -1076,18 +1076,23 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "Salsa BoloÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±esa",
+          "nombre": "Salsa Boloñesa",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 350,
-          "fechaActualizacion": "6/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.66,
+          "Fecha_Ponteareas_Establecimiento_2": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Pasta - Espirales de colores",
