@@ -1104,17 +1104,21 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "Pasta - Lazos colores",
+          "nombre": "Pasta - Pajaritas colores",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 500,
-          "fechaActualizacion": "13/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.11,
+          "Fecha_Ponteareas_Establecimiento_2": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_3": 1.1,
+          "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.97,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
