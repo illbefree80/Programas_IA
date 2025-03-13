@@ -1351,6 +1351,25 @@
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+        },
+        {
+          "nombre": "Alubia blanca",
+          "categoria": "cereales_legumbres",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 400,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 0.75,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         }
       ]
     },
