@@ -655,18 +655,23 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "AtÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºn natural",
+          "nombre": "Atún natural",
           "categoria": "carnes_pescados",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 336,
-          "fechaActualizacion": "6/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 3.95,
+          "Fecha_Ponteareas_Establecimiento_2": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_3": 4.2,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Zumo de naranja",
