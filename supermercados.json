@@ -998,32 +998,23 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "MaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­z",
+          "nombre": "Maí­z",
           "categoria": "cereales_legumbres",
           "marca": "",
           "barcode": "",
           "unidad": "kg",
           "cantidad": 420,
-          "fechaActualizacion": "6/3/2025",
-          "infoNutricional": {
-            "grasasTotales": 2.4,
-            "grasasNoSaturadas": null,
-            "colesterol": null,
-            "sodio": null,
-            "valorEnergeticoKj": 373,
-            "valorEnergeticoKcal": 89,
-            "grasasSaturadas": 0.5,
-            "hidratosCarbono": 12,
-            "azucares": 4.9,
-            "proteinas": 2.9,
-            "fibra": 3.8,
-            "sal": 0.43
-          },
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.6,
+          "Fecha_Ponteareas_Establecimiento_2": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_3": 1.6,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Sorbete de limón",
