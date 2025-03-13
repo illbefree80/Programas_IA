@@ -1651,6 +1651,25 @@
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+        },
+        {
+          "nombre": "Filete de merluza (580g)",
+          "categoria": "carnes_pescados",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 580,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 4.69,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         }
       ]
     },
