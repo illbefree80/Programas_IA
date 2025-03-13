@@ -1517,6 +1517,25 @@
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.15,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+        },
+        {
+          "nombre": "Bolsas de basura (30L)",
+          "categoria": "limpieza",
+          "marca": "",
+          "barcode": "",
+          "unidad": "pack",
+          "cantidad": 1,
+          "unidadesPack": 20,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 1.39,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         }
       ]
     },
