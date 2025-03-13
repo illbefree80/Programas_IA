@@ -1769,6 +1769,25 @@
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 3.75,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+        },
+        {
+          "nombre": "Caldo de cocido",
+          "categoria": "alimentacion",
+          "marca": "",
+          "barcode": "",
+          "unidad": "litro",
+          "cantidad": 1,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 0.85,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         }
       ]
     },
