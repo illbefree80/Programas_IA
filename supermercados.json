@@ -3,12 +3,6 @@
     "Ponteareas": {
       "establecimientos": [
         {
-          "id": "Ponteareas_Establecimiento_1",
-          "nombre": "Gadis",
-          "logoURL": "https://www.paxinasgalegas.es/imagenes/gadis_img116138t7.jpg",
-          "ciudad": "Ponteareas"
-        },
-        {
           "id": "Ponteareas_Establecimiento_2",
           "nombre": "Eroski",
           "logoURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNlNz_gNFrfGMG4EUDgJQJdRZgvsRkmWtsVA&s",
