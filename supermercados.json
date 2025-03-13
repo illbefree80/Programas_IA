@@ -1370,11 +1370,11 @@
         },
         {
           "nombre": "prueba",
-          "categoria": "bebidas",
+          "categoria": "lacteos",
           "marca": "",
           "barcode": "",
           "unidad": "litro",
-          "cantidad": 2,
+          "cantidad": 1,
           "unidadesPack": null,
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
