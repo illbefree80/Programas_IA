@@ -1110,12 +1110,13 @@
           "barcode": "",
           "unidad": "kg",
           "cantidad": 500,
-          "fechaActualizacion": "6/3/2025",
+          "fechaActualizacion": "13/3/2025",
           "unidadesPack": null,
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.11,
           "Precio_Ponteareas_Establecimiento_3": 1.1,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": 0.97,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
           "nombre": "Salsa (para pan tumaca)",
