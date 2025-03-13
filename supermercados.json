@@ -828,32 +828,23 @@
           "Precio_Ponteareas_Establecimiento_4": null
         },
         {
-          "nombre": "ChampÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂº",
+          "nombre": "Champú",
           "categoria": "hogar",
           "marca": "",
           "barcode": "",
           "unidad": "litro",
           "cantidad": 0.4,
-          "infoNutricional": {
-            "grasasTotales": 20,
-            "grasasNoSaturadas": null,
-            "colesterol": null,
-            "sodio": null,
-            "valorEnergeticoKj": 2011,
-            "valorEnergeticoKcal": 480,
-            "grasasSaturadas": 8.6,
-            "hidratosCarbono": 67,
-            "azucares": 31,
-            "proteinas": 5.9,
-            "fibra": 4,
-            "sal": 0.45
-          },
-          "fechaActualizacion": "6/3/2025",
           "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.05,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Pipas",
