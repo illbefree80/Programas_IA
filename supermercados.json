@@ -1877,7 +1877,21 @@
           "ciudad": "Madrid"
         }
       ],
-      "productos": []
+      "productos": [
+        {
+          "nombre": "Agua con gas",
+          "categoria": "bebidas",
+          "marca": "",
+          "barcode": "",
+          "unidad": "litro",
+          "cantidad": 1.25,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Madrid_Establecimiento_1": 0.41,
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+        }
+      ]
     },
     "Vigo": {
       "establecimientos": [],
