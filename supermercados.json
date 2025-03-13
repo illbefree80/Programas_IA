@@ -1916,6 +1916,19 @@
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.85,
           "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+        },
+        {
+          "nombre": "Cocktail mixto",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 90,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Madrid_Establecimiento_1": 0.78,
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
         }
       ]
     },
