@@ -879,7 +879,7 @@
           "marca": "",
           "barcode": "",
           "unidad": "kg",
-          "cantidad": 300,
+          "cantidad": null,
           "unidadesPack": null,
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
@@ -889,7 +889,7 @@
           "Fecha_Ponteareas_Establecimiento_2": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_3": 0.9,
           "Fecha_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": 2,
+          "Precio_Ponteareas_Establecimiento_4": 0,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
