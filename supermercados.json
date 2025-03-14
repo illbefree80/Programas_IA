@@ -2511,23 +2511,25 @@
           "cantidad": 400,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": null,
-          "Fecha_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "fechaActualizacion": "2025-03-14",
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
                 "fecha": "13/3/2025",
                 "precio": 0.75
+              },
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.75
               }
             ]
-          }
+          },
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": null,
+          "Fecha_Ponteareas_Establecimiento_3": null,
+          "Precio_Ponteareas_Establecimiento_4": 0.75,
+          "Fecha_Ponteareas_Establecimiento_4": "2025-03-14"
         },
         {
           "nombre": "Pasta - Helices",
