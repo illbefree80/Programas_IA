@@ -2084,7 +2084,7 @@
           "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         },
         {
-          "nombre": "Donut",
+          "nombre": "Donuts de chocolate",
           "categoria": "panaderia_reposteria",
           "marca": "",
           "barcode": "",
@@ -2105,5 +2105,5 @@
       "productos": []
     }
   },
-  "_forceUpdate": 1741954630276
+  "_forceUpdate": 1741955087598
 }
