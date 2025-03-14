@@ -3604,7 +3604,14 @@
       ]
     },
     "Vigo": {
-      "establecimientos": [],
+      "establecimientos": [
+        {
+          "id": "Vigo_Establecimiento_1",
+          "nombre": "Alcampo2",
+          "logoURL": null,
+          "ciudad": "Vigo"
+        }
+      ],
       "productos": []
     }
   },
