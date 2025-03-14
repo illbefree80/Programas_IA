@@ -1,9 +1,3 @@
 {
-  "test": "verificación",
-  "ciudades": {
-    "Ponteareas": {
-      "establecimientos": [],
-      "productos": []
-    }
-  }
+  "test": "verificación"
 }
