@@ -157,7 +157,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.59
               }
             ]
@@ -422,7 +422,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.45
               }
             ]
@@ -521,7 +521,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.67
               }
             ]
@@ -548,7 +548,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1
               }
             ]
@@ -575,7 +575,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.65
               }
             ]
@@ -618,7 +618,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.09
               }
             ]
@@ -673,7 +673,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ],
@@ -685,7 +685,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.72
               }
             ]
@@ -734,7 +734,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ]
@@ -777,7 +777,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.27
               }
             ]
@@ -840,7 +840,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.75
               }
             ]
@@ -1023,7 +1023,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 3.95
               }
             ],
@@ -1092,7 +1092,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.85
               }
             ]
@@ -1267,7 +1267,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.99
               }
             ]
@@ -1324,29 +1324,31 @@
           "cantidad": 0.4,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 2.05,
-          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_4": 1.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.05
               }
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
+                "precio": 1.95
+              },
+              {
+                "fecha": "14/03/2025",
                 "precio": 1.95
               }
             ]
-          }
+          },
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 2.05,
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": 1.95,
+          "Fecha_Ponteareas_Establecimiento_4": "14/03/2025"
         },
         {
           "nombre": "Pipas",
@@ -1377,7 +1379,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.15
               }
             ]
@@ -1404,7 +1406,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.9
               }
             ],
@@ -1416,7 +1418,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.85
               }
             ]
@@ -1443,7 +1445,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.25
               }
             ],
@@ -1455,7 +1457,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.19
               }
             ]
@@ -1532,7 +1534,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.15
               }
             ]
@@ -1583,7 +1585,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.45
               }
             ]
@@ -1652,7 +1654,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.6
               }
             ],
@@ -1664,7 +1666,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.55
               }
             ]
@@ -1691,7 +1693,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.35
               }
             ]
@@ -1760,7 +1762,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.66
               }
             ]
@@ -1809,7 +1811,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.11
               }
             ],
@@ -1821,7 +1823,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.97
               }
             ]
@@ -1930,7 +1932,7 @@
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.25
               }
             ]
@@ -2043,7 +2045,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.45
               }
             ]
@@ -2070,7 +2072,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.34
               }
             ]
@@ -2097,7 +2099,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.1
               }
             ]
@@ -2124,7 +2126,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.45
               }
             ]
@@ -2151,7 +2153,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ]
@@ -2178,7 +2180,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2
               }
             ]
@@ -2205,7 +2207,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ]
@@ -2232,7 +2234,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.52
               }
             ]
@@ -2259,7 +2261,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.29
               }
             ]
@@ -2286,7 +2288,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.25
               }
             ]
@@ -2313,7 +2315,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.89
               }
             ]
@@ -2340,7 +2342,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ]
@@ -2367,7 +2369,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.95
               }
             ]
@@ -2394,7 +2396,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.15
               }
             ]
@@ -2421,7 +2423,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.39
               }
             ]
@@ -2448,7 +2450,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.75
               }
             ]
@@ -2475,7 +2477,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.19
               }
             ]
@@ -2502,7 +2504,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.13
               }
             ]
@@ -2529,7 +2531,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 3.95
               }
             ]
@@ -2556,7 +2558,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.35
               }
             ]
@@ -2583,7 +2585,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.19
               }
             ]
@@ -2610,7 +2612,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 4.69
               }
             ]
@@ -2637,7 +2639,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.99
               }
             ]
@@ -2664,7 +2666,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.29
               }
             ]
@@ -2691,7 +2693,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.92
               }
             ]
@@ -2718,7 +2720,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 1.75
               }
             ]
@@ -2745,7 +2747,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 3.75
               }
             ]
@@ -2772,7 +2774,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.85
               }
             ]
@@ -2799,7 +2801,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.39
               }
             ]
@@ -2826,7 +2828,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.39
               }
             ]
@@ -2853,7 +2855,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 2.35
               }
             ]
@@ -2880,7 +2882,7 @@
           "historialPrecios": {
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": null,
+                "fecha": "01/01/1970",
                 "precio": 0.92
               }
             ]
@@ -2921,13 +2923,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 0.41
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.43
               }
             ]
@@ -2950,13 +2952,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 0.85
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.81
               }
             ]
@@ -2979,13 +2981,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 0.85
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.85
               }
             ]
@@ -3007,7 +3009,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 0.78
               }
             ]
@@ -3029,7 +3031,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 1
               }
             ]
@@ -3051,7 +3053,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 1.15
               }
             ]
@@ -3073,7 +3075,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 1.35
               }
             ]
@@ -3095,7 +3097,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": "13/3/2025",
+                "fecha": null,
                 "precio": 1.59
               }
             ]
@@ -3118,7 +3120,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 2.19
               }
             ]
@@ -3141,7 +3143,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 1.39
               }
             ]
@@ -3164,7 +3166,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.95
               }
             ]
@@ -3187,7 +3189,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.79
               }
             ]
@@ -3210,7 +3212,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 1.95
               }
             ]
@@ -3233,7 +3235,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 0.85
               }
             ]
@@ -3256,7 +3258,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 1.95
               }
             ]
@@ -3279,7 +3281,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": "14/3/2025",
+                "fecha": null,
                 "precio": 2.99
               }
             ]
