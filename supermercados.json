@@ -608,7 +608,7 @@
           }
         },
         {
-          "nombre": "Limón exprimido",
+          "nombre": "LimÃ³n exprimido",
           "categoria": "bebidas",
           "marca": "",
           "barcode": "",
@@ -635,7 +635,7 @@
           }
         },
         {
-          "nombre": "Vinagre de módena",
+          "nombre": "Vinagre de mÃ³dena",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -1151,7 +1151,7 @@
           }
         },
         {
-          "nombre": "Atún natural",
+          "nombre": "AtÃºn natural",
           "categoria": "carnes_pescados",
           "marca": "",
           "barcode": "",
@@ -1532,7 +1532,7 @@
           }
         },
         {
-          "nombre": "Champú",
+          "nombre": "ChampÃº",
           "categoria": "hogar",
           "marca": "",
           "barcode": "",
@@ -1896,7 +1896,7 @@
           }
         },
         {
-          "nombre": "Maí­z",
+          "nombre": "MaÃ­Â­z",
           "categoria": "cereales_legumbres",
           "marca": "",
           "barcode": "",
@@ -1939,7 +1939,7 @@
           }
         },
         {
-          "nombre": "Sorbete de limón",
+          "nombre": "Sorbete de limÃ³n",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2016,7 +2016,7 @@
           }
         },
         {
-          "nombre": "Salsa Boloñesa",
+          "nombre": "Salsa BoloÃ±esa",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2339,7 +2339,7 @@
           }
         },
         {
-          "nombre": "Piña en almí­bar",
+          "nombre": "PiÃ±a en almÃ­Â­bar",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2366,7 +2366,7 @@
           }
         },
         {
-          "nombre": "Cerveza con limón",
+          "nombre": "Cerveza con limÃ³n",
           "categoria": "bebidas",
           "marca": "Argus",
           "barcode": null,
@@ -2420,7 +2420,7 @@
           }
         },
         {
-          "nombre": "Zumo de piña",
+          "nombre": "Zumo de piÃ±a",
           "categoria": "bebidas",
           "marca": "Solevita",
           "barcode": null,
@@ -2582,7 +2582,7 @@
           }
         },
         {
-          "nombre": "Te al limón",
+          "nombre": "Te al limÃ³n",
           "categoria": "bebidas",
           "marca": "",
           "barcode": "",
@@ -2636,7 +2636,7 @@
           }
         },
         {
-          "nombre": "Rúcula",
+          "nombre": "RÃºcula",
           "categoria": "frutas_verduras",
           "marca": "",
           "barcode": "",
@@ -2852,7 +2852,7 @@
           }
         },
         {
-          "nombre": "Papel higiénico",
+          "nombre": "Papel higiÃ©nico",
           "categoria": "hogar",
           "marca": "",
           "barcode": "",
@@ -2960,7 +2960,7 @@
           }
         },
         {
-          "nombre": "Yogurt Azúcar de caña",
+          "nombre": "Yogurt AzÃºcar de caÃ±a",
           "categoria": "lacteos",
           "marca": "",
           "barcode": "",
@@ -3041,7 +3041,7 @@
           }
         },
         {
-          "nombre": "Atún natural (6x80g)",
+          "nombre": "AtÃºn natural (6x80g)",
           "categoria": "carnes_pescados",
           "marca": "",
           "barcode": "",
@@ -3279,7 +3279,7 @@
           }
         },
         {
-          "nombre": "Tiras de maíz",
+          "nombre": "Tiras de maÃ­z",
           "categoria": "snacks",
           "marca": "",
           "barcode": "",
@@ -3374,7 +3374,7 @@
           }
         },
         {
-          "nombre": "Rufles Jamón",
+          "nombre": "Rufles JamÃ³n",
           "categoria": "snacks",
           "marca": "",
           "barcode": "",
@@ -3579,7 +3579,7 @@
           }
         },
         {
-          "nombre": "Salsa boloñesa",
+          "nombre": "Salsa boloÃ±esa",
           "categoria": "alimentacion",
           "marca": "Gallo",
           "barcode": "",
@@ -3604,7 +3604,14 @@
       ]
     },
     "Vigo": {
-      "establecimientos": [],
+      "establecimientos": [
+        {
+          "id": "Vigo_Establecimiento_1",
+          "nombre": "Dia",
+          "logoURL": null,
+          "ciudad": "Vigo"
+        }
+      ],
       "productos": []
     }
   },
