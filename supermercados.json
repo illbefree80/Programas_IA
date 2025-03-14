@@ -3846,14 +3846,14 @@
           "marca": "",
           "barcode": "",
           "unidad": "kg",
-          "cantidad": 160,
+          "cantidad": 150,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "2025-03-14",
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Madrid_Establecimiento_3": [
               {
-                "fecha": "2025-03-14",
+                "fecha": "14/03/2025",
                 "precio": 1.75
               }
             ]
@@ -3863,7 +3863,7 @@
           "Precio_Madrid_Establecimiento_2": null,
           "Fecha_Madrid_Establecimiento_2": null,
           "Precio_Madrid_Establecimiento_3": 1.75,
-          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
+          "Fecha_Madrid_Establecimiento_3": "14/03/2025"
         }
       ]
     },
