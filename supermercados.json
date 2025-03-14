@@ -2005,6 +2005,21 @@
           "Fecha_Madrid_Establecimiento_1": null,
           "Precio_Madrid_Establecimiento_2": 2.19,
           "Fecha_Madrid_Establecimiento_2": "14/3/2025"
+        },
+        {
+          "nombre": "Pan de molde (820g)",
+          "categoria": "panaderia_reposteria",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 820,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/3/2025",
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 1.39,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         }
       ]
     },
