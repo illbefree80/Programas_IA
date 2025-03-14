@@ -3706,6 +3706,31 @@
           "Fecha_Madrid_Establecimiento_2": null,
           "Precio_Madrid_Establecimiento_3": 2.97,
           "Fecha_Madrid_Establecimiento_3": "2025-03-14"
+        },
+        {
+          "nombre": "Banana",
+          "categoria": "frutas_verduras",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 1000,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.49
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": null,
+          "Fecha_Madrid_Establecimiento_2": null,
+          "Precio_Madrid_Establecimiento_3": 1.49,
+          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         }
       ]
     },
