@@ -608,7 +608,7 @@
           }
         },
         {
-          "nombre": "LimÃ³n exprimido",
+          "nombre": "LimÃÂ³n exprimido",
           "categoria": "bebidas",
           "marca": "",
           "barcode": "",
@@ -635,7 +635,7 @@
           }
         },
         {
-          "nombre": "Vinagre de mÃ³dena",
+          "nombre": "Vinagre de mÃÂ³dena",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -1151,7 +1151,7 @@
           }
         },
         {
-          "nombre": "AtÃºn natural",
+          "nombre": "AtÃÂºn natural",
           "categoria": "carnes_pescados",
           "marca": "",
           "barcode": "",
@@ -1532,7 +1532,7 @@
           }
         },
         {
-          "nombre": "ChampÃº",
+          "nombre": "ChampÃÂº",
           "categoria": "hogar",
           "marca": "",
           "barcode": "",
@@ -1540,29 +1540,31 @@
           "cantidad": 0.4,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 2.05,
-          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_4": 1.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
-                "fecha": "13/3/2025",
+                "fecha": "13/03/2025",
                 "precio": 2.05
               }
             ],
             "Ponteareas_Establecimiento_4": [
               {
-                "fecha": "13/3/2025",
+                "fecha": "13/03/2025",
+                "precio": 1.95
+              },
+              {
+                "fecha": "14/03/2025",
                 "precio": 1.95
               }
             ]
-          }
+          },
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 2.05,
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": 1.95,
+          "Fecha_Ponteareas_Establecimiento_4": "14/03/2025"
         },
         {
           "nombre": "Pipas",
@@ -1896,7 +1898,7 @@
           }
         },
         {
-          "nombre": "MaÃ­Â­z",
+          "nombre": "MaÃÂ­ÃÂ­z",
           "categoria": "cereales_legumbres",
           "marca": "",
           "barcode": "",
@@ -1939,7 +1941,7 @@
           }
         },
         {
-          "nombre": "Sorbete de limÃ³n",
+          "nombre": "Sorbete de limÃÂ³n",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2016,7 +2018,7 @@
           }
         },
         {
-          "nombre": "Salsa BoloÃ±esa",
+          "nombre": "Salsa BoloÃÂ±esa",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2339,7 +2341,7 @@
           }
         },
         {
-          "nombre": "PiÃ±a en almÃ­Â­bar",
+          "nombre": "PiÃÂ±a en almÃÂ­ÃÂ­bar",
           "categoria": "alimentacion",
           "marca": "",
           "barcode": "",
@@ -2366,7 +2368,7 @@
           }
         },
         {
-          "nombre": "Cerveza con limÃ³n",
+          "nombre": "Cerveza con limÃÂ³n",
           "categoria": "bebidas",
           "marca": "Argus",
           "barcode": null,
@@ -2420,7 +2422,7 @@
           }
         },
         {
-          "nombre": "Zumo de piÃ±a",
+          "nombre": "Zumo de piÃÂ±a",
           "categoria": "bebidas",
           "marca": "Solevita",
           "barcode": null,
@@ -2582,7 +2584,7 @@
           }
         },
         {
-          "nombre": "Te al limÃ³n",
+          "nombre": "Te al limÃÂ³n",
           "categoria": "bebidas",
           "marca": "",
           "barcode": "",
@@ -2636,7 +2638,7 @@
           }
         },
         {
-          "nombre": "RÃºcula",
+          "nombre": "RÃÂºcula",
           "categoria": "frutas_verduras",
           "marca": "",
           "barcode": "",
@@ -2852,7 +2854,7 @@
           }
         },
         {
-          "nombre": "Papel higiÃ©nico",
+          "nombre": "Papel higiÃÂ©nico",
           "categoria": "hogar",
           "marca": "",
           "barcode": "",
@@ -2960,7 +2962,7 @@
           }
         },
         {
-          "nombre": "Yogurt AzÃºcar de caÃ±a",
+          "nombre": "Yogurt AzÃÂºcar de caÃÂ±a",
           "categoria": "lacteos",
           "marca": "",
           "barcode": "",
@@ -3041,7 +3043,7 @@
           }
         },
         {
-          "nombre": "AtÃºn natural (6x80g)",
+          "nombre": "AtÃÂºn natural (6x80g)",
           "categoria": "carnes_pescados",
           "marca": "",
           "barcode": "",
@@ -3279,7 +3281,7 @@
           }
         },
         {
-          "nombre": "Tiras de maÃ­z",
+          "nombre": "Tiras de maÃÂ­z",
           "categoria": "snacks",
           "marca": "",
           "barcode": "",
@@ -3374,7 +3376,7 @@
           }
         },
         {
-          "nombre": "Rufles JamÃ³n",
+          "nombre": "Rufles JamÃÂ³n",
           "categoria": "snacks",
           "marca": "",
           "barcode": "",
@@ -3579,7 +3581,7 @@
           }
         },
         {
-          "nombre": "Salsa boloÃ±esa",
+          "nombre": "Salsa boloÃÂ±esa",
           "categoria": "alimentacion",
           "marca": "Gallo",
           "barcode": "",
