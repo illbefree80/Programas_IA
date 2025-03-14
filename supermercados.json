@@ -1540,19 +1540,15 @@
           "cantidad": 0.4,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 2.05,
-          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_4": 1.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
                 "fecha": "13/3/2025",
+                "precio": 2.05
+              },
+              {
+                "fecha": "14/03/2025",
                 "precio": 2.05
               }
             ],
@@ -1562,7 +1558,13 @@
                 "precio": 1.95
               }
             ]
-          }
+          },
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 2.05,
+          "Fecha_Ponteareas_Establecimiento_3": "14/03/2025",
+          "Precio_Ponteareas_Establecimiento_4": 1.95,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
           "nombre": "Pipas",
