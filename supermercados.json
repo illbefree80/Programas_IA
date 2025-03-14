@@ -3284,6 +3284,29 @@
               }
             ]
           }
+        },
+        {
+          "nombre": "Atún LÍnad",
+          "categoria": "alimentacion",
+          "marca": "",
+          "barcode": "",
+          "unidad": "unidad",
+          "cantidad": 1,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 2,
+          "Fecha_Madrid_Establecimiento_2": "2025-03-14"
         }
       ]
     },
