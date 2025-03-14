@@ -3789,6 +3789,31 @@
           "Fecha_Madrid_Establecimiento_2": null,
           "Precio_Madrid_Establecimiento_3": 1.43,
           "Fecha_Madrid_Establecimiento_3": "2025-03-14"
+        },
+        {
+          "nombre": "Aceituna con hueso",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 550,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.87
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": null,
+          "Fecha_Madrid_Establecimiento_2": null,
+          "Precio_Madrid_Establecimiento_3": 2.87,
+          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         }
       ]
     },
