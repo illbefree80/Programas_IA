@@ -3610,6 +3610,12 @@
           "nombre": "Alcampo2",
           "logoURL": null,
           "ciudad": "Vigo"
+        },
+        {
+          "id": "Vigo_Establecimiento_2",
+          "nombre": "3424",
+          "logoURL": null,
+          "ciudad": "Vigo"
         }
       ],
       "productos": []
