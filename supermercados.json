@@ -1884,12 +1884,14 @@
           "marca": "",
           "barcode": "",
           "unidad": "litro",
-          "cantidad": 1.25,
+          "cantidad": 1.5,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
+          "fechaActualizacion": "14/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.41,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": 0.43,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         },
         {
           "nombre": "Leche",
@@ -1902,7 +1904,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.85,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Tiras de maíz",
@@ -1915,7 +1918,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.85,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Cocktail mixto",
@@ -1928,7 +1932,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.78,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Chitos",
@@ -1941,7 +1946,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Nachos",
@@ -1954,7 +1960,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1.15,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Rufles Jamón",
@@ -1967,7 +1974,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1.35,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         },
         {
           "nombre": "Triskys",
@@ -1980,7 +1988,8 @@
           "infoNutricional": null,
           "fechaActualizacion": "13/3/2025",
           "Precio_Madrid_Establecimiento_1": 1.59,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025"
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": null
         }
       ]
     },
