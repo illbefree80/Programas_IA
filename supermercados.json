@@ -3281,8 +3281,16 @@
                 "fecha": "14/03/2025",
                 "precio": 0.81
               }
+            ],
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.83
+              }
             ]
-          }
+          },
+          "Precio_Madrid_Establecimiento_3": 0.83,
+          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         },
         {
           "nombre": "Tiras de maíz",
