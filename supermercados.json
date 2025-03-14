@@ -2571,23 +2571,25 @@
           "cantidad": 1000,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
+          "fechaActualizacion": "14/03/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "01/01/1970",
+                "precio": 1.19
+              },
+              {
+                "fecha": "14/03/2025",
+                "precio": 1.19
+              }
+            ]
+          },
           "Precio_Ponteareas_Establecimiento_2": null,
           "Fecha_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
-          "historialPrecios": {
-            "Ponteareas_Establecimiento_4": [
-              {
-                "fecha": null,
-                "precio": 1.19
-              }
-            ]
-          }
+          "Fecha_Ponteareas_Establecimiento_4": "14/03/2025"
         },
         {
           "nombre": "Filete de merluza (580g)",
