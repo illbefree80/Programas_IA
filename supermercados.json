@@ -34,7 +34,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.99,
           "Precio_Ponteareas_Establecimiento_3": 1.99,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.99
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.99
+              }
+            ]
+          }
         },
         {
           "nombre": "Limones (granel)",
@@ -48,7 +62,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.15,
           "Precio_Ponteareas_Establecimiento_3": 2.15,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.15
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.15
+              }
+            ]
+          }
         },
         {
           "nombre": "Mandarinas (Malla)",
@@ -76,7 +104,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.19,
           "Precio_Ponteareas_Establecimiento_3": 1.79,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.19
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.79
+              }
+            ]
+          }
         },
         {
           "nombre": "Pizza Pollo y Bacon",
@@ -105,7 +147,21 @@
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.9,
           "Precio_Ponteareas_Establecimiento_4": 2.59,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.9
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.59
+              }
+            ]
+          }
         },
         {
           "nombre": "Pizza Barbacoa",
@@ -133,7 +189,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.5,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.5
+              }
+            ]
+          }
         },
         {
           "nombre": "Pizza Barbacoa (grande)",
@@ -161,7 +225,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 3.4,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 3.4
+              }
+            ]
+          }
         },
         {
           "nombre": "Pizza Barbacoa (pack 2)",
@@ -189,7 +261,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.9,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.9
+              }
+            ]
+          }
         },
         {
           "nombre": "Tiras de pollo",
@@ -217,7 +297,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.25,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.25
+              }
+            ]
+          }
         },
         {
           "nombre": "Humus",
@@ -245,7 +333,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.1,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.1
+              }
+            ]
+          }
         },
         {
           "nombre": "Humus pimiento",
@@ -273,7 +369,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.45,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.45
+              }
+            ]
+          }
         },
         {
           "nombre": "Tortilla",
@@ -302,7 +406,27 @@
           "Precio_Ponteareas_Establecimiento_2": 2.55,
           "Precio_Ponteareas_Establecimiento_3": 2.6,
           "Precio_Ponteareas_Establecimiento_4": 2.45,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.55
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.6
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.45
+              }
+            ]
+          }
         },
         {
           "nombre": "Tomate frito",
@@ -316,7 +440,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.35,
           "Precio_Ponteareas_Establecimiento_3": 1.35,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.35
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Garbanzos a la riojana",
@@ -344,7 +482,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.35,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Caldo de pollo",
@@ -359,7 +505,27 @@
           "Precio_Ponteareas_Establecimiento_2": 1.2,
           "Precio_Ponteareas_Establecimiento_3": 0.7,
           "Precio_Ponteareas_Establecimiento_4": 0.67,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.2
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.7
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.67
+              }
+            ]
+          }
         },
         {
           "nombre": "Limón exprimido",
@@ -378,7 +544,15 @@
           "Precio_Ponteareas_Establecimiento_3": 1,
           "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1
+              }
+            ]
+          }
         },
         {
           "nombre": "Vinagre de módena",
@@ -397,7 +571,15 @@
           "Precio_Ponteareas_Establecimiento_3": 1.65,
           "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.65
+              }
+            ]
+          }
         },
         {
           "nombre": "Pechuca de pollo",
@@ -426,7 +608,21 @@
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.65,
           "Precio_Ponteareas_Establecimiento_4": 2.09,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.65
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.09
+              }
+            ]
+          }
         },
         {
           "nombre": "Lomo",
@@ -440,7 +636,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.3,
           "Precio_Ponteareas_Establecimiento_3": 2.3,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.3
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.3
+              }
+            ]
+          }
         },
         {
           "nombre": "Garbanzos",
@@ -459,7 +669,27 @@
           "Precio_Ponteareas_Establecimiento_3": 0.75,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.72,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.75
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.72
+              }
+            ]
+          }
         },
         {
           "nombre": "Lentejas",
@@ -488,7 +718,27 @@
             "sodio": null
           },
           "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.8
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.8
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Arroz",
@@ -517,7 +767,21 @@
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 1.33,
           "Precio_Ponteareas_Establecimiento_4": 1.27,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.33
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.27
+              }
+            ]
+          }
         },
         {
           "nombre": "Filete de merluza",
@@ -531,7 +795,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 4.49,
           "Precio_Ponteareas_Establecimiento_3": 4.95,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 4.49
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 4.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Palitos de cangrejo",
@@ -546,7 +824,27 @@
           "Precio_Ponteareas_Establecimiento_2": 1.88,
           "Precio_Ponteareas_Establecimiento_3": 2.5,
           "Precio_Ponteareas_Establecimiento_4": 1.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.88
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.5
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Pollo de Airfrier",
@@ -574,7 +872,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 3.7,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 3.7
+              }
+            ]
+          }
         },
         {
           "nombre": "Nuggets de pollo",
@@ -602,7 +908,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": 2.7,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.7
+              }
+            ]
+          }
         },
         {
           "nombre": "Relleno de fajitas",
@@ -630,7 +944,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.95,
           "Precio_Ponteareas_Establecimiento_3": 1.95,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.95
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Ensaladilla rusa",
@@ -658,7 +986,21 @@
             "sal": 0.035,
             "sodio": null
           },
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.22
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.36
+              }
+            ]
+          }
         },
         {
           "nombre": "Atún natural",
@@ -677,7 +1019,21 @@
           "Precio_Ponteareas_Establecimiento_3": 4.2,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 3.95
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 4.2
+              }
+            ]
+          }
         },
         {
           "nombre": "Zumo de naranja",
@@ -691,7 +1047,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.99,
           "Precio_Ponteareas_Establecimiento_3": 2,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.99
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2
+              }
+            ]
+          }
         },
         {
           "nombre": "Leche",
@@ -706,7 +1076,27 @@
           "Precio_Ponteareas_Establecimiento_2": 0.85,
           "Precio_Ponteareas_Establecimiento_3": 0.85,
           "Precio_Ponteareas_Establecimiento_4": 0.85,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.85
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.85
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.85
+              }
+            ]
+          }
         },
         {
           "nombre": "Pan tostado",
@@ -720,7 +1110,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 0.99,
           "Precio_Ponteareas_Establecimiento_3": 1.2,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.99
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.2
+              }
+            ]
+          }
         },
         {
           "nombre": "Pan de molde",
@@ -748,7 +1152,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 0.8,
           "Precio_Ponteareas_Establecimiento_3": 0.8,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.8
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.8
+              }
+            ]
+          }
         },
         {
           "nombre": "Chocolate",
@@ -776,7 +1194,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.34,
           "Precio_Ponteareas_Establecimiento_3": 1.35,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.34
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Donuts",
@@ -790,7 +1222,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.55,
           "Precio_Ponteareas_Establecimiento_3": 1.55,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.55
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.55
+              }
+            ]
+          }
         },
         {
           "nombre": "Natillas",
@@ -805,7 +1251,27 @@
           "Precio_Ponteareas_Establecimiento_2": 1.05,
           "Precio_Ponteareas_Establecimiento_3": 1.05,
           "Precio_Ponteareas_Establecimiento_4": 0.99,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.05
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.05
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.99
+              }
+            ]
+          }
         },
         {
           "nombre": "Yogurt bebible",
@@ -833,7 +1299,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.22,
           "Precio_Ponteareas_Establecimiento_3": 1.94,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.22
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.94
+              }
+            ]
+          }
         },
         {
           "nombre": "Champú",
@@ -852,7 +1332,21 @@
           "Precio_Ponteareas_Establecimiento_3": 2.05,
           "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_4": 1.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.05
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Pipas",
@@ -867,7 +1361,27 @@
           "Precio_Ponteareas_Establecimiento_2": 1.2,
           "Precio_Ponteareas_Establecimiento_3": 1.2,
           "Precio_Ponteareas_Establecimiento_4": 1.15,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.2
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.2
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.15
+              }
+            ]
+          }
         },
         {
           "nombre": "Nachos",
@@ -886,7 +1400,27 @@
           "Precio_Ponteareas_Establecimiento_3": 0.9,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.85,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.9
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.9
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.85
+              }
+            ]
+          }
         },
         {
           "nombre": "Salsa Nachos",
@@ -905,7 +1439,27 @@
           "Precio_Ponteareas_Establecimiento_3": 1.25,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.25
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.25
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.19
+              }
+            ]
+          }
         },
         {
           "nombre": "Nestea",
@@ -919,7 +1473,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1,
           "Precio_Ponteareas_Establecimiento_3": 1,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1
+              }
+            ]
+          }
         },
         {
           "nombre": "Limonada",
@@ -948,7 +1516,27 @@
           "Precio_Ponteareas_Establecimiento_2": 1.15,
           "Precio_Ponteareas_Establecimiento_3": 1.5,
           "Precio_Ponteareas_Establecimiento_4": 1.15,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.15
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.5
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.15
+              }
+            ]
+          }
         },
         {
           "nombre": "Lima",
@@ -962,7 +1550,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 3.59,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 3.59
+              }
+            ]
+          }
         },
         {
           "nombre": "Tortilla sin cebolla",
@@ -977,7 +1573,21 @@
           "Precio_Ponteareas_Establecimiento_2": 2.55,
           "Precio_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.45,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.55
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.45
+              }
+            ]
+          }
         },
         {
           "nombre": "Patatas en bote",
@@ -1005,7 +1615,21 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.05,
           "Precio_Ponteareas_Establecimiento_3": 2.05,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.05
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.05
+              }
+            ]
+          }
         },
         {
           "nombre": "Maí­z",
@@ -1024,7 +1648,27 @@
           "Precio_Ponteareas_Establecimiento_3": 1.6,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.55,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.6
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.6
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.55
+              }
+            ]
+          }
         },
         {
           "nombre": "Sorbete de limón",
@@ -1043,7 +1687,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Yogurt natural",
@@ -1071,7 +1723,21 @@
             "fibra": null,
             "sal": 0.13
           },
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.99
+              }
+            ]
+          }
         },
         {
           "nombre": "Salsa Boloñesa",
@@ -1090,7 +1756,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.66
+              }
+            ]
+          }
         },
         {
           "nombre": "Pasta - Espirales de colores",
@@ -1104,7 +1778,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 0.89,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 0.89
+              }
+            ]
+          }
         },
         {
           "nombre": "Pasta - Pajaritas colores (Lazos)",
@@ -1123,7 +1805,27 @@
           "Precio_Ponteareas_Establecimiento_3": 1.1,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.97,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.11
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.1
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.97
+              }
+            ]
+          }
         },
         {
           "nombre": "Salsa (para pan tumaca)",
@@ -1151,7 +1853,15 @@
             "fibra": null,
             "sal": null
           },
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Cocacola",
@@ -1165,7 +1875,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.1,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.1
+              }
+            ]
+          }
         },
         {
           "nombre": "Revuelto maicitos",
@@ -1179,7 +1897,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.7,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.7
+              }
+            ]
+          }
         },
         {
           "nombre": "Galletas rellenas de chocolate",
@@ -1194,7 +1920,21 @@
           "Precio_Ponteareas_Establecimiento_2": 1.3,
           "Precio_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.25,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.3
+              }
+            ],
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.25
+              }
+            ]
+          }
         },
         {
           "nombre": "Crema de cacao",
@@ -1222,7 +1962,21 @@
             "fibra": null,
             "sal": null
           },
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.4
+              }
+            ],
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Aceitunas",
@@ -1236,7 +1990,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 2.59,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.59
+              }
+            ]
+          }
         },
         {
           "nombre": "Pipas - Aguasal",
@@ -1250,7 +2012,15 @@
           "Precio_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": 1.09,
           "Precio_Ponteareas_Establecimiento_3": null,
-          "Precio_Ponteareas_Establecimiento_4": null
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.09
+              }
+            ]
+          }
         },
         {
           "nombre": "Piña en almí­bar",
@@ -1269,7 +2039,15 @@
           "Precio_Ponteareas_Establecimiento_3": 2.45,
           "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
           "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          "Fecha_Ponteareas_Establecimiento_4": null,
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_3": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.45
+              }
+            ]
+          }
         },
         {
           "nombre": "Cerveza con limón",
@@ -1288,7 +2066,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.34,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.34
+              }
+            ]
+          }
         },
         {
           "nombre": "Cocacola Zero",
@@ -1307,7 +2093,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.1,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.1
+              }
+            ]
+          }
         },
         {
           "nombre": "Zumo de piña",
@@ -1326,7 +2120,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.45,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.45
+              }
+            ]
+          }
         },
         {
           "nombre": "Macarrones",
@@ -1345,7 +2147,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ]
+          }
         },
         {
           "nombre": "ptueba",
@@ -1364,7 +2174,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2
+              }
+            ]
+          }
         },
         {
           "nombre": "Alubia blanca",
@@ -1383,7 +2201,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Pasta - Helices",
@@ -1402,7 +2228,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.52,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.52
+              }
+            ]
+          }
         },
         {
           "nombre": "Tomate frito (3x400)",
@@ -1421,7 +2255,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.29,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.29
+              }
+            ]
+          }
         },
         {
           "nombre": "Te al limón",
@@ -1440,7 +2282,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.25,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.25
+              }
+            ]
+          }
         },
         {
           "nombre": "Humus (200g)",
@@ -1459,7 +2309,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.89,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.89
+              }
+            ]
+          }
         },
         {
           "nombre": "Rúcula",
@@ -1478,7 +2336,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Zumo de naranja exprimida",
@@ -1497,7 +2363,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Hummus chile / aceitunas / tomate seco",
@@ -1516,7 +2390,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.15,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.15
+              }
+            ]
+          }
         },
         {
           "nombre": "Bolsas de basura (30L)",
@@ -1535,7 +2417,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.39,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.39
+              }
+            ]
+          }
         },
         {
           "nombre": "Picos",
@@ -1554,7 +2444,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Chocolate (100g)",
@@ -1573,7 +2471,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.19
+              }
+            ]
+          }
         },
         {
           "nombre": "Pan de molde (820g)",
@@ -1592,7 +2498,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.13,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.13
+              }
+            ]
+          }
         },
         {
           "nombre": "Papel de cocina",
@@ -1611,7 +2525,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 3.95,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 3.95
+              }
+            ]
+          }
         },
         {
           "nombre": "Papel higiénico",
@@ -1630,7 +2552,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.35,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Ensaladilla",
@@ -1649,7 +2579,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.19
+              }
+            ]
+          }
         },
         {
           "nombre": "Filete de merluza (580g)",
@@ -1668,7 +2606,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 4.69,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 4.69
+              }
+            ]
+          }
         },
         {
           "nombre": "Natillas Chocolate",
@@ -1687,7 +2633,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.99,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.99
+              }
+            ]
+          }
         },
         {
           "nombre": "Yogurt Azúcar de caña",
@@ -1706,7 +2660,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.29,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.29
+              }
+            ]
+          }
         },
         {
           "nombre": "Gelatina",
@@ -1725,7 +2687,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.92,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.92
+              }
+            ]
+          }
         },
         {
           "nombre": "Yogurt griego",
@@ -1744,7 +2714,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 1.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Atún natural (6x80g)",
@@ -1763,7 +2741,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 3.75,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 3.75
+              }
+            ]
+          }
         },
         {
           "nombre": "Caldo de cocido",
@@ -1782,7 +2768,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.85,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.85
+              }
+            ]
+          }
         },
         {
           "nombre": "Pechuca de pollo cocida",
@@ -1801,7 +2795,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.39,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.39
+              }
+            ]
+          }
         },
         {
           "nombre": "Pechuga de pavo cocida",
@@ -1820,7 +2822,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.39,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.39
+              }
+            ]
+          }
         },
         {
           "nombre": "Pizza Barbacoa (400g)",
@@ -1839,7 +2849,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 2.35,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 2.35
+              }
+            ]
+          }
         },
         {
           "nombre": "Tomate frito (3x215)",
@@ -1858,7 +2876,15 @@
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 0.92,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": "13/3/2025",
+                "precio": 0.92
+              }
+            ]
+          }
         }
       ]
     },
@@ -2266,5 +3292,5 @@
       "productos": []
     }
   },
-  "_forceUpdate": 1741958820284
+  "_forceUpdate": 1741958921382
 }
