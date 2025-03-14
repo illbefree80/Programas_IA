@@ -3866,6 +3866,33 @@
           "Fecha_Madrid_Establecimiento_2": null,
           "Precio_Madrid_Establecimiento_3": 1.75,
           "Fecha_Madrid_Establecimiento_3": "14/03/2025"
+        },
+        {
+          "nombre": "pollo",
+          "categoria": "carnes_pescados",
+          "marca": "",
+          "barcode": "",
+          "unidad": "unidad",
+          "cantidad": 1,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/03/2025",
+          "historialPrecios": {
+            "Madrid_Establecimiento_1": [],
+            "Madrid_Establecimiento_2": [],
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "14/03/2025",
+                "precio": 23
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": null,
+          "Fecha_Madrid_Establecimiento_2": null,
+          "Precio_Madrid_Establecimiento_3": 23,
+          "Fecha_Madrid_Establecimiento_3": "14/03/2025"
         }
       ]
     },
