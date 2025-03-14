@@ -3217,6 +3217,12 @@
           "nombre": "Dia",
           "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Dia_2019.svg/1200px-Dia_2019.svg.png",
           "ciudad": "Madrid"
+        },
+        {
+          "id": "Madrid_Establecimiento_3",
+          "nombre": "Alcampo",
+          "logoURL": "https://www.saica.com/filemanager/userfiles/Logo_Alcampo_website.png",
+          "ciudad": "Madrid"
         }
       ],
       "productos": [
