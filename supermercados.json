@@ -536,25 +536,23 @@
           "cantidad": 0.28,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "2025-03-14",
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 1,
+          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null,
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
                 "fecha": null,
                 "precio": 1
-              },
-              {
-                "fecha": "14/03/2025",
-                "precio": 1
               }
             ]
-          },
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 1,
-          "Fecha_Ponteareas_Establecimiento_3": "2025-03-14",
-          "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null
+          }
         },
         {
           "nombre": "Vinagre de módena",
@@ -2573,25 +2571,23 @@
           "cantidad": 1000,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "2025-03-14",
-          "historialPrecios": {
-            "Ponteareas_Establecimiento_4": [
-              {
-                "fecha": null,
-                "precio": 1.19
-              },
-              {
-                "fecha": "2025-03-14",
-                "precio": 1.19
-              }
-            ]
-          },
+          "fechaActualizacion": "13/3/2025",
+          "Precio_Ponteareas_Establecimiento_1": null,
+          "Fecha_Ponteareas_Establecimiento_1": null,
           "Precio_Ponteareas_Establecimiento_2": null,
           "Fecha_Ponteareas_Establecimiento_2": null,
           "Precio_Ponteareas_Establecimiento_3": null,
           "Fecha_Ponteareas_Establecimiento_3": null,
           "Precio_Ponteareas_Establecimiento_4": 1.19,
-          "Fecha_Ponteareas_Establecimiento_4": "2025-03-14"
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "historialPrecios": {
+            "Ponteareas_Establecimiento_4": [
+              {
+                "fecha": null,
+                "precio": 1.19
+              }
+            ]
+          }
         },
         {
           "nombre": "Filete de merluza (580g)",
@@ -2925,13 +2921,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 0.41
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.43
               }
             ]
@@ -2954,13 +2950,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 0.85
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.81
               }
             ]
@@ -2983,13 +2979,13 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 0.85
               }
             ],
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.85
               }
             ]
@@ -3011,7 +3007,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 0.78
               }
             ]
@@ -3033,7 +3029,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 1
               }
             ]
@@ -3055,7 +3051,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 1.15
               }
             ]
@@ -3077,7 +3073,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 1.35
               }
             ]
@@ -3099,7 +3095,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
-                "fecha": null,
+                "fecha": "13/3/2025",
                 "precio": 1.59
               }
             ]
@@ -3122,7 +3118,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 2.19
               }
             ]
@@ -3145,7 +3141,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 1.39
               }
             ]
@@ -3168,7 +3164,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.95
               }
             ]
@@ -3191,7 +3187,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.79
               }
             ]
@@ -3214,7 +3210,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 1.95
               }
             ]
@@ -3237,7 +3233,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 0.85
               }
             ]
@@ -3260,7 +3256,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 1.95
               }
             ]
@@ -3283,7 +3279,7 @@
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
-                "fecha": null,
+                "fecha": "14/3/2025",
                 "precio": 2.99
               }
             ]
