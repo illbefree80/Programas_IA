@@ -3293,7 +3293,7 @@
           "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         },
         {
-          "nombre": "Tiras de maíz",
+          "nombre": "Tiras de maíz (150g)",
           "categoria": "snacks",
           "marca": "",
           "barcode": "",
@@ -3307,6 +3307,10 @@
               {
                 "fecha": "13/03/2025",
                 "precio": 0.85
+              },
+              {
+                "fecha": "14/03/2025",
+                "precio": 0.85
               }
             ],
             "Madrid_Establecimiento_2": [
@@ -3317,7 +3321,7 @@
             ]
           },
           "Precio_Madrid_Establecimiento_1": 0.85,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Fecha_Madrid_Establecimiento_1": "14/03/2025",
           "Precio_Madrid_Establecimiento_2": 0,
           "Fecha_Madrid_Establecimiento_2": "14/03/2025",
           "Precio_Madrid_Establecimiento_3": null,
