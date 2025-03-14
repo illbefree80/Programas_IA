@@ -2082,6 +2082,21 @@
           "Fecha_Madrid_Establecimiento_1": null,
           "Precio_Madrid_Establecimiento_2": 0.85,
           "Fecha_Madrid_Establecimiento_2": "14/3/2025"
+        },
+        {
+          "nombre": "Donut",
+          "categoria": "panaderia_reposteria",
+          "marca": "",
+          "barcode": "",
+          "unidad": "pack",
+          "cantidad": 1,
+          "unidadesPack": 4,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/3/2025",
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 1.95,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         }
       ]
     },
@@ -2089,5 +2104,6 @@
       "establecimientos": [],
       "productos": []
     }
-  }
+  },
+  "_forceUpdate": 1741954630276
 }
