@@ -2052,6 +2052,21 @@
           "Fecha_Madrid_Establecimiento_1": null,
           "Precio_Madrid_Establecimiento_2": 0.79,
           "Fecha_Madrid_Establecimiento_2": "14/3/2025"
+        },
+        {
+          "nombre": "Crema de cacao",
+          "categoria": "alimentacion",
+          "marca": "",
+          "barcode": "",
+          "unidad": "unidad",
+          "cantidad": 1,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/3/2025",
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 1.95,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         }
       ]
     },
