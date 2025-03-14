@@ -3494,12 +3494,21 @@
           "unidad": "unidad",
           "cantidad": 1,
           "unidadesPack": null,
-          "infoNutricional": null,
-          "fechaActualizacion": "14/3/2025",
-          "Precio_Madrid_Establecimiento_1": null,
-          "Fecha_Madrid_Establecimiento_1": null,
-          "Precio_Madrid_Establecimiento_2": 0.79,
-          "Fecha_Madrid_Establecimiento_2": "14/3/2025",
+          "infoNutricional": {
+            "valorEnergeticoKj": 2102,
+            "valorEnergeticoKcal": 503,
+            "grasasTotales": 26,
+            "grasasSaturadas": 2.4,
+            "grasasNoSaturadas": null,
+            "colesterol": null,
+            "hidratosCarbono": 61,
+            "azucares": 4.7,
+            "proteinas": 5.1,
+            "fibra": null,
+            "sal": 2.1,
+            "sodio": null
+          },
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Madrid_Establecimiento_2": [
               {
@@ -3507,7 +3516,11 @@
                 "precio": 0.79
               }
             ]
-          }
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 0.79,
+          "Fecha_Madrid_Establecimiento_2": "14/03/2025"
         },
         {
           "nombre": "Crema de cacao",
