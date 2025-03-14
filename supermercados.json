@@ -1990,6 +1990,21 @@
           "Precio_Madrid_Establecimiento_1": 1.59,
           "Fecha_Madrid_Establecimiento_1": "13/3/2025",
           "Precio_Madrid_Establecimiento_2": null
+        },
+        {
+          "nombre": "Cocacola Zero (2l)",
+          "categoria": "bebidas",
+          "marca": "",
+          "barcode": "",
+          "unidad": "litro",
+          "cantidad": 2,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/3/2025",
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 2.19,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         }
       ]
     },
