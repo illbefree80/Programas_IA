@@ -616,23 +616,25 @@
           "cantidad": 0.28,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Fecha_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 1,
-          "Fecha_Ponteareas_Establecimiento_3": "13/3/2025",
-          "Precio_Ponteareas_Establecimiento_4": null,
-          "Fecha_Ponteareas_Establecimiento_4": null,
+          "fechaActualizacion": "2025-03-14",
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
                 "fecha": "13/3/2025",
                 "precio": 1
+              },
+              {
+                "fecha": "2025-03-14",
+                "precio": 1
               }
             ]
-          }
+          },
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 1,
+          "Fecha_Ponteareas_Establecimiento_3": "2025-03-14",
+          "Precio_Ponteareas_Establecimiento_4": null,
+          "Fecha_Ponteareas_Establecimiento_4": null
         },
         {
           "nombre": "Vinagre de módena",
