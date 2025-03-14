@@ -3626,6 +3626,42 @@
               }
             ]
           }
+        },
+        {
+          "nombre": "Patatas fritas",
+          "categoria": "snacks",
+          "marca": "Santa Ana",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 160,
+          "unidadesPack": null,
+          "infoNutricional": {
+            "valorEnergeticoKj": 2079,
+            "valorEnergeticoKcal": 498,
+            "grasasTotales": 27,
+            "grasasSaturadas": 3.3,
+            "grasasNoSaturadas": null,
+            "colesterol": null,
+            "hidratosCarbono": 54,
+            "azucares": 0.3,
+            "proteinas": 6.6,
+            "fibra": 5.7,
+            "sal": 1.5,
+            "sodio": null
+          },
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_2": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.69
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 1.69,
+          "Fecha_Madrid_Establecimiento_2": "2025-03-14"
         }
       ]
     },
