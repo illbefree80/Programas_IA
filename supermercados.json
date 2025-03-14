@@ -851,27 +851,8 @@
           "barcode": "",
           "unidad": "kg",
           "cantidad": 1000,
-          "infoNutricional": {
-            "grasasTotales": null,
-            "grasasNoSaturadas": null,
-            "colesterol": null,
-            "sodio": null,
-            "valorEnergeticoKj": null,
-            "valorEnergeticoKcal": null,
-            "grasasSaturadas": null,
-            "hidratosCarbono": null,
-            "azucares": null,
-            "proteinas": null,
-            "fibra": null,
-            "sal": null
-          },
-          "fechaActualizacion": "13/3/2025",
           "unidadesPack": null,
-          "Precio_Ponteareas_Establecimiento_1": null,
-          "Precio_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 1.33,
-          "Precio_Ponteareas_Establecimiento_4": 1.27,
-          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025",
+          "infoNutricional": null,
           "historialPrecios": {
             "Ponteareas_Establecimiento_3": [
               {
@@ -881,6 +862,10 @@
               {
                 "fecha": "2025-03-14",
                 "precio": 1.33
+              },
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.43
               }
             ],
             "Ponteareas_Establecimiento_4": [
@@ -889,7 +874,14 @@
                 "precio": 1.27
               }
             ]
-          }
+          },
+          "fechaActualizacion": "2025-03-14",
+          "Precio_Ponteareas_Establecimiento_2": null,
+          "Fecha_Ponteareas_Establecimiento_2": null,
+          "Precio_Ponteareas_Establecimiento_3": 1.43,
+          "Fecha_Ponteareas_Establecimiento_3": "2025-03-14",
+          "Precio_Ponteareas_Establecimiento_4": 1.27,
+          "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
         },
         {
           "nombre": "Filete de merluza",
@@ -3608,5 +3600,5 @@
       "productos": []
     }
   },
-  "_forceUpdate": 1741958941779
+  "_forceUpdate": 1741959037378
 }
