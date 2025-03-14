@@ -1902,10 +1902,11 @@
           "cantidad": 1,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "13/3/2025",
+          "fechaActualizacion": "14/3/2025",
           "Precio_Madrid_Establecimiento_1": 0.85,
           "Fecha_Madrid_Establecimiento_1": "13/3/2025",
-          "Precio_Madrid_Establecimiento_2": null
+          "Precio_Madrid_Establecimiento_2": 0.81,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         },
         {
           "nombre": "Tiras de maíz",
