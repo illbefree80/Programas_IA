@@ -866,6 +866,10 @@
               {
                 "fecha": "2025-03-14",
                 "precio": 1.43
+              },
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.33
               }
             ],
             "Ponteareas_Establecimiento_4": [
@@ -878,7 +882,7 @@
           "fechaActualizacion": "2025-03-14",
           "Precio_Ponteareas_Establecimiento_2": null,
           "Fecha_Ponteareas_Establecimiento_2": null,
-          "Precio_Ponteareas_Establecimiento_3": 1.43,
+          "Precio_Ponteareas_Establecimiento_3": 1.33,
           "Fecha_Ponteareas_Establecimiento_3": "2025-03-14",
           "Precio_Ponteareas_Establecimiento_4": 1.27,
           "Fecha_Ponteareas_Establecimiento_4": "13/3/2025"
@@ -3600,5 +3604,5 @@
       "productos": []
     }
   },
-  "_forceUpdate": 1741959037378
+  "_forceUpdate": 1741959055570
 }
