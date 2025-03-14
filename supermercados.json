@@ -2067,6 +2067,21 @@
           "Fecha_Madrid_Establecimiento_1": null,
           "Precio_Madrid_Establecimiento_2": 1.95,
           "Fecha_Madrid_Establecimiento_2": "14/3/2025"
+        },
+        {
+          "nombre": "Palomitas snack (80g)",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 80,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "14/3/2025",
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": 0.85,
+          "Fecha_Madrid_Establecimiento_2": "14/3/2025"
         }
       ]
     },
