@@ -1,4 +1,14 @@
 {
   "test": "verificación",
-  "_forceUpdate": 1741959539211
+  "_forceUpdate": 1741959556390,
+  "ciudades": {
+    "Madrid": {
+      "establecimientos": [],
+      "productos": []
+    },
+    "Ponteareas": {
+      "establecimientos": [],
+      "productos": []
+    }
+  }
 }
