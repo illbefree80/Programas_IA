@@ -1,3 +1,10 @@
 {
-  "test": "verificación"
+  "test": "verificación",
+  "_forceUpdate": 1741959780039,
+  "ciudades": {
+    "Ponteareas": {
+      "establecimientos": [],
+      "productos": []
+    }
+  }
 }
