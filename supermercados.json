@@ -3764,6 +3764,31 @@
           "Fecha_Madrid_Establecimiento_2": null,
           "Precio_Madrid_Establecimiento_3": 1.66,
           "Fecha_Madrid_Establecimiento_3": "2025-03-14"
+        },
+        {
+          "nombre": "Pan de molde (1000g)",
+          "categoria": "panaderia_reposteria",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 1000,
+          "unidadesPack": null,
+          "infoNutricional": null,
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 1.43
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": null,
+          "Fecha_Madrid_Establecimiento_2": null,
+          "Precio_Madrid_Establecimiento_3": 1.43,
+          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         }
       ]
     },
