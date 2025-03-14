@@ -3301,11 +3301,7 @@
           "cantidad": 150,
           "unidadesPack": null,
           "infoNutricional": null,
-          "fechaActualizacion": "14/3/2025",
-          "Precio_Madrid_Establecimiento_1": 0.85,
-          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
-          "Precio_Madrid_Establecimiento_2": 0.85,
-          "Fecha_Madrid_Establecimiento_2": "14/3/2025",
+          "fechaActualizacion": "14/03/2025",
           "historialPrecios": {
             "Madrid_Establecimiento_1": [
               {
@@ -3316,10 +3312,16 @@
             "Madrid_Establecimiento_2": [
               {
                 "fecha": "14/03/2025",
-                "precio": 0.85
+                "precio": 0.79
               }
             ]
-          }
+          },
+          "Precio_Madrid_Establecimiento_1": 0.85,
+          "Fecha_Madrid_Establecimiento_1": "13/3/2025",
+          "Precio_Madrid_Establecimiento_2": 0.79,
+          "Fecha_Madrid_Establecimiento_2": "14/03/2025",
+          "Precio_Madrid_Establecimiento_3": null,
+          "Fecha_Madrid_Establecimiento_3": null
         },
         {
           "nombre": "Cocktail mixto",
