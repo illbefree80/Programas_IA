@@ -3668,6 +3668,44 @@
           "Fecha_Madrid_Establecimiento_1": null,
           "Precio_Madrid_Establecimiento_2": 1.69,
           "Fecha_Madrid_Establecimiento_2": "2025-03-14"
+        },
+        {
+          "nombre": "Mix frutos secos",
+          "categoria": "snacks",
+          "marca": "",
+          "barcode": "",
+          "unidad": "kg",
+          "cantidad": 500,
+          "unidadesPack": null,
+          "infoNutricional": {
+            "valorEnergeticoKj": 2050,
+            "valorEnergeticoKcal": 491,
+            "grasasTotales": 26,
+            "grasasSaturadas": 3.3,
+            "grasasNoSaturadas": null,
+            "colesterol": null,
+            "hidratosCarbono": 47,
+            "azucares": 5.8,
+            "proteinas": 15,
+            "fibra": 6.5,
+            "sal": 1.4,
+            "sodio": null
+          },
+          "fechaActualizacion": "2025-03-14",
+          "historialPrecios": {
+            "Madrid_Establecimiento_3": [
+              {
+                "fecha": "2025-03-14",
+                "precio": 2.97
+              }
+            ]
+          },
+          "Precio_Madrid_Establecimiento_1": null,
+          "Fecha_Madrid_Establecimiento_1": null,
+          "Precio_Madrid_Establecimiento_2": null,
+          "Fecha_Madrid_Establecimiento_2": null,
+          "Precio_Madrid_Establecimiento_3": 2.97,
+          "Fecha_Madrid_Establecimiento_3": "2025-03-14"
         }
       ]
     },
